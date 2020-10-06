@@ -35,13 +35,14 @@ namespace Expect.ARTour {
                 (string p_lang) =>
                 {
                     _language = (p_lang == StringAsset.ARTour.LangEN) ? GeneralFlag.Language.En : GeneralFlag.Language.Ch;
-
+                    StartFreeTour();
                 }
             );
         }
 
         private void StartFreeTour() {
             ARSession.enabled = true;
+            MainApp.Instance.Notify(GeneralFlag.ObeserverEvent.TourStart);
         }
 
         private void ResetData() {
