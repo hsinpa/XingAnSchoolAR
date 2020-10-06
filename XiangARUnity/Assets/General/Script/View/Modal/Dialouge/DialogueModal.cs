@@ -17,14 +17,16 @@ namespace Expect.View
         private Text contentText;
 
         [SerializeField]
-        private Dropdown _dropDownMenu;
-        public Dropdown dropDownMenu => _dropDownMenu;
+        private Transform buttonContainer;
+
+        [SerializeField]
+        private GameObject buttonPrefab;
 
         [SerializeField]
         private Image decorateImage;
 
-        public enum ButtonType {
-            Accept, Cancel, Close
+        private void Start()
+        {
         }
 
         public void DecorateSideImage(Sprite sprite) {
@@ -32,14 +34,7 @@ namespace Expect.View
             decorateImage.sprite = sprite;
         }
 
-        private List<DialogueButtonObj> buttons = new List<DialogueButtonObj>();
-
-        private void Awake()
-        {
-            buttons = GetComponentsInChildren<DialogueButtonObj>().ToList();
-        }
-
-        public void SetDialogue(string title, string content, ButtonType[] allowBtns, System.Action<ButtonType> btnEvent) {
+        public void SetDialogue(string title, string content, string[] allowBtns, System.Action<string> btnEvent) {
             ResetContent();
 
             titleText.text = title;
@@ -48,30 +43,22 @@ namespace Expect.View
             RegisterButtons(allowBtns, btnEvent);
         }
 
-        public void SetDropDown(string[] options) {
-            dropDownMenu.ClearOptions();
 
-            if (options != null && options.Length > 0) {
-                dropDownMenu.gameObject.SetActive(true);
-
-                var optionItems = options.Select(x => new Dropdown.OptionData(x)).ToList();
-                dropDownMenu.AddOptions(optionItems);
-            }
-        }
-
-        private void RegisterButtons(ButtonType[] allowBtns, System.Action<ButtonType> btnEvent) {
+        private void RegisterButtons(string[] allowBtns, System.Action<string> btnEvent) {
             int btnlength = allowBtns.Length;
 
             for (int i = 0; i < btnlength; i++) {
-                var DialogueButtonObj = buttons.Find(x => x.type == allowBtns[i]);
+                int index = i;
+                GameObject buttonObj = Utility.UtilityMethod.CreateObjectToParent(buttonContainer, buttonPrefab);
+                Button button = buttonObj.GetComponent<Button>();
+                Text textObj = button.GetComponentInChildren<Text>();
 
-                DialogueButtonObj.gameObject.SetActive(true);
+                textObj.text = allowBtns[i];
 
-                DialogueButtonObj.SetBtnEvent((ButtonType type) =>
+                button.onClick.AddListener(() =>
                 {
                     Modals.instance.Close();
-
-                    btnEvent(type);
+                    btnEvent(allowBtns[index]);
                 });
             }
         }
@@ -79,9 +66,7 @@ namespace Expect.View
         private void ResetContent() {
             DecorateSideImage(null);
 
-            dropDownMenu.gameObject.SetActive(false);
-
-            buttons.ForEach(x => x.gameObject.SetActive(false));
+            Utility.UtilityMethod.ClearChildObject(buttonContainer);
         }
 
 

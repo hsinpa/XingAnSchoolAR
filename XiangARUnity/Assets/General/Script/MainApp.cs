@@ -26,7 +26,7 @@ public class MainApp : Singleton<MainApp>
     }
 
     public void Init() {
-
+        subject.notify(GeneralFlag.ObeserverEvent.AppStart);
     }
 
     private void RegisterAllController(Subject p_subject)
