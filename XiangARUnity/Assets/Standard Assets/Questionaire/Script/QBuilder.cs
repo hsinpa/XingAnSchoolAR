@@ -32,8 +32,6 @@ namespace Questionaire {
         {
             if (_qProcessor == null) return default(Ticket);
 
-            Reset();
-
             return _qProcessor.ProcessNextEvent(ParameterFlag.StaticEventID.Menu);
         }
 
@@ -54,6 +52,11 @@ namespace Questionaire {
 
         public List<string> GetFailMessageList() {
             return _qmodel.GetRecordFailMessage();
+        }
+
+        public void EditParameter(string p_key, string p_operator, float p_value) {
+            string validText = string.Format("{0} {1} {2}", p_key, p_operator, p_value);
+            this._qmodel.ImplementEffect(validText);
         }
 
         /// <summary>

@@ -1,461 +1,578 @@
 [
   {
-    "ChoiceID": "overall_database_01",
+    "ChoiceID": "area01_database_01",
     "UniqueID": "overall_unique_01",
-    "MainValue": "衝剪機械設備",
+    "MainValue": "春季問題_01",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "stamping_01",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "overall_database_01",
+    "ChoiceID": "area01_database_01",
     "UniqueID": "overall_unique_02",
-    "MainValue": "輸送帶",
+    "MainValue": "春季問題_02",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "conveyor_01",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "overall_database_01",
+    "ChoiceID": "area01_database_01",
     "UniqueID": "overall_unique_03",
-    "MainValue": "手持式沙輪機",
+    "MainValue": "春季問題_03",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "grinder_01",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "stamping_database_01",
-    "UniqueID": "stamping_id_01",
-    "MainValue": "儀表板檢查",
+    "ChoiceID": "area01_database_01",
+    "UniqueID": "overall_unique_04",
+    "MainValue": "春季問題_04",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "stamping_anime_07",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "stamping_database_01",
-    "UniqueID": "stamping_id_02",
-    "MainValue": "沖壓按鈕檢查",
+    "ChoiceID": "area01_database_02",
+    "UniqueID": "overall_unique_05",
+    "MainValue": "春季問題_05",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "stamping_03",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "stamping_database_01",
-    "UniqueID": "stamping_id_03",
-    "MainValue": "安全裝置檢查",
+    "ChoiceID": "area01_database_02",
+    "UniqueID": "overall_unique_06",
+    "MainValue": "春季問題_06",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "stamping_anime_10",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "stamping_database_01",
-    "UniqueID": "stamping_id_04",
-    "MainValue": "檢查完成",
+    "ChoiceID": "area01_database_02",
+    "UniqueID": "overall_unique_07",
+    "MainValue": "春季問題_07",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "stamping_anime_13",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "stamping_database_02",
-    "UniqueID": "stamping_id_07",
-    "MainValue": "油壓",
-    "Constraint": "",
-    "Effect": "stamping_variable_01 = 1",
-    "NextStep": "stamping_01",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "stamping_database_02",
-    "UniqueID": "stamping_id_08",
-    "MainValue": "超負荷",
-    "Constraint": "",
-    "Effect": "stamping_variable_01 = 0",
-    "NextStep": "stamping_01",
-    "Extra": "未檢測出油壓異常"
-  },
-  {
-    "ChoiceID": "stamping_database_02",
-    "UniqueID": "stamping_id_09",
-    "MainValue": "一切正常",
-    "Constraint": "",
-    "Effect": "stamping_variable_01 = 0",
-    "NextStep": "stamping_01",
-    "Extra": "未檢測出油壓異常"
-  },
-  {
-    "ChoiceID": "stamping_database_03",
-    "UniqueID": "stamping_id_10",
-    "MainValue": "單手按壓",
+    "ChoiceID": "area01_database_02",
+    "UniqueID": "overall_unique_08",
+    "MainValue": "春季問題_08",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "stamping_anime_08",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "stamping_database_03",
-    "UniqueID": "stamping_id_11",
-    "MainValue": "雙手持續按壓",
+    "ChoiceID": "area01_database_03",
+    "UniqueID": "overall_unique_09",
+    "MainValue": "春季問題_09",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "stamping_anime_09",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "stamping_database_04",
-    "UniqueID": "stamping_id_12",
-    "MainValue": "正常",
-    "Constraint": "",
-    "Effect": "stamping_variable_02 + 0",
-    "NextStep": "stamping_03",
-    "Extra": "應確認機具為雙手按壓"
-  },
-  {
-    "ChoiceID": "stamping_database_04",
-    "UniqueID": "stamping_id_13",
-    "MainValue": "異常",
-    "Constraint": "",
-    "Effect": "stamping_variable_02 + 1",
-    "NextStep": "stamping_03",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "stamping_database_05",
-    "UniqueID": "stamping_id_14",
-    "MainValue": "正常",
-    "Constraint": "",
-    "Effect": "stamping_variable_02 + 0",
-    "NextStep": "stamping_03",
-    "Extra": "應確認機器不會二度落下"
-  },
-  {
-    "ChoiceID": "stamping_database_05",
-    "UniqueID": "stamping_id_15",
-    "MainValue": "異常",
-    "Constraint": "",
-    "Effect": "stamping_variable_02 + 1",
-    "NextStep": "stamping_03",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "stamping_database_06",
-    "UniqueID": "stamping_id_16",
-    "MainValue": "正常",
-    "Constraint": "",
-    "Effect": "stamping_variable_04 = 0",
-    "NextStep": "stamping_01",
-    "Extra": "未檢測出光電異常"
-  },
-  {
-    "ChoiceID": "stamping_database_06",
-    "UniqueID": "stamping_id_17",
-    "MainValue": "異常 : 沒有燈號",
-    "Constraint": "",
-    "Effect": "stamping_variable_04 = 0",
-    "NextStep": "stamping_01",
-    "Extra": "未檢測出光電異常"
-  },
-  {
-    "ChoiceID": "stamping_database_06",
-    "UniqueID": "stamping_id_18",
-    "MainValue": "異常 : 機器沒有停",
-    "Constraint": "",
-    "Effect": "stamping_variable_04 = 1",
-    "NextStep": "stamping_01",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "stamping_database_06",
-    "UniqueID": "stamping_id_19",
-    "MainValue": "異常 : 沒有看到光電感應器",
-    "Constraint": "",
-    "Effect": "stamping_variable_04 = 0",
-    "NextStep": "stamping_01",
-    "Extra": "未檢測出光電異常"
-  },
-  {
-    "ChoiceID": "conveyor_database_01",
-    "UniqueID": "conveyor_id_01",
-    "MainValue": "環境檢點",
+    "ChoiceID": "area01_database_03",
+    "UniqueID": "overall_unique_10",
+    "MainValue": "春季問題_10",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "conveyor_animation_01",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "conveyor_database_02",
-    "UniqueID": "conveyor_id_02",
-    "MainValue": "地面油汙清除",
-    "Constraint": "",
-    "Effect": "conveyor_variable_01 = 1",
-    "NextStep": "conveyor_animation_02",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "conveyor_database_02",
-    "UniqueID": "conveyor_id_03",
-    "MainValue": "道路淨空",
-    "Constraint": "",
-    "Effect": "conveyor_variable_01 = 0",
-    "NextStep": "conveyor_animation_03",
-    "Extra": "未清理地面油汙"
-  },
-  {
-    "ChoiceID": "conveyor_database_03",
-    "UniqueID": "conveyor_id_04",
-    "MainValue": "拆除護圍",
-    "Constraint": "",
-    "Effect": "conveyor_variable_02 + 0",
-    "NextStep": "conveyor_animation_04",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "conveyor_database_03",
-    "UniqueID": "conveyor_id_05",
-    "MainValue": "輸送帶停機",
-    "Constraint": "",
-    "Effect": "conveyor_variable_02 + 1",
-    "NextStep": "conveyor_animation_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "conveyor_database_03",
-    "UniqueID": "conveyor_id_06",
-    "MainValue": "電源處掛牌上鎖",
-    "Constraint": "",
-    "Effect": "conveyor_variable_02 + 1",
-    "NextStep": "conveyor_animation_06",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "conveyor_database_04",
-    "UniqueID": "conveyor_id_07",
-    "MainValue": "使用鐵撬敲開輸送帶",
+    "ChoiceID": "area01_database_03",
+    "UniqueID": "overall_unique_11",
+    "MainValue": "春季問題_11",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "conveyor_animation_07",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "conveyor_database_05",
-    "UniqueID": "conveyor_id_08",
-    "MainValue": "抽取出廢料",
+    "ChoiceID": "area01_database_03",
+    "UniqueID": "overall_unique_12",
+    "MainValue": "春季問題_12",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "conveyor_animation_08",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "conveyor_database_06",
-    "UniqueID": "conveyor_id_09",
-    "MainValue": "安裝護圍",
-    "Constraint": "",
-    "Effect": "conveyor_variable_03 + 1",
-    "NextStep": "conveyor_animation_09",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "conveyor_database_06",
-    "UniqueID": "conveyor_id_10",
-    "MainValue": "啟動輸送帶",
-    "Constraint": "",
-    "Effect": "conveyor_variable_03 + 0",
-    "NextStep": "conveyor_animation_10",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "conveyor_database_06",
-    "UniqueID": "conveyor_id_11",
-    "MainValue": "去除掛牌上鎖",
-    "Constraint": "",
-    "Effect": "conveyor_variable_03 + 0",
-    "NextStep": "conveyor_animation_11",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "grinder_database_01",
-    "UniqueID": "grinder_id_01",
-    "MainValue": "操作前檢查項",
+    "ChoiceID": "area01_database_04",
+    "UniqueID": "overall_unique_13",
+    "MainValue": "春季問題_13",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "grinder_animation_01",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "grinder_database_01",
-    "UniqueID": "grinder_id_02",
-    "MainValue": "環境檢查",
+    "ChoiceID": "area01_database_04",
+    "UniqueID": "overall_unique_14",
+    "MainValue": "春季問題_14",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "grinder_animation_02",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "grinder_database_01",
-    "UniqueID": "grinder_id_03",
-    "MainValue": "車體研磨",
+    "ChoiceID": "area01_database_04",
+    "UniqueID": "overall_unique_15",
+    "MainValue": "春季問題_15",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "grinder_exam_1",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "grinder_database_02",
-    "UniqueID": "grinder_id_04",
-    "MainValue": "機殼檢查",
+    "ChoiceID": "area01_database_04",
+    "UniqueID": "overall_unique_16",
+    "MainValue": "春季問題_16",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "grinder_03",
+    "NextStep": "area01_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "grinder_database_02",
-    "UniqueID": "grinder_id_05",
-    "MainValue": "砂輪片檢查",
+    "ChoiceID": "area02_database_01",
+    "UniqueID": "overall_unique_17",
+    "MainValue": "夏季問題_01",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "grinder_04",
+    "NextStep": "area02_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "grinder_database_02",
-    "UniqueID": "grinder_id_06",
-    "MainValue": "遮蓋檢查",
+    "ChoiceID": "area02_database_01",
+    "UniqueID": "overall_unique_18",
+    "MainValue": "夏季問題_02",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "grinder_05",
+    "NextStep": "area02_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "grinder_database_03",
-    "UniqueID": "grinder_id_07",
-    "MainValue": "外殼老舊破損替換",
-    "Constraint": "",
-    "Effect": "grinder_variable_01 = 1",
-    "NextStep": "grinder_02",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "grinder_database_03",
-    "UniqueID": "grinder_id_08",
-    "MainValue": "正常無誤",
-    "Constraint": "",
-    "Effect": "grinder_variable_01 = 0",
-    "NextStep": "grinder_02",
-    "Extra": "機具操作前請先檢查機格是否磨損"
-  },
-  {
-    "ChoiceID": "grinder_database_04",
-    "UniqueID": "grinder_id_09",
-    "MainValue": "砂輪片破損更換",
-    "Constraint": "",
-    "Effect": "grinder_variable_02 = 1",
-    "NextStep": "grinder_02",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "grinder_database_04",
-    "UniqueID": "grinder_id_10",
-    "MainValue": "正常無誤",
-    "Constraint": "",
-    "Effect": "grinder_variable_02 = 0",
-    "NextStep": "grinder_02",
-    "Extra": "機具操作前請先檢查砂輪片是否磨損"
-  },
-  {
-    "ChoiceID": "grinder_database_05",
-    "UniqueID": "grinder_id_11",
-    "MainValue": "加裝遮蓋",
+    "ChoiceID": "area02_database_01",
+    "UniqueID": "overall_unique_19",
+    "MainValue": "夏季問題_03",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "grinder_02",
+    "NextStep": "area02_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "grinder_database_05",
-    "UniqueID": "grinder_id_12",
-    "MainValue": "正常無誤",
+    "ChoiceID": "area02_database_01",
+    "UniqueID": "overall_unique_20",
+    "MainValue": "夏季問題_04",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "grinder_02",
+    "NextStep": "area02_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "grinder_database_06",
-    "UniqueID": "grinder_id_13",
-    "MainValue": "桌面上油漆桶歸位",
-    "Constraint": "",
-    "Effect": "grinder_variable_04 = 1",
-    "NextStep": "grinder_01",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "grinder_database_06",
-    "UniqueID": "grinder_id_14",
-    "MainValue": "作業空間散亂進行整理",
-    "Constraint": "",
-    "Effect": "grinder_variable_04 = 0",
-    "NextStep": "grinder_01",
-    "Extra": "操作前需清除周遭易燃物"
-  },
-  {
-    "ChoiceID": "grinder_database_07",
-    "UniqueID": "grinder_id_15",
-    "MainValue": "角度",
+    "ChoiceID": "area02_database_02",
+    "UniqueID": "overall_unique_21",
+    "MainValue": "夏季問題_05",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "grinder_08",
+    "NextStep": "area02_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "grinder_database_07",
-    "UniqueID": "grinder_id_16",
-    "MainValue": "力道",
+    "ChoiceID": "area02_database_02",
+    "UniqueID": "overall_unique_22",
+    "MainValue": "夏季問題_06",
     "Constraint": "",
     "Effect": "",
-    "NextStep": "grinder_09",
+    "NextStep": "area02_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "grinder_database_08",
-    "UniqueID": "grinder_id_17",
-    "MainValue": "刀鋒垂直於工件",
+    "ChoiceID": "area02_database_02",
+    "UniqueID": "overall_unique_23",
+    "MainValue": "夏季問題_07",
     "Constraint": "",
-    "Effect": "grinder_variable_05 = 0",
-    "NextStep": "grinder_animation_06",
-    "Extra": "操作砂輪機請保持機具15度角"
-  },
-  {
-    "ChoiceID": "grinder_database_08",
-    "UniqueID": "grinder_id_18",
-    "MainValue": "刀測與工件角度頻斜",
-    "Constraint": "",
-    "Effect": "grinder_variable_05 = 1",
-    "NextStep": "grinder_07",
+    "Effect": "",
+    "NextStep": "area02_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "grinder_database_09",
-    "UniqueID": "grinder_id_19",
-    "MainValue": "輕推按壓",
+    "ChoiceID": "area02_database_02",
+    "UniqueID": "overall_unique_24",
+    "MainValue": "夏季問題_08",
     "Constraint": "",
-    "Effect": "grinder_variable_06 = 1",
-    "NextStep": "grinder_07",
+    "Effect": "",
+    "NextStep": "area02_05",
     "Extra": ""
   },
   {
-    "ChoiceID": "grinder_database_09",
-    "UniqueID": "grinder_id_20",
-    "MainValue": "重推按壓",
+    "ChoiceID": "area02_database_03",
+    "UniqueID": "overall_unique_25",
+    "MainValue": "夏季問題_09",
     "Constraint": "",
-    "Effect": "grinder_variable_06 = 0",
-    "NextStep": "grinder_animation_06",
-    "Extra": "操作砂輪機時請勿重壓"
+    "Effect": "",
+    "NextStep": "area02_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_03",
+    "UniqueID": "overall_unique_26",
+    "MainValue": "夏季問題_10",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area02_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_03",
+    "UniqueID": "overall_unique_27",
+    "MainValue": "夏季問題_11",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area02_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_03",
+    "UniqueID": "overall_unique_28",
+    "MainValue": "夏季問題_12",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area02_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_04",
+    "UniqueID": "overall_unique_29",
+    "MainValue": "夏季問題_13",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area02_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_04",
+    "UniqueID": "overall_unique_30",
+    "MainValue": "夏季問題_14",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area02_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_04",
+    "UniqueID": "overall_unique_31",
+    "MainValue": "夏季問題_15",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area02_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_04",
+    "UniqueID": "overall_unique_32",
+    "MainValue": "夏季問題_16",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area02_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_01",
+    "UniqueID": "overall_unique_33",
+    "MainValue": "秋季問題_01",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_01",
+    "UniqueID": "overall_unique_34",
+    "MainValue": "秋季問題_02",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_01",
+    "UniqueID": "overall_unique_35",
+    "MainValue": "秋季問題_03",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_01",
+    "UniqueID": "overall_unique_36",
+    "MainValue": "秋季問題_04",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_02",
+    "UniqueID": "overall_unique_37",
+    "MainValue": "秋季問題_05",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_02",
+    "UniqueID": "overall_unique_38",
+    "MainValue": "秋季問題_06",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_02",
+    "UniqueID": "overall_unique_39",
+    "MainValue": "秋季問題_07",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_02",
+    "UniqueID": "overall_unique_40",
+    "MainValue": "秋季問題_08",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_03",
+    "UniqueID": "overall_unique_41",
+    "MainValue": "秋季問題_09",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_03",
+    "UniqueID": "overall_unique_42",
+    "MainValue": "秋季問題_10",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_03",
+    "UniqueID": "overall_unique_43",
+    "MainValue": "秋季問題_11",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_03",
+    "UniqueID": "overall_unique_44",
+    "MainValue": "秋季問題_12",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_04",
+    "UniqueID": "overall_unique_45",
+    "MainValue": "秋季問題_13",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_04",
+    "UniqueID": "overall_unique_46",
+    "MainValue": "秋季問題_14",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_04",
+    "UniqueID": "overall_unique_47",
+    "MainValue": "秋季問題_15",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_04",
+    "UniqueID": "overall_unique_48",
+    "MainValue": "秋季問題_16",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area03_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_01",
+    "UniqueID": "overall_unique_49",
+    "MainValue": "冬季問題_01",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_01",
+    "UniqueID": "overall_unique_50",
+    "MainValue": "冬季問題_02",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_01",
+    "UniqueID": "overall_unique_51",
+    "MainValue": "冬季問題_03",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_01",
+    "UniqueID": "overall_unique_52",
+    "MainValue": "冬季問題_04",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_02",
+    "UniqueID": "overall_unique_53",
+    "MainValue": "冬季問題_05",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_02",
+    "UniqueID": "overall_unique_54",
+    "MainValue": "冬季問題_06",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_02",
+    "UniqueID": "overall_unique_55",
+    "MainValue": "冬季問題_07",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_02",
+    "UniqueID": "overall_unique_56",
+    "MainValue": "冬季問題_08",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_03",
+    "UniqueID": "overall_unique_57",
+    "MainValue": "冬季問題_09",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_03",
+    "UniqueID": "overall_unique_58",
+    "MainValue": "冬季問題_10",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_03",
+    "UniqueID": "overall_unique_59",
+    "MainValue": "冬季問題_11",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_03",
+    "UniqueID": "overall_unique_60",
+    "MainValue": "冬季問題_12",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_04",
+    "UniqueID": "overall_unique_61",
+    "MainValue": "冬季問題_13",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_04",
+    "UniqueID": "overall_unique_62",
+    "MainValue": "冬季問題_14",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_04",
+    "UniqueID": "overall_unique_63",
+    "MainValue": "冬季問題_15",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_04",
+    "UniqueID": "overall_unique_64",
+    "MainValue": "冬季問題_16",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "area04_05",
+    "Extra": ""
   }
 ]

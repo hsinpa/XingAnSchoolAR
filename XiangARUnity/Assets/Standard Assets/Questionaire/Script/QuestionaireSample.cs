@@ -23,6 +23,8 @@ public class QuestionaireSample : MonoBehaviour
     }
 
     void OnBuilderReady() {
+
+        qBuilder.EditParameter(ParameterFlag.StaticEventID.RandomValue, "=", UnityEngine.Random.Range(1, 5));
         currentTicket = qBuilder.StartFromBeginning();
         RenderStats(currentTicket);
     }

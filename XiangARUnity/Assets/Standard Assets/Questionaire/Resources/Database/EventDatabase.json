@@ -1,506 +1,200 @@
 [
-  {
-    "_ID": "general_state_00",
-    "Tag": "End",
-    "MainValue": "",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "general_state_01",
-    "Tag": "Success",
-    "MainValue": "",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "overall_01",
-    "Tag": "Question",
-    "MainValue": "選擇關卡",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "overall_database_01",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "stamping_01",
-    "Tag": "Question",
-    "MainValue": "衝剪項目",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "stamping_database_01",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "stamping_02",
-    "Tag": "Question",
-    "MainValue": "異常燈號確認",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "stamping_database_02",
-    "FallbackStop": "stamping_01"
-  },
-  {
-    "_ID": "stamping_03",
-    "Tag": "Question",
-    "MainValue": "沖壓按鈕檢查",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "stamping_database_03",
-    "FallbackStop": "stamping_01"
-  },
-  {
-    "_ID": "stamping_04",
-    "Tag": "Question",
-    "MainValue": "單手按壓 : 觀察結果",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "stamping_database_04",
-    "FallbackStop": "stamping_01"
-  },
-  {
-    "_ID": "stamping_05",
-    "Tag": "Question",
-    "MainValue": "雙手持續按壓 : 觀察結果",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "stamping_database_05",
-    "FallbackStop": "stamping_01"
-  },
-  {
-    "_ID": "stamping_06",
-    "Tag": "Question",
-    "MainValue": "光電感應檢查",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "stamping_database_06",
-    "FallbackStop": "stamping_01"
-  },
-  {
-    "_ID": "stamping_anime_07",
-    "Tag": "Animation",
-    "MainValue": "B1儀錶板檢查",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "stamping_02",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "stamping_anime_08",
-    "Tag": "Animation",
-    "MainValue": "B3單手按壓測試",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "stamping_04",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "stamping_anime_09",
-    "Tag": "Animation",
-    "MainValue": "B4雙手按壓測試",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "stamping_05",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "stamping_anime_10",
-    "Tag": "Animation",
-    "MainValue": "B5測試光電閘",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "stamping_06",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "stamping_anime_11",
-    "Tag": "Animation",
-    "MainValue": "B2機器故障停擺",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "general_state_00",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "stamping_anime_12",
-    "Tag": "Animation",
-    "MainValue": "B6夾到手",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "general_state_00",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "stamping_anime_14",
-    "Tag": "Animation",
-    "MainValue": "B7完成任務",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "general_state_01",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "stamping_anime_13",
-    "Tag": "Examination",
-    "MainValue": "",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "stamping_exam_01",
-    "FallbackStop": "stamping_anime_14"
-  },
-  {
-    "_ID": "conveyor_01",
-    "Tag": "Question",
-    "MainValue": "輸送帶",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_database_01",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_02",
-    "Tag": "Question",
-    "MainValue": "環境檢點",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_database_02",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_03",
-    "Tag": "Question",
-    "MainValue": "故障排除(取出廢料)",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_database_03",
-    "FallbackStop": "conveyor_exam_1"
-  },
-  {
-    "_ID": "conveyor_04",
-    "Tag": "Question",
-    "MainValue": "撬開輸送帶",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_database_04",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_05",
-    "Tag": "Question",
-    "MainValue": "修理輸送帶",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_database_05",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_06",
-    "Tag": "Question",
-    "MainValue": "善後程序",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_database_06",
-    "FallbackStop": "general_state_01"
-  },
-  {
-    "_ID": "conveyor_animation_01",
-    "Tag": "Animation",
-    "MainValue": "C1 發現油汙",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_02",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_animation_02",
-    "Tag": "Image",
-    "MainValue": "C2 清理油汙",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_03",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_animation_03",
-    "Tag": "Animation",
-    "MainValue": "C3 滑倒",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "general_state_00",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_animation_04",
-    "Tag": "Animation",
-    "MainValue": "C6 拉起鐵閘",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_exam_1",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_animation_05",
-    "Tag": "Animation",
-    "MainValue": "C4 按下緊急按鈕",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_03",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_animation_06",
-    "Tag": "Image",
-    "MainValue": "C5 掛牌上鎖",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_03",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_animation_07",
-    "Tag": "Animation",
-    "MainValue": "C7 撬開傳送帶",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_05",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_animation_08",
-    "Tag": "Animation",
-    "MainValue": "C8 拔出阻塞物",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_06",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_animation_09",
-    "Tag": "Animation",
-    "MainValue": "C9 放下鐵閘",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_06",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_animation_10",
-    "Tag": "Image",
-    "MainValue": "C10 重新啟動輸送帶",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_exam_2",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_animation_11",
-    "Tag": "Image",
-    "MainValue": "C11 撤掉牌及鎖",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_exam_2",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_animation_12",
-    "Tag": "Animation",
-    "MainValue": "C12 手被夾",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "general_state_00",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "conveyor_exam_1",
-    "Tag": "Examination",
-    "MainValue": "",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_exam_02",
-    "FallbackStop": "conveyor_04"
-  },
-  {
-    "_ID": "conveyor_exam_2",
-    "Tag": "Examination",
-    "MainValue": "",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "conveyor_exam_03",
-    "FallbackStop": "conveyor_06"
-  },
-  {
-    "_ID": "grinder_01",
-    "Tag": "Question",
-    "MainValue": "手持式砂輪機",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_database_01",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_02",
-    "Tag": "Question",
-    "MainValue": "操作前檢查項",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_database_02",
-    "FallbackStop": "grinder_01"
-  },
-  {
-    "_ID": "grinder_03",
-    "Tag": "Question",
-    "MainValue": "機殼檢查",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_database_03",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_04",
-    "Tag": "Question",
-    "MainValue": "砂輪片檢查",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_database_04",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_05",
-    "Tag": "Question",
-    "MainValue": "遮蓋檢查",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_database_05",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_06",
-    "Tag": "Question",
-    "MainValue": "環境檢查",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_database_06",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_07",
-    "Tag": "Question",
-    "MainValue": "研磨車體毛邊去除",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_database_07",
-    "FallbackStop": "grinder_animation_09"
-  },
-  {
-    "_ID": "grinder_08",
-    "Tag": "Question",
-    "MainValue": "角度",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_database_08",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_09",
-    "Tag": "Question",
-    "MainValue": "力道",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_database_09",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_animation_01",
-    "Tag": "Animation",
-    "MainValue": "a1機具檢查",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_02",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_animation_02",
-    "Tag": "Animation",
-    "MainValue": "a2檢視易燃物",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_06",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_animation_03",
-    "Tag": "Animation",
-    "MainValue": "a3觸電",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "general_state_00",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_animation_04",
-    "Tag": "Animation",
-    "MainValue": "a4爆炸",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "general_state_00",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_animation_05",
-    "Tag": "Animation",
-    "MainValue": "a5魔片破裂",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "general_state_00",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_animation_06",
-    "Tag": "Animation",
-    "MainValue": "a6磨片角度錯誤",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "general_state_00",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_animation_07",
-    "Tag": "Image",
-    "MainValue": "a7修改機殼",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_02",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_animation_08",
-    "Tag": "Image",
-    "MainValue": "a8修改磨盤",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_02",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_animation_09",
-    "Tag": "Animation",
-    "MainValue": "a9研磨完成",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "general_state_01",
-    "FallbackStop": ""
-  },
-  {
-    "_ID": "grinder_exam_1",
-    "Tag": "Examination",
-    "MainValue": "",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "grinder_exam_01",
-    "FallbackStop": "grinder_07"
-  }
+    {
+        "_ID": "general_state_00",
+        "Tag": "End",
+        "MainValue": "",
+        "Constraint": "",
+        "Effect": "",
+        "NextStop": "",
+        "FallbackStop": ""
+    },
+    {
+        "_ID": "general_state_01",
+        "Tag": "Continue",
+        "MainValue": "",
+        "Constraint": "",
+        "Effect": "",
+        "NextStop": "",
+        "FallbackStop": ""
+    },
+    {
+        "_ID": "area01_01",
+        "Tag": "Question",
+        "MainValue": "春季題目：1",
+        "Constraint": "random_value == 1",
+        "Effect": "finish_area + 1",
+        "NextStop": "area01_database_01",
+        "FallbackStop": "area01_02"
+    },
+    {
+        "_ID": "area01_02",
+        "Tag": "Question",
+        "MainValue": "春季題目：2",
+        "Constraint": "random_value == 2",
+        "Effect": "finish_area + 1",
+        "NextStop": "area01_database_02",
+        "FallbackStop": "area01_03"
+    },
+    {
+        "_ID": "area01_03",
+        "Tag": "Question",
+        "MainValue": "春季題目：3",
+        "Constraint": "random_value == 3",
+        "Effect": "finish_area + 1",
+        "NextStop": "area01_database_03",
+        "FallbackStop": "area01_04"
+    },
+    {
+        "_ID": "area01_04",
+        "Tag": "Question",
+        "MainValue": "春季題目：4",
+        "Constraint": "random_value == 4",
+        "Effect": "finish_area + 1",
+        "NextStop": "area01_database_04",
+        "FallbackStop": "area01_05"
+    },
+    {
+        "_ID": "area01_05",
+        "Tag": "Examination",
+        "MainValue": "",
+        "Constraint": "",
+        "Effect": "",
+        "NextStop": "",
+        "FallbackStop": "area02_01"
+    },
+    {
+        "_ID": "area02_01",
+        "Tag": "Question",
+        "MainValue": "夏季題目 : 1",
+        "Constraint": "random_value == 1",
+        "Effect": "finish_area + 1",
+        "NextStop": "area02_database_01",
+        "FallbackStop": "area02_02"
+    },
+    {
+        "_ID": "area02_02",
+        "Tag": "Question",
+        "MainValue": "夏季題目 : 2",
+        "Constraint": "random_value == 2",
+        "Effect": "finish_area + 1",
+        "NextStop": "area02_database_02",
+        "FallbackStop": "area02_03"
+    },
+    {
+        "_ID": "area02_03",
+        "Tag": "Question",
+        "MainValue": "夏季題目 : 3",
+        "Constraint": "random_value == 3",
+        "Effect": "finish_area + 1",
+        "NextStop": "area02_database_03",
+        "FallbackStop": "area02_04"
+    },
+    {
+        "_ID": "area02_04",
+        "Tag": "Question",
+        "MainValue": "夏季題目 : 4",
+        "Constraint": "random_value == 4",
+        "Effect": "finish_area + 1",
+        "NextStop": "area02_database_04",
+        "FallbackStop": "area02_05"
+    },
+    {
+        "_ID": "area02_05",
+        "Tag": "Examination",
+        "MainValue": "",
+        "Constraint": "",
+        "Effect": "",
+        "NextStop": "",
+        "FallbackStop": "area03_01"
+    },
+    {
+        "_ID": "area03_01",
+        "Tag": "Question",
+        "MainValue": "秋季題目 : 1",
+        "Constraint": "random_value == 1",
+        "Effect": "finish_area + 1",
+        "NextStop": "area03_database_01",
+        "FallbackStop": "area03_02"
+    },
+    {
+        "_ID": "area03_02",
+        "Tag": "Question",
+        "MainValue": "秋季題目 : 2",
+        "Constraint": "random_value == 2",
+        "Effect": "finish_area + 1",
+        "NextStop": "area03_database_02",
+        "FallbackStop": "area03_03"
+    },
+    {
+        "_ID": "area03_03",
+        "Tag": "Question",
+        "MainValue": "秋季題目 : 3",
+        "Constraint": "random_value == 3",
+        "Effect": "finish_area + 1",
+        "NextStop": "area03_database_03",
+        "FallbackStop": "area03_04"
+    },
+    {
+        "_ID": "area03_04",
+        "Tag": "Question",
+        "MainValue": "秋季題目 : 4",
+        "Constraint": "random_value == 4",
+        "Effect": "finish_area + 1",
+        "NextStop": "area03_database_04",
+        "FallbackStop": "area03_05"
+    },
+    {
+        "_ID": "area03_05",
+        "Tag": "Examination",
+        "MainValue": "",
+        "Constraint": "",
+        "Effect": "",
+        "NextStop": "",
+        "FallbackStop": "area04_01"
+    },
+    {
+        "_ID": "area04_01",
+        "Tag": "Question",
+        "MainValue": "冬季題目 : 1",
+        "Constraint": "random_value == 1",
+        "Effect": "finish_area + 1",
+        "NextStop": "area04_database_01",
+        "FallbackStop": "area04_02"
+    },
+    {
+        "_ID": "area04_02",
+        "Tag": "Question",
+        "MainValue": "冬季題目 : 2",
+        "Constraint": "random_value == 2",
+        "Effect": "finish_area + 1",
+        "NextStop": "area04_database_02",
+        "FallbackStop": "area04_03"
+    },
+    {
+        "_ID": "area04_03",
+        "Tag": "Question",
+        "MainValue": "冬季題目 : 3",
+        "Constraint": "random_value == 3",
+        "Effect": "finish_area + 1",
+        "NextStop": "area04_database_03",
+        "FallbackStop": "area04_04"
+    },
+    {
+        "_ID": "area04_04",
+        "Tag": "Question",
+        "MainValue": "冬季題目 : 4",
+        "Constraint": "random_value == 4",
+        "Effect": "finish_area + 1",
+        "NextStop": "area04_database_04",
+        "FallbackStop": "area04_05"
+    },
+    {
+        "_ID": "area04_05",
+        "Tag": "Examination",
+        "MainValue": "",
+        "Constraint": "",
+        "Effect": "",
+        "NextStop": "area_exam_01",
+        "FallbackStop": ""
+    }
 ]

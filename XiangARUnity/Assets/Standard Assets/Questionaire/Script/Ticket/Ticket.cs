@@ -9,6 +9,8 @@ namespace Questionaire
     {
         public EventStats eventStats;
 
+        public int index;
+
         //Only tag => Choice will have this variable
         public List<ChoiceStats> choiceStats;
 

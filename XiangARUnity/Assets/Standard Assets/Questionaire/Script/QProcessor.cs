@@ -25,18 +25,24 @@ namespace Questionaire
         }
 
         public Ticket ProcessTicket(Ticket ticket) {
+
             return ProcessNextEvent(ticket.eventStats.NextStop);
         }
 
         public Ticket ProcessNextEvent(string event_id) {
             Ticket ticket = GetTicketFromID(event_id);
+
+
+
             if (ticket.valid) {
 
                 if (ticket.eventStats.Tag == ParameterFlag.EventTag.Examination) {
                     return ProcessExamination(ticket);
                 }
 
-                if (ticket.eventStats.Tag == ParameterFlag.EventTag.Question && ticket.choiceStats.Count <= 0) {
+                bool hasPass = this._qmodel.CheckConstraint(ticket.eventStats.Constraint);
+
+                if ((ticket.eventStats.Tag == ParameterFlag.EventTag.Question && ticket.choiceStats.Count <= 0) || !hasPass) {
                     return ProcessNextEvent(ticket.eventStats.FallbackStop);
                 }
             }
@@ -60,8 +66,30 @@ namespace Questionaire
                 ticket = GetChoiceTagTicket(ticket, eventStat);
             }
 
+            ticket.index = EventStatsIndex;
+
             return ticket;
         }
+
+        private Ticket GetTicketByIndex(int index) {
+            var ticket = new Ticket();
+
+            if (this._rawParseResult.EventStats.Count > index) return ticket;
+
+            EventStats eventStat = this._rawParseResult.EventStats[index];
+
+            ticket.eventStats = eventStat;
+
+            if (eventStat.Tag == ParameterFlag.EventTag.Question)
+            {
+                ticket = GetChoiceTagTicket(ticket, eventStat);
+            }
+
+            ticket.index = index;
+
+            return ticket;
+        }
+
 
         #region Process Examination 
         private Ticket ProcessExamination(Ticket ticket) {

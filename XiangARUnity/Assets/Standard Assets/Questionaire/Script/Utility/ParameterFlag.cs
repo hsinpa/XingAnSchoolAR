@@ -15,7 +15,9 @@ namespace Questionaire
         }
 
         public class StaticEventID {
-            public const string Menu = "overall_01";
+            public const string Menu = "area01_01";
+            public const string RandomValue = "random_value";
+            public const string ClassLevel = "class_level";
         }
 
         public class DatabasePath {
