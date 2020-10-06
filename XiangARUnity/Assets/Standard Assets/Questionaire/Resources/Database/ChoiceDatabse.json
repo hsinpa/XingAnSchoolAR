@@ -1,0 +1,461 @@
+[
+  {
+    "ChoiceID": "overall_database_01",
+    "UniqueID": "overall_unique_01",
+    "MainValue": "衝剪機械設備",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "stamping_01",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "overall_database_01",
+    "UniqueID": "overall_unique_02",
+    "MainValue": "輸送帶",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "conveyor_01",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "overall_database_01",
+    "UniqueID": "overall_unique_03",
+    "MainValue": "手持式沙輪機",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "grinder_01",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "stamping_database_01",
+    "UniqueID": "stamping_id_01",
+    "MainValue": "儀表板檢查",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "stamping_anime_07",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "stamping_database_01",
+    "UniqueID": "stamping_id_02",
+    "MainValue": "沖壓按鈕檢查",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "stamping_03",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "stamping_database_01",
+    "UniqueID": "stamping_id_03",
+    "MainValue": "安全裝置檢查",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "stamping_anime_10",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "stamping_database_01",
+    "UniqueID": "stamping_id_04",
+    "MainValue": "檢查完成",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "stamping_anime_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "stamping_database_02",
+    "UniqueID": "stamping_id_07",
+    "MainValue": "油壓",
+    "Constraint": "",
+    "Effect": "stamping_variable_01 = 1",
+    "NextStep": "stamping_01",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "stamping_database_02",
+    "UniqueID": "stamping_id_08",
+    "MainValue": "超負荷",
+    "Constraint": "",
+    "Effect": "stamping_variable_01 = 0",
+    "NextStep": "stamping_01",
+    "Extra": "未檢測出油壓異常"
+  },
+  {
+    "ChoiceID": "stamping_database_02",
+    "UniqueID": "stamping_id_09",
+    "MainValue": "一切正常",
+    "Constraint": "",
+    "Effect": "stamping_variable_01 = 0",
+    "NextStep": "stamping_01",
+    "Extra": "未檢測出油壓異常"
+  },
+  {
+    "ChoiceID": "stamping_database_03",
+    "UniqueID": "stamping_id_10",
+    "MainValue": "單手按壓",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "stamping_anime_08",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "stamping_database_03",
+    "UniqueID": "stamping_id_11",
+    "MainValue": "雙手持續按壓",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "stamping_anime_09",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "stamping_database_04",
+    "UniqueID": "stamping_id_12",
+    "MainValue": "正常",
+    "Constraint": "",
+    "Effect": "stamping_variable_02 + 0",
+    "NextStep": "stamping_03",
+    "Extra": "應確認機具為雙手按壓"
+  },
+  {
+    "ChoiceID": "stamping_database_04",
+    "UniqueID": "stamping_id_13",
+    "MainValue": "異常",
+    "Constraint": "",
+    "Effect": "stamping_variable_02 + 1",
+    "NextStep": "stamping_03",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "stamping_database_05",
+    "UniqueID": "stamping_id_14",
+    "MainValue": "正常",
+    "Constraint": "",
+    "Effect": "stamping_variable_02 + 0",
+    "NextStep": "stamping_03",
+    "Extra": "應確認機器不會二度落下"
+  },
+  {
+    "ChoiceID": "stamping_database_05",
+    "UniqueID": "stamping_id_15",
+    "MainValue": "異常",
+    "Constraint": "",
+    "Effect": "stamping_variable_02 + 1",
+    "NextStep": "stamping_03",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "stamping_database_06",
+    "UniqueID": "stamping_id_16",
+    "MainValue": "正常",
+    "Constraint": "",
+    "Effect": "stamping_variable_04 = 0",
+    "NextStep": "stamping_01",
+    "Extra": "未檢測出光電異常"
+  },
+  {
+    "ChoiceID": "stamping_database_06",
+    "UniqueID": "stamping_id_17",
+    "MainValue": "異常 : 沒有燈號",
+    "Constraint": "",
+    "Effect": "stamping_variable_04 = 0",
+    "NextStep": "stamping_01",
+    "Extra": "未檢測出光電異常"
+  },
+  {
+    "ChoiceID": "stamping_database_06",
+    "UniqueID": "stamping_id_18",
+    "MainValue": "異常 : 機器沒有停",
+    "Constraint": "",
+    "Effect": "stamping_variable_04 = 1",
+    "NextStep": "stamping_01",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "stamping_database_06",
+    "UniqueID": "stamping_id_19",
+    "MainValue": "異常 : 沒有看到光電感應器",
+    "Constraint": "",
+    "Effect": "stamping_variable_04 = 0",
+    "NextStep": "stamping_01",
+    "Extra": "未檢測出光電異常"
+  },
+  {
+    "ChoiceID": "conveyor_database_01",
+    "UniqueID": "conveyor_id_01",
+    "MainValue": "環境檢點",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "conveyor_animation_01",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "conveyor_database_02",
+    "UniqueID": "conveyor_id_02",
+    "MainValue": "地面油汙清除",
+    "Constraint": "",
+    "Effect": "conveyor_variable_01 = 1",
+    "NextStep": "conveyor_animation_02",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "conveyor_database_02",
+    "UniqueID": "conveyor_id_03",
+    "MainValue": "道路淨空",
+    "Constraint": "",
+    "Effect": "conveyor_variable_01 = 0",
+    "NextStep": "conveyor_animation_03",
+    "Extra": "未清理地面油汙"
+  },
+  {
+    "ChoiceID": "conveyor_database_03",
+    "UniqueID": "conveyor_id_04",
+    "MainValue": "拆除護圍",
+    "Constraint": "",
+    "Effect": "conveyor_variable_02 + 0",
+    "NextStep": "conveyor_animation_04",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "conveyor_database_03",
+    "UniqueID": "conveyor_id_05",
+    "MainValue": "輸送帶停機",
+    "Constraint": "",
+    "Effect": "conveyor_variable_02 + 1",
+    "NextStep": "conveyor_animation_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "conveyor_database_03",
+    "UniqueID": "conveyor_id_06",
+    "MainValue": "電源處掛牌上鎖",
+    "Constraint": "",
+    "Effect": "conveyor_variable_02 + 1",
+    "NextStep": "conveyor_animation_06",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "conveyor_database_04",
+    "UniqueID": "conveyor_id_07",
+    "MainValue": "使用鐵撬敲開輸送帶",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "conveyor_animation_07",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "conveyor_database_05",
+    "UniqueID": "conveyor_id_08",
+    "MainValue": "抽取出廢料",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "conveyor_animation_08",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "conveyor_database_06",
+    "UniqueID": "conveyor_id_09",
+    "MainValue": "安裝護圍",
+    "Constraint": "",
+    "Effect": "conveyor_variable_03 + 1",
+    "NextStep": "conveyor_animation_09",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "conveyor_database_06",
+    "UniqueID": "conveyor_id_10",
+    "MainValue": "啟動輸送帶",
+    "Constraint": "",
+    "Effect": "conveyor_variable_03 + 0",
+    "NextStep": "conveyor_animation_10",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "conveyor_database_06",
+    "UniqueID": "conveyor_id_11",
+    "MainValue": "去除掛牌上鎖",
+    "Constraint": "",
+    "Effect": "conveyor_variable_03 + 0",
+    "NextStep": "conveyor_animation_11",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_01",
+    "UniqueID": "grinder_id_01",
+    "MainValue": "操作前檢查項",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "grinder_animation_01",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_01",
+    "UniqueID": "grinder_id_02",
+    "MainValue": "環境檢查",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "grinder_animation_02",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_01",
+    "UniqueID": "grinder_id_03",
+    "MainValue": "車體研磨",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "grinder_exam_1",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_02",
+    "UniqueID": "grinder_id_04",
+    "MainValue": "機殼檢查",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "grinder_03",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_02",
+    "UniqueID": "grinder_id_05",
+    "MainValue": "砂輪片檢查",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "grinder_04",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_02",
+    "UniqueID": "grinder_id_06",
+    "MainValue": "遮蓋檢查",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "grinder_05",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_03",
+    "UniqueID": "grinder_id_07",
+    "MainValue": "外殼老舊破損替換",
+    "Constraint": "",
+    "Effect": "grinder_variable_01 = 1",
+    "NextStep": "grinder_02",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_03",
+    "UniqueID": "grinder_id_08",
+    "MainValue": "正常無誤",
+    "Constraint": "",
+    "Effect": "grinder_variable_01 = 0",
+    "NextStep": "grinder_02",
+    "Extra": "機具操作前請先檢查機格是否磨損"
+  },
+  {
+    "ChoiceID": "grinder_database_04",
+    "UniqueID": "grinder_id_09",
+    "MainValue": "砂輪片破損更換",
+    "Constraint": "",
+    "Effect": "grinder_variable_02 = 1",
+    "NextStep": "grinder_02",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_04",
+    "UniqueID": "grinder_id_10",
+    "MainValue": "正常無誤",
+    "Constraint": "",
+    "Effect": "grinder_variable_02 = 0",
+    "NextStep": "grinder_02",
+    "Extra": "機具操作前請先檢查砂輪片是否磨損"
+  },
+  {
+    "ChoiceID": "grinder_database_05",
+    "UniqueID": "grinder_id_11",
+    "MainValue": "加裝遮蓋",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "grinder_02",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_05",
+    "UniqueID": "grinder_id_12",
+    "MainValue": "正常無誤",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "grinder_02",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_06",
+    "UniqueID": "grinder_id_13",
+    "MainValue": "桌面上油漆桶歸位",
+    "Constraint": "",
+    "Effect": "grinder_variable_04 = 1",
+    "NextStep": "grinder_01",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_06",
+    "UniqueID": "grinder_id_14",
+    "MainValue": "作業空間散亂進行整理",
+    "Constraint": "",
+    "Effect": "grinder_variable_04 = 0",
+    "NextStep": "grinder_01",
+    "Extra": "操作前需清除周遭易燃物"
+  },
+  {
+    "ChoiceID": "grinder_database_07",
+    "UniqueID": "grinder_id_15",
+    "MainValue": "角度",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "grinder_08",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_07",
+    "UniqueID": "grinder_id_16",
+    "MainValue": "力道",
+    "Constraint": "",
+    "Effect": "",
+    "NextStep": "grinder_09",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_08",
+    "UniqueID": "grinder_id_17",
+    "MainValue": "刀鋒垂直於工件",
+    "Constraint": "",
+    "Effect": "grinder_variable_05 = 0",
+    "NextStep": "grinder_animation_06",
+    "Extra": "操作砂輪機請保持機具15度角"
+  },
+  {
+    "ChoiceID": "grinder_database_08",
+    "UniqueID": "grinder_id_18",
+    "MainValue": "刀測與工件角度頻斜",
+    "Constraint": "",
+    "Effect": "grinder_variable_05 = 1",
+    "NextStep": "grinder_07",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_09",
+    "UniqueID": "grinder_id_19",
+    "MainValue": "輕推按壓",
+    "Constraint": "",
+    "Effect": "grinder_variable_06 = 1",
+    "NextStep": "grinder_07",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_database_09",
+    "UniqueID": "grinder_id_20",
+    "MainValue": "重推按壓",
+    "Constraint": "",
+    "Effect": "grinder_variable_06 = 0",
+    "NextStep": "grinder_animation_06",
+    "Extra": "操作砂輪機時請勿重壓"
+  }
+]

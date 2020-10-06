@@ -1,0 +1,65 @@
+[
+  {
+    "ChoiceID": "stamping_exam_01",
+    "UniqueID": "exam_uuid_01",
+    "MainValue": "",
+    "Constraint": "stamping_variable_01 ==  0",
+    "Effect": "",
+    "NextStep": "stamping_anime_11",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "stamping_exam_01",
+    "UniqueID": "exam_uuid_02",
+    "MainValue": "",
+    "Constraint": "stamping_variable_02 ==  0 & stamping_variable_04 == 0",
+    "Effect": "",
+    "NextStep": "stamping_anime_12",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "conveyor_exam_02",
+    "UniqueID": "exam_uuid_03",
+    "MainValue": "",
+    "Constraint": "conveyor_variable_02 < 2",
+    "Effect": "",
+    "NextStep": "conveyor_animation_12",
+    "Extra": "請勿在未按下緊急停止下進行操作"
+  },
+  {
+    "ChoiceID": "conveyor_exam_03",
+    "UniqueID": "exam_uuid_04",
+    "MainValue": "",
+    "Constraint": "conveyor_variable_03 < 1",
+    "Effect": "",
+    "NextStep": "conveyor_animation_12",
+    "Extra": "勿在操作完成前啟動機具"
+  },
+  {
+    "ChoiceID": "grinder_exam_01",
+    "UniqueID": "exam_uuid_05",
+    "MainValue": "",
+    "Constraint": "grinder_variable_01 == 0",
+    "Effect": "",
+    "NextStep": "grinder_animation_03",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_exam_01",
+    "UniqueID": "exam_uuid_06",
+    "MainValue": "",
+    "Constraint": "grinder_variable_02 == 0",
+    "Effect": "",
+    "NextStep": "grinder_animation_04",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "grinder_exam_01",
+    "UniqueID": "exam_uuid_07",
+    "MainValue": "",
+    "Constraint": "grinder_variable_04 == 0",
+    "Effect": "",
+    "NextStep": "grinder_animation_05",
+    "Extra": ""
+  }
+]
