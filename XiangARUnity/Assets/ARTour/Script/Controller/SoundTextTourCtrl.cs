@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Expect.View;
+using Hsinpa.View;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,6 +20,7 @@ namespace Expect.ARTour
         public static System.Action<ARDataSync> OnDataSync;
 
         ARDataSync _arDataSync;
+        ARTourModel _model;
 
         private GeneralFlag.ARTourTheme _arTourTheme = GeneralFlag.ARTourTheme.None;
 
@@ -38,6 +41,8 @@ namespace Expect.ARTour
         private void Start()
         {
             _arDataSync = new ARDataSync();
+            _model = MainApp.Instance.model.GetModel<ARTourModel>();
+
             tourButton.onClick.AddListener(OnClickTourBtn);
             updateButton.onClick.AddListener(OnARObjectUpdateBtn);
 
@@ -48,6 +53,15 @@ namespace Expect.ARTour
 
         private void OnClickTourBtn() {
             if (_arTourTheme == GeneralFlag.ARTourTheme.None) return;
+
+            TourView tourModal = Modals.instance.OpenModal<TourView>();
+            tourModal.SetUp(_arTourTheme, _model, "Game is foot", OnQuestionStartClick);
+        }
+
+        private void OnQuestionStartClick() {
+            if (GeneralFlag.QThemeLookUpTable.TryGetValue(_arTourTheme, out string firstQEventKey)) {
+                MainApp.Instance.Notify(GeneralFlag.ObeserverEvent.QuizStart, firstQEventKey);
+            }
         }
 
         private void OnARObjectUpdateBtn()

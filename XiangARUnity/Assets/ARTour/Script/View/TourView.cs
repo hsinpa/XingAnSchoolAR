@@ -41,6 +41,8 @@ namespace Expect.View
         }
 
         private void OnQuestionaireClick() {
+            Modals.instance.Close();
+
             if (OnQuestionStartCallback != null)
                 OnQuestionStartCallback();
         }

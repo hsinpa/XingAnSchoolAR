@@ -14,14 +14,17 @@ public class MainApp : Singleton<MainApp>
 
     public ModelManager model;
 
-    private void Start()
+    private void Awake()
     {
         subject = new Subject();
 
         RegisterModel();
 
         RegisterAllController(subject);
+    }
 
+    private void Start()
+    {
         Init();
     }
 
@@ -54,6 +57,7 @@ public class MainApp : Singleton<MainApp>
         if (modelHolder == null) return;
 
         model = modelHolder.GetComponent<ModelManager>();
+        model.SetUp();
     }
 
 
