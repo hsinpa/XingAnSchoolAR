@@ -1,200 +1,200 @@
 [
-    {
-        "_ID": "general_state_00",
-        "Tag": "End",
-        "MainValue": "",
-        "Constraint": "",
-        "Effect": "",
-        "NextStop": "",
-        "FallbackStop": ""
-    },
-    {
-        "_ID": "general_state_01",
-        "Tag": "Continue",
-        "MainValue": "",
-        "Constraint": "",
-        "Effect": "",
-        "NextStop": "",
-        "FallbackStop": ""
-    },
-    {
-        "_ID": "area01_01",
-        "Tag": "Question",
-        "MainValue": "春季題目：1",
-        "Constraint": "random_value == 1",
-        "Effect": "finish_area + 1",
-        "NextStop": "area01_database_01",
-        "FallbackStop": "area01_02"
-    },
-    {
-        "_ID": "area01_02",
-        "Tag": "Question",
-        "MainValue": "春季題目：2",
-        "Constraint": "random_value == 2",
-        "Effect": "finish_area + 1",
-        "NextStop": "area01_database_02",
-        "FallbackStop": "area01_03"
-    },
-    {
-        "_ID": "area01_03",
-        "Tag": "Question",
-        "MainValue": "春季題目：3",
-        "Constraint": "random_value == 3",
-        "Effect": "finish_area + 1",
-        "NextStop": "area01_database_03",
-        "FallbackStop": "area01_04"
-    },
-    {
-        "_ID": "area01_04",
-        "Tag": "Question",
-        "MainValue": "春季題目：4",
-        "Constraint": "random_value == 4",
-        "Effect": "finish_area + 1",
-        "NextStop": "area01_database_04",
-        "FallbackStop": "area01_05"
-    },
-    {
-        "_ID": "area01_05",
-        "Tag": "Examination",
-        "MainValue": "",
-        "Constraint": "",
-        "Effect": "",
-        "NextStop": "",
-        "FallbackStop": "area02_01"
-    },
-    {
-        "_ID": "area02_01",
-        "Tag": "Question",
-        "MainValue": "夏季題目 : 1",
-        "Constraint": "random_value == 1",
-        "Effect": "finish_area + 1",
-        "NextStop": "area02_database_01",
-        "FallbackStop": "area02_02"
-    },
-    {
-        "_ID": "area02_02",
-        "Tag": "Question",
-        "MainValue": "夏季題目 : 2",
-        "Constraint": "random_value == 2",
-        "Effect": "finish_area + 1",
-        "NextStop": "area02_database_02",
-        "FallbackStop": "area02_03"
-    },
-    {
-        "_ID": "area02_03",
-        "Tag": "Question",
-        "MainValue": "夏季題目 : 3",
-        "Constraint": "random_value == 3",
-        "Effect": "finish_area + 1",
-        "NextStop": "area02_database_03",
-        "FallbackStop": "area02_04"
-    },
-    {
-        "_ID": "area02_04",
-        "Tag": "Question",
-        "MainValue": "夏季題目 : 4",
-        "Constraint": "random_value == 4",
-        "Effect": "finish_area + 1",
-        "NextStop": "area02_database_04",
-        "FallbackStop": "area02_05"
-    },
-    {
-        "_ID": "area02_05",
-        "Tag": "Examination",
-        "MainValue": "",
-        "Constraint": "",
-        "Effect": "",
-        "NextStop": "",
-        "FallbackStop": "area03_01"
-    },
-    {
-        "_ID": "area03_01",
-        "Tag": "Question",
-        "MainValue": "秋季題目 : 1",
-        "Constraint": "random_value == 1",
-        "Effect": "finish_area + 1",
-        "NextStop": "area03_database_01",
-        "FallbackStop": "area03_02"
-    },
-    {
-        "_ID": "area03_02",
-        "Tag": "Question",
-        "MainValue": "秋季題目 : 2",
-        "Constraint": "random_value == 2",
-        "Effect": "finish_area + 1",
-        "NextStop": "area03_database_02",
-        "FallbackStop": "area03_03"
-    },
-    {
-        "_ID": "area03_03",
-        "Tag": "Question",
-        "MainValue": "秋季題目 : 3",
-        "Constraint": "random_value == 3",
-        "Effect": "finish_area + 1",
-        "NextStop": "area03_database_03",
-        "FallbackStop": "area03_04"
-    },
-    {
-        "_ID": "area03_04",
-        "Tag": "Question",
-        "MainValue": "秋季題目 : 4",
-        "Constraint": "random_value == 4",
-        "Effect": "finish_area + 1",
-        "NextStop": "area03_database_04",
-        "FallbackStop": "area03_05"
-    },
-    {
-        "_ID": "area03_05",
-        "Tag": "Examination",
-        "MainValue": "",
-        "Constraint": "",
-        "Effect": "",
-        "NextStop": "",
-        "FallbackStop": "area04_01"
-    },
-    {
-        "_ID": "area04_01",
-        "Tag": "Question",
-        "MainValue": "冬季題目 : 1",
-        "Constraint": "random_value == 1",
-        "Effect": "finish_area + 1",
-        "NextStop": "area04_database_01",
-        "FallbackStop": "area04_02"
-    },
-    {
-        "_ID": "area04_02",
-        "Tag": "Question",
-        "MainValue": "冬季題目 : 2",
-        "Constraint": "random_value == 2",
-        "Effect": "finish_area + 1",
-        "NextStop": "area04_database_02",
-        "FallbackStop": "area04_03"
-    },
-    {
-        "_ID": "area04_03",
-        "Tag": "Question",
-        "MainValue": "冬季題目 : 3",
-        "Constraint": "random_value == 3",
-        "Effect": "finish_area + 1",
-        "NextStop": "area04_database_03",
-        "FallbackStop": "area04_04"
-    },
-    {
-        "_ID": "area04_04",
-        "Tag": "Question",
-        "MainValue": "冬季題目 : 4",
-        "Constraint": "random_value == 4",
-        "Effect": "finish_area + 1",
-        "NextStop": "area04_database_04",
-        "FallbackStop": "area04_05"
-    },
-    {
-        "_ID": "area04_05",
-        "Tag": "Examination",
-        "MainValue": "",
-        "Constraint": "",
-        "Effect": "",
-        "NextStop": "area_exam_01",
-        "FallbackStop": ""
-    }
+  {
+    "_ID": "general_state_00",
+    "Tag": "End",
+    "MainValue": "",
+    "Constraint": "",
+    "Effect": "",
+    "NextStop": "",
+    "FallbackStop": ""
+  },
+  {
+    "_ID": "general_state_01",
+    "Tag": "Continue",
+    "MainValue": "",
+    "Constraint": "",
+    "Effect": "",
+    "NextStop": "",
+    "FallbackStop": ""
+  },
+  {
+    "_ID": "area01_01",
+    "Tag": "Question",
+    "MainValue": "春季題目：1",
+    "Constraint": "random_value == 1",
+    "Effect": "area01 = 1",
+    "NextStop": "area01_database_01",
+    "FallbackStop": "area01_02"
+  },
+  {
+    "_ID": "area01_02",
+    "Tag": "Question",
+    "MainValue": "春季題目：2",
+    "Constraint": "random_value == 2",
+    "Effect": "area01 = 1",
+    "NextStop": "area01_database_02",
+    "FallbackStop": "area01_03"
+  },
+  {
+    "_ID": "area01_03",
+    "Tag": "Question",
+    "MainValue": "春季題目：3",
+    "Constraint": "random_value == 3",
+    "Effect": "area01 = 1",
+    "NextStop": "area01_database_03",
+    "FallbackStop": "area01_04"
+  },
+  {
+    "_ID": "area01_04",
+    "Tag": "Question",
+    "MainValue": "春季題目：4",
+    "Constraint": "random_value == 4",
+    "Effect": "area01 = 1",
+    "NextStop": "area01_database_04",
+    "FallbackStop": "area01_05"
+  },
+  {
+    "_ID": "area01_05",
+    "Tag": "Examination",
+    "MainValue": "",
+    "Constraint": "",
+    "Effect": "",
+    "NextStop": "area_exam_01",
+    "FallbackStop": ""
+  },
+  {
+    "_ID": "area02_01",
+    "Tag": "Question",
+    "MainValue": "夏季題目 : 1",
+    "Constraint": "random_value == 1",
+    "Effect": "area02 = 1",
+    "NextStop": "area02_database_01",
+    "FallbackStop": "area02_02"
+  },
+  {
+    "_ID": "area02_02",
+    "Tag": "Question",
+    "MainValue": "夏季題目 : 2",
+    "Constraint": "random_value == 2",
+    "Effect": "area02 = 1",
+    "NextStop": "area02_database_02",
+    "FallbackStop": "area02_03"
+  },
+  {
+    "_ID": "area02_03",
+    "Tag": "Question",
+    "MainValue": "夏季題目 : 3",
+    "Constraint": "random_value == 3",
+    "Effect": "area02 = 1",
+    "NextStop": "area02_database_03",
+    "FallbackStop": "area02_04"
+  },
+  {
+    "_ID": "area02_04",
+    "Tag": "Question",
+    "MainValue": "夏季題目 : 4",
+    "Constraint": "random_value == 4",
+    "Effect": "area02 = 1",
+    "NextStop": "area02_database_04",
+    "FallbackStop": "area02_05"
+  },
+  {
+    "_ID": "area02_05",
+    "Tag": "Examination",
+    "MainValue": "",
+    "Constraint": "",
+    "Effect": "",
+    "NextStop": "area_exam_01",
+    "FallbackStop": ""
+  },
+  {
+    "_ID": "area03_01",
+    "Tag": "Question",
+    "MainValue": "秋季題目 : 1",
+    "Constraint": "random_value == 1",
+    "Effect": "area03 = 1",
+    "NextStop": "area03_database_01",
+    "FallbackStop": "area03_02"
+  },
+  {
+    "_ID": "area03_02",
+    "Tag": "Question",
+    "MainValue": "秋季題目 : 2",
+    "Constraint": "random_value == 2",
+    "Effect": "area03 = 1",
+    "NextStop": "area03_database_02",
+    "FallbackStop": "area03_03"
+  },
+  {
+    "_ID": "area03_03",
+    "Tag": "Question",
+    "MainValue": "秋季題目 : 3",
+    "Constraint": "random_value == 3",
+    "Effect": "area03 = 1",
+    "NextStop": "area03_database_03",
+    "FallbackStop": "area03_04"
+  },
+  {
+    "_ID": "area03_04",
+    "Tag": "Question",
+    "MainValue": "秋季題目 : 4",
+    "Constraint": "random_value == 4",
+    "Effect": "area03 = 1",
+    "NextStop": "area03_database_04",
+    "FallbackStop": "area03_05"
+  },
+  {
+    "_ID": "area03_05",
+    "Tag": "Examination",
+    "MainValue": "",
+    "Constraint": "",
+    "Effect": "",
+    "NextStop": "area_exam_01",
+    "FallbackStop": ""
+  },
+  {
+    "_ID": "area04_01",
+    "Tag": "Question",
+    "MainValue": "冬季題目 : 1",
+    "Constraint": "random_value == 1",
+    "Effect": "area04 = 1",
+    "NextStop": "area04_database_01",
+    "FallbackStop": "area04_02"
+  },
+  {
+    "_ID": "area04_02",
+    "Tag": "Question",
+    "MainValue": "冬季題目 : 2",
+    "Constraint": "random_value == 2",
+    "Effect": "area04 = 1",
+    "NextStop": "area04_database_02",
+    "FallbackStop": "area04_03"
+  },
+  {
+    "_ID": "area04_03",
+    "Tag": "Question",
+    "MainValue": "冬季題目 : 3",
+    "Constraint": "random_value == 3",
+    "Effect": "area04 = 1",
+    "NextStop": "area04_database_03",
+    "FallbackStop": "area04_04"
+  },
+  {
+    "_ID": "area04_04",
+    "Tag": "Question",
+    "MainValue": "冬季題目 : 4",
+    "Constraint": "random_value == 4",
+    "Effect": "area04 = 1",
+    "NextStop": "area04_database_04",
+    "FallbackStop": "area04_05"
+  },
+  {
+    "_ID": "area04_05",
+    "Tag": "Examination",
+    "MainValue": "",
+    "Constraint": "",
+    "Effect": "",
+    "NextStop": "area_exam_01",
+    "FallbackStop": ""
+  }
 ]

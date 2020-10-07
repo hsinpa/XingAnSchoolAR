@@ -47,6 +47,8 @@ namespace Questionaire
                 }
             }
 
+            this._qmodel.ImplementEffect(ticket.eventStats.Effect);
+
             return ticket;
         }
 
@@ -70,26 +72,6 @@ namespace Questionaire
 
             return ticket;
         }
-
-        private Ticket GetTicketByIndex(int index) {
-            var ticket = new Ticket();
-
-            if (this._rawParseResult.EventStats.Count > index) return ticket;
-
-            EventStats eventStat = this._rawParseResult.EventStats[index];
-
-            ticket.eventStats = eventStat;
-
-            if (eventStat.Tag == ParameterFlag.EventTag.Question)
-            {
-                ticket = GetChoiceTagTicket(ticket, eventStat);
-            }
-
-            ticket.index = index;
-
-            return ticket;
-        }
-
 
         #region Process Examination 
         private Ticket ProcessExamination(Ticket ticket) {

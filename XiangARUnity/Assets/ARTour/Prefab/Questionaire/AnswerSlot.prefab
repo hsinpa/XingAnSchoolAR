@@ -194,7 +194,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7923794803541836916
 CanvasRenderer:
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -311,6 +311,13 @@ MonoBehaviour:
   tickImage: {fileID: 2087989510322637481}
   answerText: {fileID: 90185784579646172}
   button: {fileID: 494631113914119600}
+  state:
+  - state: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - state: 1
+    color: {r: 0.31287822, g: 0.745283, b: 0.3208692, a: 1}
+  - state: 2
+    color: {r: 0.7490196, g: 0.3137255, b: 0.4027947, a: 1}
 --- !u!1 &9091036187120884740
 GameObject:
   m_ObjectHideFlags: 0

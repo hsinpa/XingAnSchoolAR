@@ -4,7 +4,7 @@
     "UniqueID": "overall_unique_01",
     "MainValue": "春季問題_01",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -13,7 +13,7 @@
     "UniqueID": "overall_unique_02",
     "MainValue": "春季問題_02",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -22,7 +22,7 @@
     "UniqueID": "overall_unique_03",
     "MainValue": "春季問題_03",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -31,7 +31,7 @@
     "UniqueID": "overall_unique_04",
     "MainValue": "春季問題_04",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -40,7 +40,7 @@
     "UniqueID": "overall_unique_05",
     "MainValue": "春季問題_05",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -49,7 +49,7 @@
     "UniqueID": "overall_unique_06",
     "MainValue": "春季問題_06",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -58,7 +58,7 @@
     "UniqueID": "overall_unique_07",
     "MainValue": "春季問題_07",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -67,7 +67,7 @@
     "UniqueID": "overall_unique_08",
     "MainValue": "春季問題_08",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -76,7 +76,7 @@
     "UniqueID": "overall_unique_09",
     "MainValue": "春季問題_09",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -85,7 +85,7 @@
     "UniqueID": "overall_unique_10",
     "MainValue": "春季問題_10",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -94,7 +94,7 @@
     "UniqueID": "overall_unique_11",
     "MainValue": "春季問題_11",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -103,7 +103,7 @@
     "UniqueID": "overall_unique_12",
     "MainValue": "春季問題_12",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -112,7 +112,7 @@
     "UniqueID": "overall_unique_13",
     "MainValue": "春季問題_13",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -121,7 +121,7 @@
     "UniqueID": "overall_unique_14",
     "MainValue": "春季問題_14",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -130,7 +130,7 @@
     "UniqueID": "overall_unique_15",
     "MainValue": "春季問題_15",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -139,7 +139,7 @@
     "UniqueID": "overall_unique_16",
     "MainValue": "春季問題_16",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area01_05",
     "Extra": ""
   },
@@ -148,7 +148,7 @@
     "UniqueID": "overall_unique_17",
     "MainValue": "夏季問題_01",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -157,7 +157,7 @@
     "UniqueID": "overall_unique_18",
     "MainValue": "夏季問題_02",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -166,7 +166,7 @@
     "UniqueID": "overall_unique_19",
     "MainValue": "夏季問題_03",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -175,7 +175,7 @@
     "UniqueID": "overall_unique_20",
     "MainValue": "夏季問題_04",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -184,7 +184,7 @@
     "UniqueID": "overall_unique_21",
     "MainValue": "夏季問題_05",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -193,7 +193,7 @@
     "UniqueID": "overall_unique_22",
     "MainValue": "夏季問題_06",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -202,7 +202,7 @@
     "UniqueID": "overall_unique_23",
     "MainValue": "夏季問題_07",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -211,7 +211,7 @@
     "UniqueID": "overall_unique_24",
     "MainValue": "夏季問題_08",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -220,7 +220,7 @@
     "UniqueID": "overall_unique_25",
     "MainValue": "夏季問題_09",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -229,7 +229,7 @@
     "UniqueID": "overall_unique_26",
     "MainValue": "夏季問題_10",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -238,7 +238,7 @@
     "UniqueID": "overall_unique_27",
     "MainValue": "夏季問題_11",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -247,7 +247,7 @@
     "UniqueID": "overall_unique_28",
     "MainValue": "夏季問題_12",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -256,7 +256,7 @@
     "UniqueID": "overall_unique_29",
     "MainValue": "夏季問題_13",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -265,7 +265,7 @@
     "UniqueID": "overall_unique_30",
     "MainValue": "夏季問題_14",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -274,7 +274,7 @@
     "UniqueID": "overall_unique_31",
     "MainValue": "夏季問題_15",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -283,7 +283,7 @@
     "UniqueID": "overall_unique_32",
     "MainValue": "夏季問題_16",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area02_05",
     "Extra": ""
   },
@@ -292,7 +292,7 @@
     "UniqueID": "overall_unique_33",
     "MainValue": "秋季問題_01",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -301,7 +301,7 @@
     "UniqueID": "overall_unique_34",
     "MainValue": "秋季問題_02",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -310,7 +310,7 @@
     "UniqueID": "overall_unique_35",
     "MainValue": "秋季問題_03",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -319,7 +319,7 @@
     "UniqueID": "overall_unique_36",
     "MainValue": "秋季問題_04",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -328,7 +328,7 @@
     "UniqueID": "overall_unique_37",
     "MainValue": "秋季問題_05",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -337,7 +337,7 @@
     "UniqueID": "overall_unique_38",
     "MainValue": "秋季問題_06",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -346,7 +346,7 @@
     "UniqueID": "overall_unique_39",
     "MainValue": "秋季問題_07",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -355,7 +355,7 @@
     "UniqueID": "overall_unique_40",
     "MainValue": "秋季問題_08",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -364,7 +364,7 @@
     "UniqueID": "overall_unique_41",
     "MainValue": "秋季問題_09",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -373,7 +373,7 @@
     "UniqueID": "overall_unique_42",
     "MainValue": "秋季問題_10",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -382,7 +382,7 @@
     "UniqueID": "overall_unique_43",
     "MainValue": "秋季問題_11",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -391,7 +391,7 @@
     "UniqueID": "overall_unique_44",
     "MainValue": "秋季問題_12",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -400,7 +400,7 @@
     "UniqueID": "overall_unique_45",
     "MainValue": "秋季問題_13",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -409,7 +409,7 @@
     "UniqueID": "overall_unique_46",
     "MainValue": "秋季問題_14",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -418,7 +418,7 @@
     "UniqueID": "overall_unique_47",
     "MainValue": "秋季問題_15",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -427,7 +427,7 @@
     "UniqueID": "overall_unique_48",
     "MainValue": "秋季問題_16",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area03_05",
     "Extra": ""
   },
@@ -436,7 +436,7 @@
     "UniqueID": "overall_unique_49",
     "MainValue": "冬季問題_01",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -445,7 +445,7 @@
     "UniqueID": "overall_unique_50",
     "MainValue": "冬季問題_02",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -454,7 +454,7 @@
     "UniqueID": "overall_unique_51",
     "MainValue": "冬季問題_03",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -463,7 +463,7 @@
     "UniqueID": "overall_unique_52",
     "MainValue": "冬季問題_04",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -472,7 +472,7 @@
     "UniqueID": "overall_unique_53",
     "MainValue": "冬季問題_05",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -481,7 +481,7 @@
     "UniqueID": "overall_unique_54",
     "MainValue": "冬季問題_06",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -490,7 +490,7 @@
     "UniqueID": "overall_unique_55",
     "MainValue": "冬季問題_07",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -499,7 +499,7 @@
     "UniqueID": "overall_unique_56",
     "MainValue": "冬季問題_08",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -508,7 +508,7 @@
     "UniqueID": "overall_unique_57",
     "MainValue": "冬季問題_09",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -517,7 +517,7 @@
     "UniqueID": "overall_unique_58",
     "MainValue": "冬季問題_10",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -526,7 +526,7 @@
     "UniqueID": "overall_unique_59",
     "MainValue": "冬季問題_11",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -535,7 +535,7 @@
     "UniqueID": "overall_unique_60",
     "MainValue": "冬季問題_12",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -544,7 +544,7 @@
     "UniqueID": "overall_unique_61",
     "MainValue": "冬季問題_13",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -553,7 +553,7 @@
     "UniqueID": "overall_unique_62",
     "MainValue": "冬季問題_14",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 1",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -562,7 +562,7 @@
     "UniqueID": "overall_unique_63",
     "MainValue": "冬季問題_15",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area04_05",
     "Extra": ""
   },
@@ -571,7 +571,7 @@
     "UniqueID": "overall_unique_64",
     "MainValue": "冬季問題_16",
     "Constraint": "",
-    "Effect": "",
+    "Effect": "score + 0",
     "NextStep": "area04_05",
     "Extra": ""
   }

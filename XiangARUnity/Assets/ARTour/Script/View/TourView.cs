@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Expect.StaticAsset;
 using Hsinpa.View;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,9 @@ namespace Expect.View
         [SerializeField]
         private Button startQuestionaireBtn;
 
+        [SerializeField]
+        private Button closeBtn;
+
         private ARTourModel _model;
 
         private string _themeKey;
@@ -23,6 +27,11 @@ namespace Expect.View
         private void Start()
         {
             startQuestionaireBtn.onClick.AddListener(OnQuestionaireClick);
+
+            closeBtn.onClick.AddListener(() =>
+            {
+                Modals.instance.Close();
+            });
         }
 
         public void SetUp(GeneralFlag.ARTourTheme theme, ARTourModel model, string title, System.Action Callback) {
@@ -37,7 +46,7 @@ namespace Expect.View
 
             //Check question is being take or not
             int questionRecord = _model.GetVariable(_themeKey);
-            startQuestionaireBtn.interactable = questionRecord == 0;
+            startQuestionaireBtn.gameObject.SetActive(questionRecord == 0);
         }
 
         private void OnQuestionaireClick() {

@@ -55,7 +55,8 @@ namespace Expect.ARTour
             if (_arTourTheme == GeneralFlag.ARTourTheme.None) return;
 
             TourView tourModal = Modals.instance.OpenModal<TourView>();
-            tourModal.SetUp(_arTourTheme, _model, "Game is foot", OnQuestionStartClick);
+            tourModal.SetUp(_arTourTheme, _model, "Game is foot",
+                OnQuestionStartClick);
         }
 
         private void OnQuestionStartClick() {

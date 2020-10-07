@@ -1,4 +1,6 @@
-﻿using Hsinpa.View;
+﻿using Expect.StaticAsset;
+using Hsinpa.View;
+using Questionaire;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +24,7 @@ namespace Expect.View
 
         [SerializeField]
         private Button ProceedBtn;
+        private Text ProceedBtnText;
 
         private int currentIndex = -1;
         private int correctAnswerIndex = -1;
@@ -36,6 +39,7 @@ namespace Expect.View
         private void Start()
         {
             ProceedBtn.onClick.AddListener(OnProceedBtnClick);
+            ProceedBtnText = ProceedBtn.GetComponentInChildren<Text>();
         }
 
         public void SetContent(string title, string question, string[] answers, int correctAnswerIndex, System.Action<int> OnProceedCallback) {
@@ -55,6 +59,8 @@ namespace Expect.View
             isCorrectAnswerDisplay = false;
 
             OnProceedClickEvent = OnProceedCallback;
+
+            ProceedBtnText.text = StringAsset.ARTour.QuestionaireSubmitBtn;
         }
 
         private void CreateAnswerSlots(string[] answers) {
@@ -85,7 +91,14 @@ namespace Expect.View
         }
 
         private void DisplayCorrectAnswerLayout(int correctIndex) {
+            if (_answerSlotItems == null || correctIndex < 0) return;
 
+            for (int i = 0; i < _answerSlotItems.Length; i++)
+                _answerSlotItems[i].SetState(AnswerSloItem.State.Wrong);
+
+            _answerSlotItems[correctIndex].SetState(AnswerSloItem.State.Correct);
+
+            ProceedBtnText.text = StringAsset.ARTour.QuestionaireContinueBtn;
         }
 
         private void OnProceedBtnClick() {
@@ -97,7 +110,7 @@ namespace Expect.View
             }
 
             if (OnProceedClickEvent != null)
-                OnProceedClickEvent(currentIndex);
+                OnProceedClickEvent (currentIndex);
         }
 
     }
