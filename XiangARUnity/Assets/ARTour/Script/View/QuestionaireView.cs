@@ -40,7 +40,7 @@ namespace Expect.View
 
         public void SetContent(string title, string question, string[] answers, int correctAnswerIndex, System.Action<int> OnProceedCallback) {
             currentIndex = -1;
-            correctAnswerIndex = correctAnswerIndex;
+            this.correctAnswerIndex = correctAnswerIndex;
 
             _rawAnswerSlots = answers;
 
@@ -91,7 +91,7 @@ namespace Expect.View
         private void OnProceedBtnClick() {
 
             if (!isCorrectAnswerDisplay) {
-                DisplayCorrectAnswerLayout();
+                DisplayCorrectAnswerLayout(this.correctAnswerIndex);
                 isCorrectAnswerDisplay = true;
                 return;
             }
