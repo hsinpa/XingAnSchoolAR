@@ -23,12 +23,19 @@ public class GeneralFlag
     }
 
     public class ARTour {
-
+        public class QuestionType {
+            public const string Continue = "Continue";
+            public const string End = "End";
+            public const string Question = "Question";
+            public const string Examination = "Examination";
+        }
     }
 
     public enum ARTourTheme {
         Spring, Summer, Autumn, Winter, None
     }
+
+
 
     public class Questionaire {
         public const string ThemeSpring = "area01";

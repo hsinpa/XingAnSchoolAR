@@ -13,6 +13,8 @@ namespace Expect.ARTour
     {
         private ARTourModel _model;
 
+        private QuestionaireView _questionaireView;
+
         public override void OnNotify(string p_event, params object[] p_objects)
         {
             base.OnNotify(p_event, p_objects);
@@ -31,10 +33,24 @@ namespace Expect.ARTour
 
             Ticket ticket = _model.EnterQuestionaire(firstQ_key);
 
-            QuestionaireView questionaireView = Modals.instance.OpenModal<QuestionaireView>();
+            _questionaireView = Modals.instance.OpenModal<QuestionaireView>();
 
             string debugMsg = string.Format("ID : {0}, Value : {1}", ticket.eventStats._ID, ticket.eventStats.MainValue);
             Debug.Log(debugMsg);
+        }
+
+        private void ProcessTicket(Ticket ticket) {
+
+            if (ticket.eventStats.Tag == GeneralFlag.ARTour.QuestionType.End)
+            {
+                //TODO: Show Score Board;
+
+                return;
+            }
+
+            if (ticket.eventStats.Tag == GeneralFlag.ARTour.QuestionType.Continue) {
+
+            }
         }
 
 

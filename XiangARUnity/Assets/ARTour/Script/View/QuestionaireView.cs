@@ -24,10 +24,14 @@ namespace Expect.View
         private Button ProceedBtn;
 
         private int currentIndex = -1;
+        private int correctAnswerIndex = -1;
+
         private string[] _rawAnswerSlots;
         private AnswerSloItem[] _answerSlotItems;
 
         private System.Action<int> OnProceedClickEvent;
+
+        private bool isCorrectAnswerDisplay = false;
 
         private void Start()
         {
@@ -36,6 +40,7 @@ namespace Expect.View
 
         public void SetContent(string title, string question, string[] answers, int correctAnswerIndex, System.Action<int> OnProceedCallback) {
             currentIndex = -1;
+            correctAnswerIndex = correctAnswerIndex;
 
             _rawAnswerSlots = answers;
 
@@ -46,6 +51,8 @@ namespace Expect.View
             CreateAnswerSlots(answers);
 
             ProceedBtn.interactable = false;
+
+            isCorrectAnswerDisplay = false;
 
             OnProceedClickEvent = OnProceedCallback;
         }
@@ -77,7 +84,17 @@ namespace Expect.View
             }
         }
 
+        private void DisplayCorrectAnswerLayout(int correctIndex) {
+
+        }
+
         private void OnProceedBtnClick() {
+
+            if (!isCorrectAnswerDisplay) {
+                DisplayCorrectAnswerLayout();
+                isCorrectAnswerDisplay = true;
+                return;
+            }
 
             if (OnProceedClickEvent != null)
                 OnProceedClickEvent(currentIndex);
