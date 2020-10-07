@@ -941,7 +941,7 @@ PrefabInstance:
     - target: {fileID: 845444692136287453, guid: e7bce37e3e7a9424c8bcbadfa36dd32d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.0697937
+      value: 6.0697784
       objectReference: {fileID: 0}
     - target: {fileID: 845444692542761622, guid: e7bce37e3e7a9424c8bcbadfa36dd32d,
         type: 3}
@@ -1674,6 +1674,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: QuestionareModal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207016715002207355, guid: f53d5056e7a633c4da64361a204a9830,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5359722367129687307, guid: f53d5056e7a633c4da64361a204a9830,
         type: 3}

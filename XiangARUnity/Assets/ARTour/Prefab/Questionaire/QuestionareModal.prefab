@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 2207016715002207349}
   - component: {fileID: 2207016715002207354}
   - component: {fileID: 2207016715002207355}
+  - component: {fileID: 7314674027971149755}
   m_Layer: 5
   m_Name: QuestionareModal
   m_TagString: Untagged
@@ -162,10 +163,29 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2207016715002207353}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &7314674027971149755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207016715002207353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 687a363f52f97654b913e740d3a622a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 2207016715002207355}
+  AnswerSlotPrefab: {fileID: 6053553367505621771, guid: 59b8215ef34ad2a4c995b7e4feb206ef,
+    type: 3}
+  titleText: {fileID: 5102857534338649154}
+  questionText: {fileID: 2577465813697475539}
+  AnswerContainer: {fileID: 7275844814196924712}
+  ProceedBtn: {fileID: 5603834519264669288}
 --- !u!1 &4058986729912365998
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.9222081}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 13.315}
+  m_AnchoredPosition: {x: 0, y: 13.31501}
   m_SizeDelta: {x: -240.79291, y: 26.685104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6575279810052540172
@@ -510,7 +530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.038895983}
   m_AnchorMax: {x: 1, y: 0.66737604}
-  m_AnchoredPosition: {x: 0, y: -4.2}
+  m_AnchoredPosition: {x: 0, y: -4.200012}
   m_SizeDelta: {x: -25.207153, y: -10.906326}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &583847407947003841
