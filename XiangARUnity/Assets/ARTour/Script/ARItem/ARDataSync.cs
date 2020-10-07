@@ -8,7 +8,7 @@ namespace Expect.ARTour
 {
     public class ARDataSync
     {
-        private string GoogleSheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQAyCfqm9J5kMSTL8wYon8LWLx2kO6YeyEpTogq2GF6YH6-MrgNDK-BmECPQ5UIeaNYXQgpf5I5ZITJ/pub?gid=0&single=true&output=csv";
+        private string GoogleSheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSbngYlP16ueNJQBjGKrQ_nddcveXDW1XGfkIyoD6q7RggABq4Ae-HHajAepf22KWq_o0wZtw4vnlNQ/pub?gid=838559800&single=true&output=csv";
         private int _version = 0;
         private Dictionary<string, ARData> _arDataList = new Dictionary<string, ARData>();
 
