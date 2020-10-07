@@ -33,7 +33,6 @@ namespace Expect.ARTour
                     tourButton.gameObject.SetActive(false);
                     break;
             }
-
         }
 
         private void Start()
@@ -45,8 +44,6 @@ namespace Expect.ARTour
             //Hide by default
             tourButton.gameObject.SetActive(false);
             OnThemeChange += OnThemeChangeCallback;
-
-
         }
 
         private void OnClickTourBtn() {

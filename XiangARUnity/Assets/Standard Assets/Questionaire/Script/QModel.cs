@@ -116,7 +116,7 @@ namespace Questionaire
             }
         }
 
-        private int FindTraitValue(string trait_id) {
+        public int FindTraitValue(string trait_id) {
             if (ScoreDict.TryGetValue(trait_id, out int score)) {
 
                 Debug.Log("trait_id " + trait_id + ", score " + score);

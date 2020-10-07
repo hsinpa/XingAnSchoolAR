@@ -5,8 +5,6 @@ using Hsinpa.Model;
 
 public class ARTourModelManager : ModelManager
 {
-
-
     public override void SetUp()
     {
         base.SetUp();

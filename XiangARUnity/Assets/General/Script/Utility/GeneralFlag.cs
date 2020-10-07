@@ -16,15 +16,29 @@ public class GeneralFlag
         public const string AppEnd = "event@end_app";
     }
 
-    public enum Language { 
+    public enum Language {
         En, Ch
     }
 
     public class ARTour {
-        
+
     }
 
     public enum ARTourTheme {
         Spring, Summer, Autumn, Winter, None
     }
+
+    public class Questionaire {
+        public const string ThemeSpring = "area01";
+        public const string ThemeSummer = "area02";
+        public const string ThemeAutumn = "area03";
+        public const string ThemeWinter = "area04";
+    }
+
+    public static readonly Dictionary<ARTourTheme, string> ThemeKeyLookUpTable = new Dictionary<ARTourTheme, string> {
+        {ARTourTheme.Spring, Questionaire.ThemeSpring },
+        {ARTourTheme.Summer, Questionaire.ThemeSummer },
+        {ARTourTheme.Autumn, Questionaire.ThemeAutumn },
+        {ARTourTheme.Winter, Questionaire.ThemeWinter }
+    };
 }

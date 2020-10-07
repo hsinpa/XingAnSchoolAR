@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Hsinpa.Model;
 
 public class MainApp : Singleton<MainApp>
 {
@@ -11,9 +12,13 @@ public class MainApp : Singleton<MainApp>
 
     private Observer[] observers = new Observer[0];
 
+    public ModelManager model;
+
     private void Start()
     {
         subject = new Subject();
+
+        RegisterModel();
 
         RegisterAllController(subject);
 
@@ -41,6 +46,14 @@ public class MainApp : Singleton<MainApp>
         {
             subject.addObserver(observer);
         }
+    }
+
+    private void RegisterModel() {
+        Transform modelHolder = transform.Find("Model");
+
+        if (modelHolder == null) return;
+
+        model = modelHolder.GetComponent<ModelManager>();
     }
 
 

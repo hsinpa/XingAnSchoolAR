@@ -8,6 +8,8 @@ namespace Questionaire {
     public class QBuilder
     {
         private QModel _qmodel;
+        public QModel qmodel => _qmodel;
+
         private QDataParser _qDataParser;
         private QProcessor _qProcessor;
     
@@ -28,11 +30,12 @@ namespace Questionaire {
         }
 
         //Begin of story
-        public Ticket StartFromBeginning()
+        public Ticket StartFromEventKey(string key)
         {
             if (_qProcessor == null) return default(Ticket);
 
-            return _qProcessor.ProcessNextEvent(ParameterFlag.StaticEventID.Menu);
+            //ParameterFlag.StaticEventID.Menu
+            return _qProcessor.ProcessNextEvent(key);
         }
 
         //Pass the choice user pick
