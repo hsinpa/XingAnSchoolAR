@@ -35,7 +35,9 @@ public class GeneralFlag
         Spring, Summer, Autumn, Winter, None
     }
 
-
+    public class Playerpref {
+        public const string Level = "pp@level";
+    }
 
     public class Questionaire {
         public const string ThemeSpring = "area01";

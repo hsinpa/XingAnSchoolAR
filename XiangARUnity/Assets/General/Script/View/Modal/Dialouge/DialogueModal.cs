@@ -34,7 +34,7 @@ namespace Expect.View
             decorateImage.sprite = sprite;
         }
 
-        public void SetDialogue(string title, string content, string[] allowBtns, System.Action<string> btnEvent) {
+        public void SetDialogue(string title, string content, string[] allowBtns, System.Action<int> btnEvent) {
             ResetContent();
 
             titleText.text = title;
@@ -44,7 +44,7 @@ namespace Expect.View
         }
 
 
-        private void RegisterButtons(string[] allowBtns, System.Action<string> btnEvent) {
+        private void RegisterButtons(string[] allowBtns, System.Action<int> btnEvent) {
             int btnlength = allowBtns.Length;
 
             for (int i = 0; i < btnlength; i++) {
@@ -58,7 +58,7 @@ namespace Expect.View
                 button.onClick.AddListener(() =>
                 {
                     Modals.instance.Close();
-                    btnEvent(allowBtns[index]);
+                    btnEvent(index);
                 });
             }
         }

@@ -31,10 +31,14 @@ namespace Expect.ARTour {
 
         private void StartWithSelectLang() {
             DialogueModal dialogueModal = Modals.instance.OpenModal<DialogueModal>();
-            dialogueModal.SetDialogue(StringAsset.ARTour.ChooseLangTitle, StringAsset.ARTour.ChooseLangContent, new string[] { StringAsset.ARTour.LangEN, StringAsset.ARTour.LangCH },
-                (string p_lang) =>
+            string[] levels = new string[] { StringAsset.ARTour.LowGrade, StringAsset.ARTour.MiddleGrade, StringAsset.ARTour.HighGrade };
+
+            dialogueModal.SetDialogue(StringAsset.ARTour.ChooseGradeTitle, StringAsset.ARTour.ChooseGradeContent,
+                levels,
+                (int p_index) =>
                 {
-                    _language = (p_lang == StringAsset.ARTour.LangEN) ? GeneralFlag.Language.En : GeneralFlag.Language.Ch;
+                    PlayerPrefs.SetInt(GeneralFlag.Playerpref.Level, p_index);
+
                     StartFreeTour();
                 }
             );
