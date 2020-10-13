@@ -4,7 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/ARTour/Scene/ARTour.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: c15c74d2ccea54ad0884261b4afdbf25,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0d1de16eada594767909e6d03774105f,
       type: 2}
