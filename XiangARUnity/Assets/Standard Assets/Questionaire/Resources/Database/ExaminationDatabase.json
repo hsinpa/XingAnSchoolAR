@@ -1,17 +1,17 @@
 [
-  {
-    "ChoiceID": "area_exam_01",
-    "UniqueID": "exam_uuid_01",
-    "MainValue": "",
-    "Constraint": "finish_area == 4",
-    "Effect": "",
-    "NextStep": "general_state_00"
-  },
+    {
+        "ChoiceID": "area_exam_01",
+        "UniqueID": "exam_uuid_01",
+        "MainValue": "",
+        "Constraint": "area01 == 1&area02 == 1&area03 == 1&area04 == 1",
+        "Effect": "",
+        "NextStep": "general_state_00"
+    },
   {
     "ChoiceID": "area_exam_01",
     "UniqueID": "exam_uuid_02",
     "MainValue": "",
-    "Constraint": "finish_area < 4",
+    "Constraint": "",
     "Effect": "",
     "NextStep": "general_state_01"
   }

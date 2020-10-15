@@ -20,8 +20,8 @@
   {
     "_ID": "area01_01",
     "Tag": "Question",
-    "MainValue": "春季題目：1",
-    "Constraint": "random_value == 1",
+    "MainValue": "小朋友在溫帶氣候區你看到櫃台後方的植物名稱叫柳杉?",
+    "Constraint": "random_value == 1&level == 0",
     "Effect": "area01 = 1",
     "NextStop": "area01_database_01",
     "FallbackStop": "area01_02"
@@ -29,8 +29,8 @@
   {
     "_ID": "area01_02",
     "Tag": "Question",
-    "MainValue": "春季題目：2",
-    "Constraint": "random_value == 2",
+    "MainValue": "小朋友在溫帶氣候區你可以發現有臺灣黑熊的蹤跡?",
+    "Constraint": "random_value == 2&level == 0",
     "Effect": "area01 = 1",
     "NextStop": "area01_database_02",
     "FallbackStop": "area01_03"
@@ -38,8 +38,8 @@
   {
     "_ID": "area01_03",
     "Tag": "Question",
-    "MainValue": "春季題目：3",
-    "Constraint": "random_value == 3",
+    "MainValue": "小朋友在溫帶氣候區就像在沙漠一樣氣溫都很熱?",
+    "Constraint": "random_value == 3&level == 0",
     "Effect": "area01 = 1",
     "NextStop": "area01_database_03",
     "FallbackStop": "area01_04"
@@ -47,26 +47,98 @@
   {
     "_ID": "area01_04",
     "Tag": "Question",
-    "MainValue": "春季題目：4",
-    "Constraint": "random_value == 4",
+    "MainValue": "在溫帶氣候區可以看到挑高的天花板上有台灣藍鵲在飛?",
+    "Constraint": "random_value == 4&level == 0",
     "Effect": "area01 = 1",
     "NextStop": "area01_database_04",
     "FallbackStop": "area01_05"
   },
   {
     "_ID": "area01_05",
-    "Tag": "Examination",
-    "MainValue": "",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "area_exam_01",
-    "FallbackStop": ""
+    "Tag": "Question",
+    "MainValue": "在溫帶氣候區你看地的橙綠楓植物葉子顏色是?",
+    "Constraint": "random_value == 1&level == 1",
+    "Effect": "area01 = 1",
+    "NextStop": "area01_database_05",
+    "FallbackStop": "area01_06"
   },
+  {
+    "_ID": "area01_06",
+    "Tag": "Question",
+    "MainValue": "小朋友在溫帶氣候區你可以發現什麼動物的蹤跡?",
+    "Constraint": "random_value == 2&level == 1",
+    "Effect": "area01 = 1",
+    "NextStop": "area01_database_06",
+    "FallbackStop": "area01_07"
+  },
+  {
+    "_ID": "area01_07",
+    "Tag": "Question",
+    "MainValue": "在溫帶氣候區的天氣比較不會出現哪種天氣?",
+    "Constraint": "random_value == 3&level == 1",
+    "Effect": "area01 = 1",
+    "NextStop": "area01_database_07",
+    "FallbackStop": "area01_08"
+  },
+  {
+    "_ID": "area01_08",
+    "Tag": "Question",
+    "MainValue": "在溫帶氣候區可以看到植物葉子會變色的是?",
+    "Constraint": "random_value == 4&level == 1",
+    "Effect": "area01 = 1",
+    "NextStop": "area01_database_08",
+    "FallbackStop": "area01_09"
+  },
+  {
+    "_ID": "area01_09",
+    "Tag": "Question",
+    "MainValue": "小朋友在溫帶氣候區你看到在臺灣黑熊旁的植物名稱是?",
+    "Constraint": "random_value == 1&level == 2",
+    "Effect": "area01 = 1",
+    "NextStop": "area01_database_09",
+    "FallbackStop": "area01_10"
+  },
+  {
+    "_ID": "area01_10",
+    "Tag": "Question",
+    "MainValue": "在溫帶氣候區你可以發現什麼動物的蹤跡?",
+    "Constraint": "random_value == 2&level == 2",
+    "Effect": "area01 = 1",
+    "NextStop": "area01_database_10",
+    "FallbackStop": "area01_11"
+  },
+  {
+    "_ID": "area01_11",
+    "Tag": "Question",
+    "MainValue": "在溫帶氣候區溫度會跟地球哪個區域溫度相似?",
+    "Constraint": "random_value == 3&level == 2",
+    "Effect": "area01 = 1",
+    "NextStop": "area01_database_11",
+    "FallbackStop": "area01_12"
+  },
+  {
+    "_ID": "area01_12",
+    "Tag": "Question",
+    "MainValue": "台灣黑熊屬於台灣特有種動物最大的特徵是胸前?",
+    "Constraint": "random_value == 4&level == 2",
+    "Effect": "area01 = 1",
+    "NextStop": "area01_database_12",
+    "FallbackStop": "area01_13"
+  },
+    {
+        "_ID": "area01_13",
+        "Tag": "Examination",
+        "MainValue": "",
+        "Constraint": "",
+        "Effect": "finish_area + 1",
+        "NextStop": "area_exam_01",
+        "FallbackStop": ""
+    },
   {
     "_ID": "area02_01",
     "Tag": "Question",
-    "MainValue": "夏季題目 : 1",
-    "Constraint": "random_value == 1",
+    "MainValue": "小朋友在熱帶氣候區你看地的植物葉子都是長的很大片?",
+    "Constraint": "random_value == 1&level == 0",
     "Effect": "area02 = 1",
     "NextStop": "area02_database_01",
     "FallbackStop": "area02_02"
@@ -74,8 +146,8 @@
   {
     "_ID": "area02_02",
     "Tag": "Question",
-    "MainValue": "夏季題目 : 2",
-    "Constraint": "random_value == 2",
+    "MainValue": "小朋友在熱帶氣候區你可以發現有穿山甲的蹤跡?",
+    "Constraint": "random_value == 2&level == 0",
     "Effect": "area02 = 1",
     "NextStop": "area02_database_02",
     "FallbackStop": "area02_03"
@@ -83,8 +155,8 @@
   {
     "_ID": "area02_03",
     "Tag": "Question",
-    "MainValue": "夏季題目 : 3",
-    "Constraint": "random_value == 3",
+    "MainValue": "小朋友在熱帶氣候區就像在南台灣墾丁的天氣?",
+    "Constraint": "random_value == 3&level == 0",
     "Effect": "area02 = 1",
     "NextStop": "area02_database_03",
     "FallbackStop": "area02_04"
@@ -92,26 +164,98 @@
   {
     "_ID": "area02_04",
     "Tag": "Question",
-    "MainValue": "夏季題目 : 4",
-    "Constraint": "random_value == 4",
+    "MainValue": "在熱帶氣候區的植物叫可可椰子?",
+    "Constraint": "random_value == 4&level == 0",
     "Effect": "area02 = 1",
     "NextStop": "area02_database_04",
     "FallbackStop": "area02_05"
   },
   {
     "_ID": "area02_05",
-    "Tag": "Examination",
-    "MainValue": "",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "area_exam_01",
-    "FallbackStop": ""
+    "Tag": "Question",
+    "MainValue": "在熱帶氣候區你看地的植物葉子形狀是?",
+    "Constraint": "random_value == 1&level == 1",
+    "Effect": "area02 = 1",
+    "NextStop": "area02_database_05",
+    "FallbackStop": "area02_06"
   },
+  {
+    "_ID": "area02_06",
+    "Tag": "Question",
+    "MainValue": "小朋友在熱帶氣候區你可以發現什麼動物的蹤跡?",
+    "Constraint": "random_value == 2&level == 1",
+    "Effect": "area02 = 1",
+    "NextStop": "area02_database_06",
+    "FallbackStop": "area02_07"
+  },
+  {
+    "_ID": "area02_07",
+    "Tag": "Question",
+    "MainValue": "小朋友在熱帶氣候區很像在台灣哪個地區的氣候?",
+    "Constraint": "random_value == 3&level == 1",
+    "Effect": "area02 = 1",
+    "NextStop": "area02_database_07",
+    "FallbackStop": "area02_08"
+  },
+  {
+    "_ID": "area02_08",
+    "Tag": "Question",
+    "MainValue": "在幸福森林圖書館熱帶氣候區的植物叫?",
+    "Constraint": "random_value == 4&level == 1",
+    "Effect": "area02 = 1",
+    "NextStop": "area02_database_08",
+    "FallbackStop": "area02_09"
+  },
+  {
+    "_ID": "area02_09",
+    "Tag": "Question",
+    "MainValue": "在熱帶氣候區你看地的植物葉子形狀是?",
+    "Constraint": "random_value == 1&level == 2",
+    "Effect": "area02 = 1",
+    "NextStop": "area02_database_09",
+    "FallbackStop": "area02_10"
+  },
+  {
+    "_ID": "area02_10",
+    "Tag": "Question",
+    "MainValue": "在熱帶氣候區你可以發現什麼植物的蹤跡?",
+    "Constraint": "random_value == 2&level == 2",
+    "Effect": "area02 = 1",
+    "NextStop": "area02_database_10",
+    "FallbackStop": "area02_11"
+  },
+  {
+    "_ID": "area02_11",
+    "Tag": "Question",
+    "MainValue": "在熱帶氣候區溫度會跟地球哪個地區一樣?",
+    "Constraint": "random_value == 3&level == 2",
+    "Effect": "area02 = 1",
+    "NextStop": "area02_database_11",
+    "FallbackStop": "area02_12"
+  },
+  {
+    "_ID": "area02_12",
+    "Tag": "Question",
+    "MainValue": "走在熱帶氣候區不發現什麼動物的足跡?",
+    "Constraint": "random_value == 4&level == 2",
+    "Effect": "area02 = 1",
+    "NextStop": "area02_database_12",
+    "FallbackStop": "area02_13"
+  },
+    {
+        "_ID": "area02_13",
+        "Tag": "Examination",
+        "MainValue": "",
+        "Constraint": "",
+        "Effect": "finish_area + 1",
+        "NextStop": "area_exam_01",
+        "FallbackStop": ""
+    },
   {
     "_ID": "area03_01",
     "Tag": "Question",
-    "MainValue": "秋季題目 : 1",
-    "Constraint": "random_value == 1",
+    "MainValue": "小朋友在一走進幸福圖書館就是亞熱帶氣候區?",
+    "Constraint": "random_value == 1&level == 0",
     "Effect": "area03 = 1",
     "NextStop": "area03_database_01",
     "FallbackStop": "area03_02"
@@ -119,8 +263,8 @@
   {
     "_ID": "area03_02",
     "Tag": "Question",
-    "MainValue": "秋季題目 : 2",
-    "Constraint": "random_value == 2",
+    "MainValue": "小朋友在亞熱帶氣候區你可以發現有石虎的蹤跡?",
+    "Constraint": "random_value == 2&level == 0",
     "Effect": "area03 = 1",
     "NextStop": "area03_database_02",
     "FallbackStop": "area03_03"
@@ -128,8 +272,8 @@
   {
     "_ID": "area03_03",
     "Tag": "Question",
-    "MainValue": "秋季題目 : 3",
-    "Constraint": "random_value == 3",
+    "MainValue": "小朋友在亞熱帶氣候區你會發現甜心榕樹都沒有動物?",
+    "Constraint": "random_value == 3&level == 0",
     "Effect": "area03 = 1",
     "NextStop": "area03_database_03",
     "FallbackStop": "area03_04"
@@ -137,26 +281,98 @@
   {
     "_ID": "area03_04",
     "Tag": "Question",
-    "MainValue": "秋季題目 : 4",
-    "Constraint": "random_value == 4",
+    "MainValue": "在亞熱帶氣候區新書展示架上的動物是台灣黑熊的造型?",
+    "Constraint": "random_value == 4&level == 0",
     "Effect": "area03 = 1",
     "NextStop": "area03_database_04",
     "FallbackStop": "area03_05"
   },
   {
     "_ID": "area03_05",
-    "Tag": "Examination",
-    "MainValue": "",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "area_exam_01",
-    "FallbackStop": ""
+    "Tag": "Question",
+    "MainValue": "小朋友在亞熱帶氣候區你可以發現書籤的圖片內容是?",
+    "Constraint": "random_value == 1&level == 1",
+    "Effect": "area03 = 1",
+    "NextStop": "area03_database_05",
+    "FallbackStop": "area03_06"
   },
+  {
+    "_ID": "area03_06",
+    "Tag": "Question",
+    "MainValue": "小朋友在亞熱帶氣候區你會發現甜心榕樹上沒有哪種動物?",
+    "Constraint": "random_value == 2&level == 1",
+    "Effect": "area03 = 1",
+    "NextStop": "area03_database_06",
+    "FallbackStop": "area03_07"
+  },
+  {
+    "_ID": "area03_07",
+    "Tag": "Question",
+    "MainValue": "小朋友在亞熱帶氣候區溫度會比在溫帶?",
+    "Constraint": "random_value == 3&level == 1",
+    "Effect": "area03 = 1",
+    "NextStop": "area03_database_07",
+    "FallbackStop": "area03_08"
+  },
+  {
+    "_ID": "area03_08",
+    "Tag": "Question",
+    "MainValue": "在亞熱帶氣候區新書展示架上的動物是?",
+    "Constraint": "random_value == 4&level == 1",
+    "Effect": "area03 = 1",
+    "NextStop": "area03_database_08",
+    "FallbackStop": "area03_09"
+  },
+  {
+    "_ID": "area03_09",
+    "Tag": "Question",
+    "MainValue": "在亞熱帶氣候區你看可以發現圓桌內的植物名稱是?",
+    "Constraint": "random_value == 1&level == 2",
+    "Effect": "area03 = 1",
+    "NextStop": "area03_database_09",
+    "FallbackStop": "area03_10"
+  },
+  {
+    "_ID": "area03_10",
+    "Tag": "Question",
+    "MainValue": "在亞熱帶氣候區你可以發現什麼動物的蹤跡?",
+    "Constraint": "random_value == 2&level == 2",
+    "Effect": "area03 = 1",
+    "NextStop": "area03_database_10",
+    "FallbackStop": "area03_11"
+  },
+  {
+    "_ID": "area03_11",
+    "Tag": "Question",
+    "MainValue": "在亞熱帶氣候區你可以發現甜心榕與幸安國小哪一個地方的植物很像?",
+    "Constraint": "random_value == 3&level == 2",
+    "Effect": "area03 = 1",
+    "NextStop": "area03_database_11",
+    "FallbackStop": "area03_12"
+  },
+  {
+    "_ID": "area03_12",
+    "Tag": "Question",
+    "MainValue": "亞熱帶氣候區最常發生的氣候現象?",
+    "Constraint": "random_value == 4&level == 2",
+    "Effect": "area03 = 1",
+    "NextStop": "area03_database_12",
+    "FallbackStop": "area03_13"
+  },
+    {
+        "_ID": "area03_13",
+        "Tag": "Examination",
+        "MainValue": "",
+        "Constraint": "",
+        "Effect": "finish_area + 1",
+        "NextStop": "area_exam_01",
+        "FallbackStop": ""
+    },
   {
     "_ID": "area04_01",
     "Tag": "Question",
-    "MainValue": "冬季題目 : 1",
-    "Constraint": "random_value == 1",
+    "MainValue": "小朋友在寒帶氣候區你看到的植物葉子都是長的很大片?",
+    "Constraint": "random_value == 1&level == 0",
     "Effect": "area04 = 1",
     "NextStop": "area04_database_01",
     "FallbackStop": "area04_02"
@@ -164,8 +380,8 @@
   {
     "_ID": "area04_02",
     "Tag": "Question",
-    "MainValue": "冬季題目 : 2",
-    "Constraint": "random_value == 2",
+    "MainValue": "小朋友在寒帶氣候區你可以發現有水鹿的蹤跡?",
+    "Constraint": "random_value == 2&level == 0",
     "Effect": "area04 = 1",
     "NextStop": "area04_database_02",
     "FallbackStop": "area04_03"
@@ -173,8 +389,8 @@
   {
     "_ID": "area04_03",
     "Tag": "Question",
-    "MainValue": "冬季題目 : 3",
-    "Constraint": "random_value == 3",
+    "MainValue": "小朋友在寒帶氣候區就像在高山一樣氣溫比較冷?",
+    "Constraint": "random_value == 3&level == 0",
     "Effect": "area04 = 1",
     "NextStop": "area04_database_03",
     "FallbackStop": "area04_04"
@@ -182,19 +398,91 @@
   {
     "_ID": "area04_04",
     "Tag": "Question",
-    "MainValue": "冬季題目 : 4",
-    "Constraint": "random_value == 4",
+    "MainValue": "在寒帶氣候區兩棵長的直挺挺的植物叫柳杉?",
+    "Constraint": "random_value == 4&level == 0",
     "Effect": "area04 = 1",
     "NextStop": "area04_database_04",
     "FallbackStop": "area04_05"
   },
   {
     "_ID": "area04_05",
-    "Tag": "Examination",
-    "MainValue": "",
-    "Constraint": "",
-    "Effect": "",
-    "NextStop": "area_exam_01",
-    "FallbackStop": ""
-  }
+    "Tag": "Question",
+    "MainValue": "小朋友在寒帶氣候區你看地的植物葉子形狀是?",
+    "Constraint": "random_value == 1&level == 1",
+    "Effect": "area04 = 1",
+    "NextStop": "area04_database_05",
+    "FallbackStop": "area04_06"
+  },
+  {
+    "_ID": "area04_06",
+    "Tag": "Question",
+    "MainValue": "小朋友在寒帶氣候區你可以發現什麼動物的蹤跡?",
+    "Constraint": "random_value == 2&level == 1",
+    "Effect": "area04 = 1",
+    "NextStop": "area04_database_06",
+    "FallbackStop": "area04_07"
+  },
+  {
+    "_ID": "area04_07",
+    "Tag": "Question",
+    "MainValue": "小朋友在寒帶氣候區溫度會比在平地?",
+    "Constraint": "random_value == 3&level == 1",
+    "Effect": "area04 = 1",
+    "NextStop": "area04_database_07",
+    "FallbackStop": "area04_08"
+  },
+  {
+    "_ID": "area04_08",
+    "Tag": "Question",
+    "MainValue": "在寒帶氣候區兩棵長的直挺挺的植物叫?",
+    "Constraint": "random_value == 4&level == 1",
+    "Effect": "area04 = 1",
+    "NextStop": "area04_database_08",
+    "FallbackStop": "area04_09"
+  },
+  {
+    "_ID": "area04_09",
+    "Tag": "Question",
+    "MainValue": "在寒帶氣候區你看地的植物葉子形狀是?",
+    "Constraint": "random_value == 1&level == 2",
+    "Effect": "area04 = 1",
+    "NextStop": "area04_database_09",
+    "FallbackStop": "area04_10"
+  },
+  {
+    "_ID": "area04_10",
+    "Tag": "Question",
+    "MainValue": "在寒帶氣候區你可以發現什麼植物的蹤跡?",
+    "Constraint": "random_value == 2&level == 2",
+    "Effect": "area04 = 1",
+    "NextStop": "area04_database_10",
+    "FallbackStop": "area04_11"
+  },
+  {
+    "_ID": "area04_11",
+    "Tag": "Question",
+    "MainValue": "在3000公尺以上寒帶氣候區溫度會比在平地低?",
+    "Constraint": "random_value == 3&level == 2",
+    "Effect": "area04 = 1",
+    "NextStop": "area04_database_11",
+    "FallbackStop": "area04_12"
+  },
+  {
+    "_ID": "area04_12",
+    "Tag": "Question",
+    "MainValue": "走在寒帶氣候區可以發現什麼動物的足跡?",
+    "Constraint": "random_value == 4&level == 2",
+    "Effect": "area04 = 1",
+    "NextStop": "area04_database_12",
+    "FallbackStop": "area04_13"
+  },
+    {
+        "_ID": "area04_13",
+        "Tag": "Examination",
+        "MainValue": "",
+        "Constraint": "",
+        "Effect": "finish_area + 1",
+        "NextStop": "area_exam_01",
+        "FallbackStop": ""
+    }
 ]

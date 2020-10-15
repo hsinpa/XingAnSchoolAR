@@ -33,7 +33,8 @@ public class ARTourModel : Model
     }
 
     private void ShuffleData() {
-        qBuilder.EditParameter(ParameterFlag.StaticEventID.RandomValue, "=", UnityEngine.Random.Range(1, 5));
+        qBuilder.EditParameter(ParameterFlag.QuestionaireParameter.RandomValue, "=", UnityEngine.Random.Range(1, 5));
+        qBuilder.EditParameter(ParameterFlag.QuestionaireParameter.ClassLevel, "=", PlayerPrefs.GetInt(GeneralFlag.Playerpref.Level, 0));
     }
 
     public void Reset() {

@@ -26,6 +26,10 @@ namespace Expect.ARTour {
                     StartWithSelectLang();
 
                     break;
+
+                case GeneralFlag.ObeserverEvent.AppEnd:
+
+                    break;
             }
         }
 
@@ -47,6 +51,13 @@ namespace Expect.ARTour {
         private void StartFreeTour() {
             ARSession.enabled = true;
             MainApp.Instance.Notify(GeneralFlag.ObeserverEvent.TourStart);
+        }
+
+        private void ShowTotalScore() {
+            ScoreView scoreView = Modals.instance.OpenModal<ScoreView>();
+
+
+
         }
 
         private void ResetData() {
