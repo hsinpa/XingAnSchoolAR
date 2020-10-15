@@ -20,6 +20,9 @@ namespace Expect.View
         private Text questionText;
 
         [SerializeField]
+        private Text scoreText;
+
+        [SerializeField]
         private Transform AnswerContainer;
 
         [SerializeField]
@@ -51,6 +54,8 @@ namespace Expect.View
             titleText.text = title;
 
             questionText.text = question;
+
+            scoreText.text = "";
 
             CreateAnswerSlots(answers);
 
@@ -99,6 +104,9 @@ namespace Expect.View
             _answerSlotItems[correctIndex].SetState(AnswerSloItem.State.Correct);
 
             ProceedBtnText.text = StringAsset.ARTour.QuestionaireContinueBtn;
+
+            if (correctAnswerIndex == correctIndex)
+                scoreText.text = string.Format(StringAsset.ARTour.AddScoreText, 25);
         }
 
         private void OnProceedBtnClick() {

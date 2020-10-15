@@ -18,11 +18,10 @@ namespace Expect.ARTour
 
         public static System.Action<GeneralFlag.ARTourTheme> OnThemeChange;
         public static System.Action<ARDataSync> OnDataSync;
+        public static GeneralFlag.ARTourTheme arTourTheme = GeneralFlag.ARTourTheme.None;
 
         ARDataSync _arDataSync;
         ARTourModel _model;
-
-        private GeneralFlag.ARTourTheme _arTourTheme = GeneralFlag.ARTourTheme.None;
 
         public override void OnNotify(string p_event, params object[] p_objects)
         {
@@ -30,10 +29,16 @@ namespace Expect.ARTour
 
             switch (p_event) {
                 case GeneralFlag.ObeserverEvent.TourStart:
+                    arTourTheme = GeneralFlag.ARTourTheme.None;
                     break;
 
                 case GeneralFlag.ObeserverEvent.AppEnd:
                     tourButton.gameObject.SetActive(false);
+                    break;
+
+                case GeneralFlag.ObeserverEvent.ThemeChange:
+                    OnThemeChange((GeneralFlag.ARTourTheme)p_objects[0]);
+                    OnARObjectUpdateBtn();
                     break;
             }
         }
@@ -52,15 +57,15 @@ namespace Expect.ARTour
         }
 
         private void OnClickTourBtn() {
-            if (_arTourTheme == GeneralFlag.ARTourTheme.None) return;
+            if (arTourTheme == GeneralFlag.ARTourTheme.None) return;
 
             TourView tourModal = Modals.instance.OpenModal<TourView>();
-            tourModal.SetUp(_arTourTheme, _model, "Game is foot",
+            tourModal.SetUp(arTourTheme, _model, "Game is foot",
                 OnQuestionStartClick);
         }
 
         private void OnQuestionStartClick() {
-            if (GeneralFlag.QThemeLookUpTable.TryGetValue(_arTourTheme, out string firstQEventKey)) {
+            if (GeneralFlag.QThemeLookUpTable.TryGetValue(arTourTheme, out string firstQEventKey)) {
                 MainApp.Instance.Notify(GeneralFlag.ObeserverEvent.QuizStart, firstQEventKey);
             }
         }
@@ -77,7 +82,7 @@ namespace Expect.ARTour
 
         private void OnThemeChangeCallback(GeneralFlag.ARTourTheme theme) {
             tourButton.gameObject.SetActive(true);
-            _arTourTheme = theme;
+            arTourTheme = theme;
             
             Debug.Log("Theme is pick " + theme.ToString("g"));
         }

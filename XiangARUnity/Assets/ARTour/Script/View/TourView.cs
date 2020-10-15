@@ -10,9 +10,6 @@ namespace Expect.View
     public class TourView : Modal
     {
         [SerializeField]
-        private Text titleText;
-
-        [SerializeField]
         private Button startQuestionaireBtn;
 
         [SerializeField]
@@ -36,7 +33,6 @@ namespace Expect.View
 
         public void SetUp(GeneralFlag.ARTourTheme theme, ARTourModel model, string title, System.Action Callback) {
             this._model = model;
-            titleText.text = title;
 
             if (GeneralFlag.ThemeKeyLookUpTable.TryGetValue(theme, out string p_key)) {
                 _themeKey = p_key;

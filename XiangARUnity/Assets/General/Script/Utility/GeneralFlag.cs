@@ -14,6 +14,7 @@ public class GeneralFlag
         //After lang is pick
         public const string TourStart = "event@start_tour";
         public const string QuizStart = "event@start_quiz";
+        public const string ThemeChange = "event@theme_change";
 
         public const string AppEnd = "event@end_app";
     }
@@ -28,6 +29,13 @@ public class GeneralFlag
             public const string End = "End";
             public const string Question = "Question";
             public const string Examination = "Examination";
+        }
+
+        public class ImageTracker {
+            public const string ThemeSpring = "ar_theme_spring";
+            public const string ThemeSummer = "ar_theme_summer";
+            public const string ThemeAutumn = "ar_theme_autumn";
+            public const string ThemeWinter = "ar_theme_winter";
         }
     }
 
@@ -64,6 +72,13 @@ public class GeneralFlag
         {ARTourTheme.Summer, Questionaire.QThemeSummer },
         {ARTourTheme.Autumn, Questionaire.QThemeAutumn },
         {ARTourTheme.Winter, Questionaire.QThemeWinter }
+    };
+
+    public static readonly Dictionary<string, ARTourTheme> SThemeLookUpTable = new Dictionary<string, ARTourTheme> {
+        {ARTour.ImageTracker.ThemeSpring, ARTourTheme.Spring },
+        {ARTour.ImageTracker.ThemeSummer, ARTourTheme.Summer },
+        {ARTour.ImageTracker.ThemeAutumn, ARTourTheme.Autumn },
+        {ARTour.ImageTracker.ThemeWinter, ARTourTheme.Winter },
     };
 
 }

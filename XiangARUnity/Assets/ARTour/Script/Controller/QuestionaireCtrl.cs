@@ -6,7 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Expect.StaticAsset;
+using UnityEngine.SceneManagement;
 
 namespace Expect.ARTour
 {
@@ -54,8 +55,9 @@ namespace Expect.ARTour
             }
 
             string[] potentialAnswers = ticket.choiceStats.Select(x => x.MainValue).ToArray<string>();
+            string title = StringAsset.GetGradeString(PlayerPrefs.GetInt(ParameterFlag.QuestionaireParameter.ClassLevel, 0));
 
-            _questionaireView.SetContent("低年級", ticket.eventStats.MainValue, potentialAnswers, correctIndex, OnAnswerSubmit);
+            _questionaireView.SetContent(title, ticket.eventStats.MainValue, potentialAnswers, correctIndex, OnAnswerSubmit);
         }
 
         private void ProcessTicket(Ticket ticket) {
@@ -63,6 +65,13 @@ namespace Expect.ARTour
             if (ticket.eventStats.Tag == GeneralFlag.ARTour.QuestionType.End)
             {
                 //TODO: Show Score Board;
+                Modals.instance.Close();
+                int score = _model.GetVariable(ParameterFlag.QuestionaireParameter.Score) * 25;
+
+                ScoreView scoreView = Modals.instance.OpenModal<ScoreView>();
+                scoreView.SetContent($"+{score}分", () => {
+                    SceneManager.LoadScene("ARTour");
+                });
 
                 return;
             }

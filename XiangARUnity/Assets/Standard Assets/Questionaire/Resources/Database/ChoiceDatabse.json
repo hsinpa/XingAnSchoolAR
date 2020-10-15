@@ -2,577 +2,1153 @@
   {
     "ChoiceID": "area01_database_01",
     "UniqueID": "overall_unique_01",
-    "MainValue": "春季問題_01",
+    "MainValue": "正確",
     "Constraint": "",
     "Effect": "score + 1",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area01_database_01",
     "UniqueID": "overall_unique_02",
-    "MainValue": "春季問題_02",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_01",
+    "ChoiceID": "area01_database_02",
     "UniqueID": "overall_unique_03",
-    "MainValue": "春季問題_03",
+    "MainValue": "正確",
     "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area01_05",
+    "Effect": "score + 1",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_01",
+    "ChoiceID": "area01_database_02",
     "UniqueID": "overall_unique_04",
-    "MainValue": "春季問題_04",
+    "MainValue": "否認",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_02",
+    "ChoiceID": "area01_database_03",
     "UniqueID": "overall_unique_05",
-    "MainValue": "春季問題_05",
+    "MainValue": "正確",
     "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area01_05",
+    "Effect": "score + 1",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_02",
+    "ChoiceID": "area01_database_03",
     "UniqueID": "overall_unique_06",
-    "MainValue": "春季問題_06",
+    "MainValue": "否認",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_02",
+    "ChoiceID": "area01_database_04",
     "UniqueID": "overall_unique_07",
-    "MainValue": "春季問題_07",
+    "MainValue": "正確",
     "Constraint": "",
     "Effect": "score + 1",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_02",
+    "ChoiceID": "area01_database_04",
     "UniqueID": "overall_unique_08",
-    "MainValue": "春季問題_08",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_03",
+    "ChoiceID": "area01_database_05",
     "UniqueID": "overall_unique_09",
-    "MainValue": "春季問題_09",
+    "MainValue": "黑色",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_03",
+    "ChoiceID": "area01_database_05",
     "UniqueID": "overall_unique_10",
-    "MainValue": "春季問題_10",
+    "MainValue": "墨綠色",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_03",
+    "ChoiceID": "area01_database_05",
     "UniqueID": "overall_unique_11",
-    "MainValue": "春季問題_11",
+    "MainValue": "橙紅色",
     "Constraint": "",
     "Effect": "score + 1",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_03",
+    "ChoiceID": "area01_database_06",
     "UniqueID": "overall_unique_12",
-    "MainValue": "春季問題_12",
+    "MainValue": "招潮蟹",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_04",
+    "ChoiceID": "area01_database_06",
     "UniqueID": "overall_unique_13",
-    "MainValue": "春季問題_13",
+    "MainValue": "臺灣黑熊",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_04",
+    "ChoiceID": "area01_database_06",
     "UniqueID": "overall_unique_14",
-    "MainValue": "春季問題_14",
+    "MainValue": "穿山甲",
     "Constraint": "",
     "Effect": "score + 1",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_04",
+    "ChoiceID": "area01_database_07",
     "UniqueID": "overall_unique_15",
-    "MainValue": "春季問題_15",
+    "MainValue": "颱風",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area01_database_04",
+    "ChoiceID": "area01_database_07",
     "UniqueID": "overall_unique_16",
-    "MainValue": "春季問題_16",
+    "MainValue": "下雨",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area01_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area02_database_01",
+    "ChoiceID": "area01_database_07",
     "UniqueID": "overall_unique_17",
-    "MainValue": "夏季問題_01",
+    "MainValue": "終年結冰",
     "Constraint": "",
     "Effect": "score + 1",
-    "NextStep": "area02_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area02_database_01",
+    "ChoiceID": "area01_database_08",
     "UniqueID": "overall_unique_18",
-    "MainValue": "夏季問題_02",
+    "MainValue": "橙綠楓",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area02_05",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area02_database_01",
+    "ChoiceID": "area01_database_08",
     "UniqueID": "overall_unique_19",
-    "MainValue": "夏季問題_03",
+    "MainValue": "甜心榕",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area02_05",
+    "NextStep": "area01_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area01_database_08",
+    "UniqueID": "overall_unique_20",
+    "MainValue": "樺樹",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area01_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area01_database_09",
+    "UniqueID": "overall_unique_21",
+    "MainValue": "樺樹",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area01_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area01_database_09",
+    "UniqueID": "overall_unique_22",
+    "MainValue": "可可椰子",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area01_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area01_database_09",
+    "UniqueID": "overall_unique_23",
+    "MainValue": "橙綠楓",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area01_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area01_database_10",
+    "UniqueID": "overall_unique_24",
+    "MainValue": "黃喉貂",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area01_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area01_database_10",
+    "UniqueID": "overall_unique_25",
+    "MainValue": "食蟻獸",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area01_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area01_database_10",
+    "UniqueID": "overall_unique_26",
+    "MainValue": "臺北樹蛙",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area01_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area01_database_11",
+    "UniqueID": "overall_unique_27",
+    "MainValue": "冰島2.澳洲3.日本",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area01_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area01_database_11",
+    "UniqueID": "overall_unique_28",
+    "MainValue": "澳洲",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area01_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area01_database_11",
+    "UniqueID": "overall_unique_29",
+    "MainValue": "日本",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area01_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area01_database_12",
+    "UniqueID": "overall_unique_30",
+    "MainValue": "白色叉叉",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area01_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area01_database_12",
+    "UniqueID": "overall_unique_31",
+    "MainValue": "白色大V",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area01_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area01_database_12",
+    "UniqueID": "overall_unique_32",
+    "MainValue": "黑色大V",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area01_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area02_database_01",
-    "UniqueID": "overall_unique_20",
-    "MainValue": "夏季問題_04",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area02_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area02_database_02",
-    "UniqueID": "overall_unique_21",
-    "MainValue": "夏季問題_05",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area02_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area02_database_02",
-    "UniqueID": "overall_unique_22",
-    "MainValue": "夏季問題_06",
-    "Constraint": "",
-    "Effect": "score + 1",
-    "NextStep": "area02_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area02_database_02",
-    "UniqueID": "overall_unique_23",
-    "MainValue": "夏季問題_07",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area02_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area02_database_02",
-    "UniqueID": "overall_unique_24",
-    "MainValue": "夏季問題_08",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area02_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area02_database_03",
-    "UniqueID": "overall_unique_25",
-    "MainValue": "夏季問題_09",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area02_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area02_database_03",
-    "UniqueID": "overall_unique_26",
-    "MainValue": "夏季問題_10",
-    "Constraint": "",
-    "Effect": "score + 1",
-    "NextStep": "area02_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area02_database_03",
-    "UniqueID": "overall_unique_27",
-    "MainValue": "夏季問題_11",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area02_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area02_database_03",
-    "UniqueID": "overall_unique_28",
-    "MainValue": "夏季問題_12",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area02_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area02_database_04",
-    "UniqueID": "overall_unique_29",
-    "MainValue": "夏季問題_13",
-    "Constraint": "",
-    "Effect": "score + 1",
-    "NextStep": "area02_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area02_database_04",
-    "UniqueID": "overall_unique_30",
-    "MainValue": "夏季問題_14",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area02_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area02_database_04",
-    "UniqueID": "overall_unique_31",
-    "MainValue": "夏季問題_15",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area02_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area02_database_04",
-    "UniqueID": "overall_unique_32",
-    "MainValue": "夏季問題_16",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area02_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area03_database_01",
     "UniqueID": "overall_unique_33",
-    "MainValue": "秋季問題_01",
+    "MainValue": "正確",
     "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area03_05",
+    "Effect": "score + 1",
+    "NextStep": "area02_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area03_database_01",
+    "ChoiceID": "area02_database_01",
     "UniqueID": "overall_unique_34",
-    "MainValue": "秋季問題_02",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area03_05",
+    "NextStep": "area02_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area03_database_01",
+    "ChoiceID": "area02_database_02",
     "UniqueID": "overall_unique_35",
-    "MainValue": "秋季問題_03",
+    "MainValue": "正確",
     "Constraint": "",
     "Effect": "score + 1",
-    "NextStep": "area03_05",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_02",
+    "UniqueID": "overall_unique_36",
+    "MainValue": "否認",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_03",
+    "UniqueID": "overall_unique_37",
+    "MainValue": "正確",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_03",
+    "UniqueID": "overall_unique_38",
+    "MainValue": "否認",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_04",
+    "UniqueID": "overall_unique_39",
+    "MainValue": "正確",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_04",
+    "UniqueID": "overall_unique_40",
+    "MainValue": "錯誤",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_05",
+    "UniqueID": "overall_unique_41",
+    "MainValue": "大片扇形",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_05",
+    "UniqueID": "overall_unique_42",
+    "MainValue": "針狀",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_05",
+    "UniqueID": "overall_unique_43",
+    "MainValue": "小片橢圓形",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_06",
+    "UniqueID": "overall_unique_44",
+    "MainValue": "石虎",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_06",
+    "UniqueID": "overall_unique_45",
+    "MainValue": "台灣黑熊",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_06",
+    "UniqueID": "overall_unique_46",
+    "MainValue": "穿山甲",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_07",
+    "UniqueID": "overall_unique_47",
+    "MainValue": "合歡山",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_07",
+    "UniqueID": "overall_unique_48",
+    "MainValue": "陽明山",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_07",
+    "UniqueID": "overall_unique_49",
+    "MainValue": "墾丁",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_08",
+    "UniqueID": "overall_unique_50",
+    "MainValue": "甜心榕",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_08",
+    "UniqueID": "overall_unique_51",
+    "MainValue": "橙綠楓",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_08",
+    "UniqueID": "overall_unique_52",
+    "MainValue": "可可椰子",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_09",
+    "UniqueID": "overall_unique_53",
+    "MainValue": "扇形",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_09",
+    "UniqueID": "overall_unique_54",
+    "MainValue": "針狀",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_09",
+    "UniqueID": "overall_unique_55",
+    "MainValue": "大片橢圓形",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_10",
+    "UniqueID": "overall_unique_56",
+    "MainValue": "甜心榕",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_10",
+    "UniqueID": "overall_unique_57",
+    "MainValue": "柳杉",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_10",
+    "UniqueID": "overall_unique_58",
+    "MainValue": "可可椰子",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_11",
+    "UniqueID": "overall_unique_59",
+    "MainValue": "冰島",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_11",
+    "UniqueID": "overall_unique_60",
+    "MainValue": "日本",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_11",
+    "UniqueID": "overall_unique_61",
+    "MainValue": "菲律賓",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_12",
+    "UniqueID": "overall_unique_62",
+    "MainValue": "台灣獼猴",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_12",
+    "UniqueID": "overall_unique_63",
+    "MainValue": "穿山甲",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area02_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area02_database_12",
+    "UniqueID": "overall_unique_64",
+    "MainValue": "水鹿",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area02_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area03_database_01",
-    "UniqueID": "overall_unique_36",
-    "MainValue": "秋季問題_04",
+    "UniqueID": "overall_unique_65",
+    "MainValue": "正確",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_01",
+    "UniqueID": "overall_unique_66",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area03_05",
+    "NextStep": "area03_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area03_database_02",
-    "UniqueID": "overall_unique_37",
-    "MainValue": "秋季問題_05",
+    "UniqueID": "overall_unique_67",
+    "MainValue": "正確",
     "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area03_05",
+    "Effect": "score + 1",
+    "NextStep": "area03_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area03_database_02",
-    "UniqueID": "overall_unique_38",
-    "MainValue": "秋季問題_06",
+    "UniqueID": "overall_unique_68",
+    "MainValue": "否認",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area03_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area03_database_02",
-    "UniqueID": "overall_unique_39",
-    "MainValue": "秋季問題_07",
-    "Constraint": "",
-    "Effect": "score + 1",
-    "NextStep": "area03_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area03_database_02",
-    "UniqueID": "overall_unique_40",
-    "MainValue": "秋季問題_08",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area03_05",
+    "NextStep": "area03_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area03_database_03",
-    "UniqueID": "overall_unique_41",
-    "MainValue": "秋季問題_09",
+    "UniqueID": "overall_unique_69",
+    "MainValue": "正確",
     "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area03_05",
+    "Effect": "score + 1",
+    "NextStep": "area03_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area03_database_03",
-    "UniqueID": "overall_unique_42",
-    "MainValue": "秋季問題_10",
+    "UniqueID": "overall_unique_70",
+    "MainValue": "否認",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area03_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area03_database_03",
-    "UniqueID": "overall_unique_43",
-    "MainValue": "秋季問題_11",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area03_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area03_database_03",
-    "UniqueID": "overall_unique_44",
-    "MainValue": "秋季問題_12",
-    "Constraint": "",
-    "Effect": "score + 1",
-    "NextStep": "area03_05",
+    "NextStep": "area03_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area03_database_04",
-    "UniqueID": "overall_unique_45",
-    "MainValue": "秋季問題_13",
+    "UniqueID": "overall_unique_71",
+    "MainValue": "正確",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area03_05",
+    "NextStep": "area03_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area03_database_04",
-    "UniqueID": "overall_unique_46",
-    "MainValue": "秋季問題_14",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area03_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area03_database_04",
-    "UniqueID": "overall_unique_47",
-    "MainValue": "秋季問題_15",
+    "UniqueID": "overall_unique_72",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 1",
-    "NextStep": "area03_05",
+    "NextStep": "area03_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area03_database_04",
-    "UniqueID": "overall_unique_48",
-    "MainValue": "秋季問題_16",
+    "ChoiceID": "area03_database_05",
+    "UniqueID": "overall_unique_73",
+    "MainValue": "活動中心",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area03_05",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_05",
+    "UniqueID": "overall_unique_74",
+    "MainValue": "圖書館",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_05",
+    "UniqueID": "overall_unique_75",
+    "MainValue": "司令台",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_06",
+    "UniqueID": "overall_unique_76",
+    "MainValue": "貓頭鷹",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_06",
+    "UniqueID": "overall_unique_77",
+    "MainValue": "台灣藍鵲",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_06",
+    "UniqueID": "overall_unique_78",
+    "MainValue": "招潮蟹",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_07",
+    "UniqueID": "overall_unique_79",
+    "MainValue": "低",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_07",
+    "UniqueID": "overall_unique_80",
+    "MainValue": "高",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_07",
+    "UniqueID": "overall_unique_81",
+    "MainValue": "一樣",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_08",
+    "UniqueID": "overall_unique_82",
+    "MainValue": "台灣黑熊",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_08",
+    "UniqueID": "overall_unique_83",
+    "MainValue": "馬",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_08",
+    "UniqueID": "overall_unique_84",
+    "MainValue": "臺灣獼猴的造型",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_09",
+    "UniqueID": "overall_unique_85",
+    "MainValue": "扇形",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_09",
+    "UniqueID": "overall_unique_86",
+    "MainValue": "針狀",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_09",
+    "UniqueID": "overall_unique_87",
+    "MainValue": "大片橢圓形",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_10",
+    "UniqueID": "overall_unique_88",
+    "MainValue": "水鹿",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_10",
+    "UniqueID": "overall_unique_89",
+    "MainValue": "櫻花鉤吻鮭",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_10",
+    "UniqueID": "overall_unique_90",
+    "MainValue": "石虎",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_11",
+    "UniqueID": "overall_unique_91",
+    "MainValue": "快閃廣場",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_11",
+    "UniqueID": "overall_unique_92",
+    "MainValue": "學務處平安廣場",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_11",
+    "UniqueID": "overall_unique_93",
+    "MainValue": "活動中心前",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_12",
+    "UniqueID": "overall_unique_94",
+    "MainValue": "颱風",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_12",
+    "UniqueID": "overall_unique_95",
+    "MainValue": "結冰",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area03_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area03_database_12",
+    "UniqueID": "overall_unique_96",
+    "MainValue": "沙漠",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area03_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area04_database_01",
-    "UniqueID": "overall_unique_49",
-    "MainValue": "冬季問題_01",
+    "UniqueID": "overall_unique_97",
+    "MainValue": "正確",
     "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area04_05",
+    "Effect": "score + 1",
+    "NextStep": "area04_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area04_database_01",
-    "UniqueID": "overall_unique_50",
-    "MainValue": "冬季問題_02",
-    "Constraint": "",
-    "Effect": "score + 1",
-    "NextStep": "area04_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area04_database_01",
-    "UniqueID": "overall_unique_51",
-    "MainValue": "冬季問題_03",
+    "UniqueID": "overall_unique_98",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area04_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area04_database_01",
-    "UniqueID": "overall_unique_52",
-    "MainValue": "冬季問題_04",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area04_05",
+    "NextStep": "area04_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area04_database_02",
-    "UniqueID": "overall_unique_53",
-    "MainValue": "冬季問題_05",
+    "UniqueID": "overall_unique_99",
+    "MainValue": "正確",
     "Constraint": "",
     "Effect": "score + 1",
-    "NextStep": "area04_05",
+    "NextStep": "area04_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area04_database_02",
-    "UniqueID": "overall_unique_54",
-    "MainValue": "冬季問題_06",
+    "UniqueID": "overall_unique_100",
+    "MainValue": "否認",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area04_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area04_database_02",
-    "UniqueID": "overall_unique_55",
-    "MainValue": "冬季問題_07",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area04_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area04_database_02",
-    "UniqueID": "overall_unique_56",
-    "MainValue": "冬季問題_08",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area04_05",
+    "NextStep": "area04_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area04_database_03",
-    "UniqueID": "overall_unique_57",
-    "MainValue": "冬季問題_09",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area04_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area04_database_03",
-    "UniqueID": "overall_unique_58",
-    "MainValue": "冬季問題_10",
-    "Constraint": "",
-    "Effect": "score + 0",
-    "NextStep": "area04_05",
-    "Extra": ""
-  },
-  {
-    "ChoiceID": "area04_database_03",
-    "UniqueID": "overall_unique_59",
-    "MainValue": "冬季問題_11",
+    "UniqueID": "overall_unique_101",
+    "MainValue": "正確",
     "Constraint": "",
     "Effect": "score + 1",
-    "NextStep": "area04_05",
+    "NextStep": "area04_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area04_database_03",
-    "UniqueID": "overall_unique_60",
-    "MainValue": "冬季問題_12",
+    "UniqueID": "overall_unique_102",
+    "MainValue": "否認",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area04_05",
+    "NextStep": "area04_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area04_database_04",
-    "UniqueID": "overall_unique_61",
-    "MainValue": "冬季問題_13",
+    "UniqueID": "overall_unique_103",
+    "MainValue": "正確",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area04_05",
+    "NextStep": "area04_13",
     "Extra": ""
   },
   {
     "ChoiceID": "area04_database_04",
-    "UniqueID": "overall_unique_62",
-    "MainValue": "冬季問題_14",
+    "UniqueID": "overall_unique_104",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 1",
-    "NextStep": "area04_05",
+    "NextStep": "area04_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area04_database_04",
-    "UniqueID": "overall_unique_63",
-    "MainValue": "冬季問題_15",
+    "ChoiceID": "area04_database_05",
+    "UniqueID": "overall_unique_105",
+    "MainValue": "扇形",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area04_05",
+    "NextStep": "area04_13",
     "Extra": ""
   },
   {
-    "ChoiceID": "area04_database_04",
-    "UniqueID": "overall_unique_64",
-    "MainValue": "冬季問題_16",
+    "ChoiceID": "area04_database_05",
+    "UniqueID": "overall_unique_106",
+    "MainValue": "針狀",
     "Constraint": "",
     "Effect": "score + 0",
-    "NextStep": "area04_05",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_05",
+    "UniqueID": "overall_unique_107",
+    "MainValue": "大片橢圓形",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_06",
+    "UniqueID": "overall_unique_108",
+    "MainValue": "小白兔",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_06",
+    "UniqueID": "overall_unique_109",
+    "MainValue": "彈塗魚",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_06",
+    "UniqueID": "overall_unique_110",
+    "MainValue": "水鹿",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_07",
+    "UniqueID": "overall_unique_111",
+    "MainValue": "低",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_07",
+    "UniqueID": "overall_unique_112",
+    "MainValue": "高",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_07",
+    "UniqueID": "overall_unique_113",
+    "MainValue": "一樣",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_08",
+    "UniqueID": "overall_unique_114",
+    "MainValue": "甜心榕",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_08",
+    "UniqueID": "overall_unique_115",
+    "MainValue": "柳杉",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_08",
+    "UniqueID": "overall_unique_116",
+    "MainValue": "可可椰子",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_09",
+    "UniqueID": "overall_unique_117",
+    "MainValue": "扇形",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_09",
+    "UniqueID": "overall_unique_118",
+    "MainValue": "針狀",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_09",
+    "UniqueID": "overall_unique_119",
+    "MainValue": "大片橢圓形",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_10",
+    "UniqueID": "overall_unique_120",
+    "MainValue": "甜心榕",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_10",
+    "UniqueID": "overall_unique_121",
+    "MainValue": "柳杉",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_10",
+    "UniqueID": "overall_unique_122",
+    "MainValue": "可可椰子",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_11",
+    "UniqueID": "overall_unique_123",
+    "MainValue": "6度",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_11",
+    "UniqueID": "overall_unique_124",
+    "MainValue": "10度",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_11",
+    "UniqueID": "overall_unique_125",
+    "MainValue": "16度以上",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_12",
+    "UniqueID": "overall_unique_126",
+    "MainValue": "招潮蟹",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_12",
+    "UniqueID": "overall_unique_127",
+    "MainValue": "駱駝",
+    "Constraint": "",
+    "Effect": "score + 0",
+    "NextStep": "area04_13",
+    "Extra": ""
+  },
+  {
+    "ChoiceID": "area04_database_12",
+    "UniqueID": "overall_unique_128",
+    "MainValue": "水鹿",
+    "Constraint": "",
+    "Effect": "score + 1",
+    "NextStep": "area04_13",
     "Extra": ""
   }
 ]

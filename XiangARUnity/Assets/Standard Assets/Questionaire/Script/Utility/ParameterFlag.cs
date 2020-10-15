@@ -16,8 +16,12 @@ namespace Questionaire
 
         public class StaticEventID {
             public const string Menu = "area01_01";
+        }
+
+        public class QuestionaireParameter {
             public const string RandomValue = "random_value";
-            public const string ClassLevel = "class_level";
+            public const string ClassLevel = "level";
+            public const string Score = "score";
         }
 
         public class DatabasePath {
