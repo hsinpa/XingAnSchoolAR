@@ -233,7 +233,8 @@ MonoBehaviour:
   targetMaterial: {fileID: 2100000, guid: f8c184718ea2f004a9b7c3a45ae7e445, type: 2}
   drawToTexture: {fileID: 1207677032}
   _camera: {fileID: 1317064130}
-  _PaintColor: {r: 0, g: 1, b: 0, a: 1}
+  _toolSRP: {fileID: 11400000, guid: 050e89b5d14cd0c41924ea6f0007a39f, type: 2}
+  _ResidualThreshold: 0.01
 --- !u!114 &1207677032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +250,8 @@ MonoBehaviour:
   _Power: 0.28
   _Range: 0.31
   DrawShader: {fileID: 4800000, guid: 9b55552181b9fe144bf55fdf52af3727, type: 3}
-  buffer: {fileID: 0}
+  ScoreShader: {fileID: 4800000, guid: df5db4e76c9e1574b865c44077811875, type: 3}
+  maskTexture: {fileID: 2800000, guid: 9b6d529ad7ad9464498e1d85d9538967, type: 3}
 --- !u!4 &1207677033
 Transform:
   m_ObjectHideFlags: 0
