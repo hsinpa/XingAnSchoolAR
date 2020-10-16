@@ -13,6 +13,6 @@ public class ToolSRP : ScriptableObject
     [Serializable]
     public struct Tool {
         public string tool_id;
-        public Color mask_color;
+        public Color mask_color;        
     }
 }

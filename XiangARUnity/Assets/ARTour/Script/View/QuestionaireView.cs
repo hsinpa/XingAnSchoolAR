@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Hsinpa.Utility;
 
 namespace Expect.View
 {
@@ -69,10 +70,10 @@ namespace Expect.View
         }
 
         private void CreateAnswerSlots(string[] answers) {
-            Utility.UtilityMethod.ClearChildObject(AnswerContainer);
+            UtilityMethod.ClearChildObject(AnswerContainer);
             _answerSlotItems = new AnswerSloItem[answers.Length];
             for (int i = 0; i < answers.Length; i++) {
-                var slotitem = Utility.UtilityMethod.CreateObjectToParent(AnswerContainer, AnswerSlotPrefab).GetComponent<AnswerSloItem>();
+                var slotitem = UtilityMethod.CreateObjectToParent(AnswerContainer, AnswerSlotPrefab).GetComponent<AnswerSloItem>();
                 _answerSlotItems[i] = slotitem;
 
                 slotitem.SetContent(answers[i], HighlightCurrentSelectSlot);

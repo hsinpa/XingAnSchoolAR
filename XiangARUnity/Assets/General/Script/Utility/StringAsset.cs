@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Expect.StaticAsset {
     
@@ -25,11 +27,27 @@ namespace Expect.StaticAsset {
             public const string TourQuizIsDone = "測試結束";
         }
 
+        public class LionRepairing {
+            public const string ToolID_1 = "tool_01";
+            public const string ToolID_2 = "tool_02";
+            public const string ToolID_3 = "tool_03";
+
+            public const string UnavilableTipTool_1 = "";
+            public const string UnavilableTipTool_2 = "需要先用過Tool_1 清潔";
+            public const string UnavilableTipTool_3 = "需要先用過Tool_2 清潔";
+        }
+
         public static string GetGradeString(int level) {
             if (level == 0) return ARTour.LowGrade;
             if (level == 1) return ARTour.MiddleGrade;
             return ARTour.HighGrade;
         }
+
+        public Dictionary<string, string> UnavilableTipTable = new Dictionary<string, string>() {
+            { LionRepairing.ToolID_1 , LionRepairing.UnavilableTipTool_1},
+            { LionRepairing.ToolID_2 , LionRepairing.UnavilableTipTool_2},
+            {LionRepairing.ToolID_3, LionRepairing.UnavilableTipTool_3}
+        };
 
     }
 

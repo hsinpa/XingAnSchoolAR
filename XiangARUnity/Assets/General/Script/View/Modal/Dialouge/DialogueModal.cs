@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using Hsinpa.Utility;
 
 namespace Expect.View
 {
@@ -49,7 +50,7 @@ namespace Expect.View
 
             for (int i = 0; i < btnlength; i++) {
                 int index = i;
-                GameObject buttonObj = Utility.UtilityMethod.CreateObjectToParent(buttonContainer, buttonPrefab);
+                GameObject buttonObj = UtilityMethod.CreateObjectToParent(buttonContainer, buttonPrefab);
                 Button button = buttonObj.GetComponent<Button>();
                 Text textObj = button.GetComponentInChildren<Text>();
 
@@ -66,7 +67,7 @@ namespace Expect.View
         private void ResetContent() {
             DecorateSideImage(null);
 
-            Utility.UtilityMethod.ClearChildObject(buttonContainer);
+            UtilityMethod.ClearChildObject(buttonContainer);
         }
 
 
