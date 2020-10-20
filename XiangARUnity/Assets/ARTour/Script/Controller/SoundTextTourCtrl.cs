@@ -90,16 +90,16 @@ namespace Expect.ARTour
 #if UNITY_EDITOR
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1) && OnThemeChange != null)
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Alpha1) && OnThemeChange != null)
                 OnThemeChange(GeneralFlag.ARTourTheme.Spring);
 
-            if (Input.GetKeyDown(KeyCode.Alpha2) && OnThemeChange != null)
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Alpha2) && OnThemeChange != null)
                 OnThemeChange(GeneralFlag.ARTourTheme.Summer);
 
-            if (Input.GetKeyDown(KeyCode.Alpha3) && OnThemeChange != null)
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Alpha3) && OnThemeChange != null)
                 OnThemeChange(GeneralFlag.ARTourTheme.Autumn);
 
-            if (Input.GetKeyDown(KeyCode.Alpha4) && OnThemeChange != null)
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Alpha4) && OnThemeChange != null)
                 OnThemeChange(GeneralFlag.ARTourTheme.Winter);
         }
 #endif

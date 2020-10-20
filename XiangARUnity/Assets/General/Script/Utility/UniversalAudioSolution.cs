@@ -28,8 +28,11 @@ namespace Hsinpa.Utility {
         }
 
         public void PlayAudio(AudioType audioType, AudioClip audioClip) {
+            if (audioClip == null) return;
+
             var audioSource = GetAudioByType(audioType);
             audioSource.clip = audioClip;
+            audioSource.time = 0;
             audioSource.Play();
         }
 

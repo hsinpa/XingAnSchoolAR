@@ -21,6 +21,9 @@ namespace Hsinpa.App {
         [SerializeField, Range(0, 0.1f)]
         private float _ResidualThreshold;
 
+        [SerializeField]
+        private Transform targetModel;
+
         private int toolIndex;
         private int toolCount;
 
@@ -58,6 +61,7 @@ namespace Hsinpa.App {
             }
 
             CheckIfToolIsPick();
+            RotateTargetModelManually();
         }
 
         private async void CheckIfSocreIsMeet() {
@@ -75,6 +79,17 @@ namespace Hsinpa.App {
 
             if (Input.GetKeyDown(KeyCode.Alpha3))
                 EquipTool(ToolSRP.ToolEnum.Tool_3);
+        }
+
+        private void RotateTargetModelManually() {
+            int speed = 100;
+            if (Input.GetKey(KeyCode.RightArrow))
+                targetModel.transform.Rotate(Vector3.up * Time.deltaTime * speed);
+
+            if (Input.GetKey(KeyCode.LeftArrow))
+                targetModel.transform.Rotate(-Vector3.up * Time.deltaTime * speed);
+
+
         }
 
         public void EquipTool(ToolSRP.ToolEnum toolEnum) {

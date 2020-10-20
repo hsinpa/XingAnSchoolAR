@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Hsinpa.Utility;
 
 namespace Expect.View
 {
@@ -45,7 +45,7 @@ namespace Expect.View
 
             targetBtn.onClick.AddListener(() =>
             {
-
+                UniversalAudioSolution.instance.PlayAudio(UniversalAudioSolution.AudioType.AudioClip2D, audio);
             });
         }
 
