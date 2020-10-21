@@ -35,6 +35,7 @@ namespace Expect.StaticAsset {
             public const string UnavilableTipTool_1 = "";
             public const string UnavilableTipTool_2 = "需要先用過Tool_1 清潔";
             public const string UnavilableTipTool_3 = "需要先用過Tool_2 清潔";
+            public const string ToolUsedMessage = "已完成";
         }
 
         public static string GetGradeString(int level) {
@@ -43,11 +44,29 @@ namespace Expect.StaticAsset {
             return ARTour.HighGrade;
         }
 
-        public Dictionary<string, string> UnavilableTipTable = new Dictionary<string, string>() {
+        public enum GetToolStatusType { 
+            Available, AlreadyUsed, Unavilable
+        }
+
+        public static Dictionary<string, string> UnavilableTipTable = new Dictionary<string, string>() {
             { LionRepairing.ToolID_1 , LionRepairing.UnavilableTipTool_1},
             { LionRepairing.ToolID_2 , LionRepairing.UnavilableTipTool_2},
             {LionRepairing.ToolID_3, LionRepairing.UnavilableTipTool_3}
         };
+
+        private static Dictionary<string, ToolSRP.ToolEnum> ToolIDToEnumTable = new Dictionary<string, ToolSRP.ToolEnum> {
+            { LionRepairing.ToolID_1 , ToolSRP.ToolEnum.Tool_1},
+            { LionRepairing.ToolID_2 , ToolSRP.ToolEnum.Tool_2},
+            {LionRepairing.ToolID_3, ToolSRP.ToolEnum.Tool_3}
+        };
+
+        public static ToolSRP.ToolEnum GetToolEnumByID(string id) {
+            if (ToolIDToEnumTable.TryGetValue(id, out ToolSRP.ToolEnum toolEnum)) { 
+                return toolEnum;
+            }
+
+            return ToolSRP.ToolEnum.Tool_1;
+        }
 
     }
 

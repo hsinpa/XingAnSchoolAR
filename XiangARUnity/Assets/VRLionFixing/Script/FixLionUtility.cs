@@ -1,4 +1,5 @@
 ﻿using Expect.StaticAsset;
+using Expect.View;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,17 +7,15 @@ using UnityEngine;
 public class FixLionUtility 
 {
 
-    public static bool IsGivenToolAllowToProceed(string tool_name, int current_progress) {
+    public static StringAsset.GetToolStatusType IsGivenToolAllowToProceed(string tool_name, int current_progress) {
+        int toolEnum = (int)StringAsset.GetToolEnumByID(tool_name);
 
-        switch (tool_name) {
-            case StringAsset.LionRepairing.ToolID_1:
-                return current_progress >= 0;
-            case StringAsset.LionRepairing.ToolID_2:
-                return current_progress >= 1;
-            case StringAsset.LionRepairing.ToolID_3:
-                return current_progress >= 2;
-        }
+        if (current_progress > toolEnum)
+            return StringAsset.GetToolStatusType.AlreadyUsed;
 
-        return false;
+        if (current_progress < toolEnum)
+            return StringAsset.GetToolStatusType.Unavilable;
+
+        return StringAsset.GetToolStatusType.Available;
     }
 }

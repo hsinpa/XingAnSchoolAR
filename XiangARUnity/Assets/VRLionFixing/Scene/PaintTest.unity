@@ -876,7 +876,7 @@ MonoBehaviour:
   drawToTexture: {fileID: 1207677032}
   _camera: {fileID: 1317064130}
   _toolSRP: {fileID: 11400000, guid: 050e89b5d14cd0c41924ea6f0007a39f, type: 2}
-  _ResidualThreshold: 0.01
+  _ResidualThreshold: 0.015
   targetModel: {fileID: 1993486147}
 --- !u!114 &1207677032
 MonoBehaviour:
@@ -890,8 +890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd1f6c867f7fee4da8eb20b966a423d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Power: 0.28
-  _Range: 0.31
+  _Power: 0.18
+  _Range: 0.1
   DrawShader: {fileID: 4800000, guid: 9b55552181b9fe144bf55fdf52af3727, type: 3}
   ScoreShader: {fileID: 4800000, guid: df5db4e76c9e1574b865c44077811875, type: 3}
   maskTexture: {fileID: 2800000, guid: 9b6d529ad7ad9464498e1d85d9538967, type: 3}
@@ -1054,6 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FixLionInput: {fileID: 1533247559}
+  PaintingManager: {fileID: 1207677031}
   handTransform: {fileID: 333153110}
 --- !u!1 &1556235441
 GameObject:
@@ -1334,7 +1335,7 @@ GameObject:
   - component: {fileID: 1993486146}
   - component: {fileID: 1993486145}
   - component: {fileID: 1993486144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TargetModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

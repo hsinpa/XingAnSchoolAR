@@ -26,10 +26,12 @@ namespace Hsinpa.App {
 
         private int toolIndex;
         private int toolCount;
+        private int layerMask = 1 << 9;
 
-        int layerMask = 1 << 0;
+        public System.Action OnTargetDirtIsClear; 
 
-        private void Start()
+
+private void Start()
         {
             drawToTexture.SetUp(targetMaterial);
             toolCount = _toolSRP.tools.Length;
@@ -66,8 +68,12 @@ namespace Hsinpa.App {
 
         private async void CheckIfSocreIsMeet() {
             float colorScore = await drawToTexture.CalScoreOnDrawMat(_toolSRP.tools[toolIndex].mask_color);
+            bool dirtIsClear = colorScore < _ResidualThreshold;
 
-            Debug.Log("Color Score " + colorScore +", pass " + (colorScore < _ResidualThreshold));
+            if (dirtIsClear && OnTargetDirtIsClear != null) {
+                OnTargetDirtIsClear();
+            }
+            Debug.Log("Color Score " + colorScore +", pass " + (dirtIsClear));
         }
 
         private void CheckIfToolIsPick() {
@@ -94,6 +100,10 @@ namespace Hsinpa.App {
 
         public void EquipTool(ToolSRP.ToolEnum toolEnum) {
             toolIndex = (int)toolEnum;
+        }
+
+        public void UnEquip() {
+            toolIndex = -1;
         }
 
         private Vector3 GetMouseWorldPos()

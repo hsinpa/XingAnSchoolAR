@@ -102,8 +102,8 @@ namespace Hsinpa.Shader {
 
         private void OnGUI()
         {
-            GUI.DrawTexture(new Rect(0, 0, 256, 256), buffer, ScaleMode.ScaleToFit, false, 1);
-            GUI.DrawTexture(new Rect(256, 0, 256, 256), scoreBuffer, ScaleMode.ScaleToFit, false, 1);
+            GUI.DrawTexture(new Rect(0, 0, 128, 128), buffer, ScaleMode.ScaleToFit, false, 1);
+            GUI.DrawTexture(new Rect(128, 0, 128, 128), scoreBuffer, ScaleMode.ScaleToFit, false, 1);
         }
 
         public void ResetBuffer() {
