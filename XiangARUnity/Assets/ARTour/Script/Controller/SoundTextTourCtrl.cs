@@ -62,10 +62,10 @@ namespace Expect.ARTour
         private void OnClickTourBtn() {
             if (arTourTheme == GeneralFlag.ARTourTheme.None) return;
 
-
             if (GeneralFlag.ThemeKeyLookUpTable.TryGetValue(arTourTheme, out string p_key))
             {
-                var guideSRP = tourGuideDataList.Find(x => x._id == p_key);
+
+                var guideSRP = tourGuideDataList.Find(x => x._id.Equals(p_key));
 
                 if (guideSRP.isValid) {
                     TourView tourModal = Modals.instance.OpenModal<TourView>();

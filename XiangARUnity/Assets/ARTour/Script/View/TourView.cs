@@ -24,6 +24,9 @@ namespace Expect.View
         private RectTransform ViewportScrollRect;
 
         [SerializeField]
+        private ScrollRect ScrollRect;
+
+        [SerializeField]
         private Button leftBtn;
 
         [SerializeField]
@@ -47,9 +50,11 @@ namespace Expect.View
 
         private ARTourModel _model;
 
-        private string _themeKey;
-
         private System.Action OnQuestionStartCallback;
+
+        private float viewportHeight, contentHeight;
+        private float currentHeight => ContentScrollRect.anchoredPosition.y;
+        private float maxHeight => contentHeight - viewportHeight;
 
         private void Start()
         {
@@ -59,6 +64,10 @@ namespace Expect.View
             {
                 Modals.instance.Close();
             });
+
+            leftBtn.onClick.AddListener(OnLeftBtnClick);
+            rightBtn.onClick.AddListener(OnRightBtnClick);
+            ScrollRect.onValueChanged.AddListener(OnScrollViewChange);
         }
 
         public void SetUp(string tour_id, ARTourModel model, GuideBoardSRP guideBoardSRP, System.Action Callback) {
@@ -72,6 +81,45 @@ namespace Expect.View
             //Check question is being take or not
             int questionRecord = _model.GetVariable(tour_id);
             startQuestionaireBtn.gameObject.SetActive(questionRecord == 0 && Callback != null);
+
+            StartCoroutine(ConfigTextContent());
+        }
+
+        private IEnumerator ConfigTextContent() {
+            yield return new WaitForEndOfFrame();
+            ContentScrollRect.anchoredPosition = Vector2.zero;
+
+            viewportHeight = ViewportScrollRect.rect.height;
+            contentHeight = ContentScrollRect.sizeDelta.y;
+            SetLeftRightContentBtn();
+        }
+
+        private void SetLeftRightContentBtn() {
+            leftBtn.gameObject.SetActive(currentHeight > 0);
+            rightBtn.gameObject.SetActive(currentHeight < (maxHeight));
+        }
+
+        private void OnLeftBtnClick() {
+            ProcessBtnClickAction(-1);
+        }
+
+        private void OnRightBtnClick()
+        {
+            ProcessBtnClickAction(1);
+        }
+
+        private void ProcessBtnClickAction(int dir) {
+            Debug.Log($"maxHeight {maxHeight} viewportHeight {viewportHeight}" );
+            float _currentHeight = currentHeight + viewportHeight * dir;
+            _currentHeight = Mathf.Clamp(_currentHeight, 0, maxHeight);
+
+            ContentScrollRect.anchoredPosition = new Vector2(0, _currentHeight);
+            SetLeftRightContentBtn();
+        }
+
+        private void OnScrollViewChange(Vector2 pos) {
+            Debug.Log("Pos " + pos);
+            SetLeftRightContentBtn();
         }
 
         private void OnQuestionaireClick() {
