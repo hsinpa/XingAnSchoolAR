@@ -33,7 +33,7 @@ namespace Expect.View
 
         private void SetContent(GuideBoardSRP p_guideBoardSRP) {
             title.text = p_guideBoardSRP.title;
-            content.text = p_guideBoardSRP.content_id;
+            content.text = p_guideBoardSRP.textAsset.text;
             sideSprite.sprite = p_guideBoardSRP.sprite;
 
             SetAudioBtnEvent(engGuideAuidoBtn, p_guideBoardSRP.enAudioGuide);

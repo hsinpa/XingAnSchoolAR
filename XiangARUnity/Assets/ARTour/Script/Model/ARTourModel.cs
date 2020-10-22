@@ -37,8 +37,17 @@ public class ARTourModel : Model
         qBuilder.EditParameter(ParameterFlag.QuestionaireParameter.ClassLevel, "=", PlayerPrefs.GetInt(GeneralFlag.Playerpref.Level, 0));
     }
 
+
+
     public void Reset() {
 
+    }
+
+    [System.Serializable]
+    public struct TourDataTextStruct {
+        public TextAsset textAsset;
+        public string title;
+        public string _id;
     }
 
 }

@@ -31,17 +31,8 @@ public class APIHttpRequest
             try
             {
                 string rawJSON = webRequest.downloadHandler.text;
-                var DatabaseResult = JsonUtility.FromJson<TypeFlag.SocketDataType.GeneralDatabaseType>(rawJSON);
-                Debug.Log(rawJSON);
-                Debug.Log(DatabaseResult.result);
 
-                if (DatabaseResult.status && !string.IsNullOrEmpty(DatabaseResult.result))
-                {
-                    if (success_callback != null) success_callback(DatabaseResult.result);
-                }
-                else {
-                    if (fail_callback != null) fail_callback();
-                }
+                if (success_callback != null) success_callback(rawJSON);
             }
             catch {
                 if (fail_callback != null) fail_callback();

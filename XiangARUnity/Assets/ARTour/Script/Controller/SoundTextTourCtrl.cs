@@ -16,6 +16,9 @@ namespace Expect.ARTour
         [SerializeField]
         private Button updateButton;
 
+        [SerializeField]
+        private List<TourGuideData> tourGuideDataList;
+
         public static System.Action<GeneralFlag.ARTourTheme> OnThemeChange;
         public static System.Action<ARDataSync> OnDataSync;
         public static GeneralFlag.ARTourTheme arTourTheme = GeneralFlag.ARTourTheme.None;
@@ -59,9 +62,17 @@ namespace Expect.ARTour
         private void OnClickTourBtn() {
             if (arTourTheme == GeneralFlag.ARTourTheme.None) return;
 
-            TourView tourModal = Modals.instance.OpenModal<TourView>();
-            tourModal.SetUp(arTourTheme, _model, "Game is foot",
-                OnQuestionStartClick);
+
+            if (GeneralFlag.ThemeKeyLookUpTable.TryGetValue(arTourTheme, out string p_key))
+            {
+                var guideSRP = tourGuideDataList.Find(x => x._id == p_key);
+
+                if (guideSRP.isValid) {
+                    TourView tourModal = Modals.instance.OpenModal<TourView>();
+                    tourModal.SetUp(p_key, _model, guideSRP.GuideBoardSRP, OnQuestionStartClick);
+                }
+            }
+
         }
 
         private void OnQuestionStartClick() {
@@ -103,6 +114,14 @@ namespace Expect.ARTour
                 OnThemeChange(GeneralFlag.ARTourTheme.Winter);
         }
 #endif
+
+        [System.Serializable]
+        public struct TourGuideData {
+            public GuideBoardSRP GuideBoardSRP;
+            public string _id;
+
+            public bool isValid => !string.IsNullOrEmpty(_id);
+        }
 
     }
 }

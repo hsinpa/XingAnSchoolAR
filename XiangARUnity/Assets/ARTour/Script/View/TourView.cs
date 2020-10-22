@@ -9,6 +9,36 @@ namespace Expect.View
 {
     public class TourView : Modal
     {
+        [Header("Content")]
+
+        [SerializeField]
+        private Text title;
+
+        [SerializeField]
+        private Text contentText;
+
+        [SerializeField]
+        private RectTransform ContentScrollRect;
+
+        [SerializeField]
+        private RectTransform ViewportScrollRect;
+
+        [SerializeField]
+        private Button leftBtn;
+
+        [SerializeField]
+        private Button rightBtn;
+
+        [Header("Voice")]
+
+        [SerializeField]
+        private Button engVoiceBtn;
+
+        [SerializeField]
+        private Button chtVoiceBtn;
+
+        [Header("Rest")]
+
         [SerializeField]
         private Button startQuestionaireBtn;
 
@@ -31,18 +61,17 @@ namespace Expect.View
             });
         }
 
-        public void SetUp(GeneralFlag.ARTourTheme theme, ARTourModel model, string title, System.Action Callback) {
+        public void SetUp(string tour_id, ARTourModel model, GuideBoardSRP guideBoardSRP, System.Action Callback) {
             this._model = model;
 
-            if (GeneralFlag.ThemeKeyLookUpTable.TryGetValue(theme, out string p_key)) {
-                _themeKey = p_key;
-            }
+            title.text = guideBoardSRP.title;
+            contentText.text = guideBoardSRP.textAsset.text;
 
             OnQuestionStartCallback = Callback;
 
             //Check question is being take or not
-            int questionRecord = _model.GetVariable(_themeKey);
-            startQuestionaireBtn.gameObject.SetActive(questionRecord == 0);
+            int questionRecord = _model.GetVariable(tour_id);
+            startQuestionaireBtn.gameObject.SetActive(questionRecord == 0 && Callback != null);
         }
 
         private void OnQuestionaireClick() {

@@ -37,6 +37,17 @@ public class GeneralFlag
             public const string ThemeAutumn = "ar_theme_autumn";
             public const string ThemeWinter = "ar_theme_winter";
         }
+
+        public class TourGuide
+        {
+            public const string ThemeSpring = "ar_theme_spring";
+            public const string ThemeSummer = "ar_theme_summer";
+            public const string ThemeAutumn = "ar_theme_autumn";
+            public const string ThemeWinter = "ar_theme_winter";
+
+            public const string LibraryIntro = "guide_library_intro";
+            public const string LibraryPaint = "guide_library_paint";
+        }
     }
 
     public enum ARTourTheme {
