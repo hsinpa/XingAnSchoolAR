@@ -49,6 +49,8 @@ namespace Expect.ARTour
             string keyValue = "score + 1";
             int correctIndex = ticket.choiceStats.FindIndex(x => x.Effect.IndexOf(keyValue) >= 0);
 
+            Debug.Log("correctIndex " + correctIndex);
+
             if (correctIndex < 0) {
                 Debug.LogError(ticket.eventStats._ID +", has no correct answer");
                 return;

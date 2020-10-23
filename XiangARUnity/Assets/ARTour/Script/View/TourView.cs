@@ -109,7 +109,6 @@ namespace Expect.View
         }
 
         private void ProcessBtnClickAction(int dir) {
-            Debug.Log($"maxHeight {maxHeight} viewportHeight {viewportHeight}" );
             float _currentHeight = currentHeight + viewportHeight * dir;
             _currentHeight = Mathf.Clamp(_currentHeight, 0, maxHeight);
 
@@ -118,7 +117,6 @@ namespace Expect.View
         }
 
         private void OnScrollViewChange(Vector2 pos) {
-            Debug.Log("Pos " + pos);
             SetLeftRightContentBtn();
         }
 

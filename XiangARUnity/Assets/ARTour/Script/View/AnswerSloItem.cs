@@ -35,7 +35,7 @@ namespace Expect.View
         }
 
         public void SetState(State p_state) {
-            _background.color = state.Find(x => x.state == p_state).color;
+            answerText.color = state.Find(x => x.state == p_state).color;
 
             button.interactable = (p_state == State.Normal);
         }

@@ -106,7 +106,7 @@ namespace Expect.View
 
             ProceedBtnText.text = StringAsset.ARTour.QuestionaireContinueBtn;
 
-            if (correctAnswerIndex == correctIndex)
+            if (currentIndex == correctIndex)
                 scoreText.text = string.Format(StringAsset.ARTour.AddScoreText, 25);
         }
 

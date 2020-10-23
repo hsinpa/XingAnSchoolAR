@@ -53,7 +53,7 @@ namespace Questionaire
 
                 isValid = Utility.UtilityMethod.AnalyzeStringOperator(operator_string, c_value, m_value);
 
-                Debug.Log("Constraint " + operator_string + ", " + c_value + ", " + m_value);
+                //Debug.Log("Constraint " + operator_string + ", " + c_value + ", " + m_value);
 
                 //first element and the constraint fail, break loop
                 if (i <= 0 && isValid == false)

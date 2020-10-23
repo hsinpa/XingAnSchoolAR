@@ -313,7 +313,7 @@ MonoBehaviour:
   button: {fileID: 494631113914119600}
   state:
   - state: 0
-    color: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 0, g: 0, b: 0, a: 1}
   - state: 1
     color: {r: 0.31287822, g: 0.745283, b: 0.3208692, a: 1}
   - state: 2
