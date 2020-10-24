@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 09a3ddebf6fb5924a823c0de087a568b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: DFPBiaoKaiW5-ZhuIn
+  fontNames:
+  - DFPBiaoKaiW5-ZhuIn
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
