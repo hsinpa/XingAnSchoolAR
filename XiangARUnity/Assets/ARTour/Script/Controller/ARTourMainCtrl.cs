@@ -49,7 +49,7 @@ namespace Expect.ARTour {
         }
 
         private void StartFreeTour() {
-            ARSession.enabled = true;
+            //ARSession.enabled = true;
             MainApp.Instance.Notify(GeneralFlag.ObeserverEvent.TourStart);
         }
 
@@ -61,7 +61,7 @@ namespace Expect.ARTour {
         }
 
         private void ResetData() {
-            ARSession.enabled = false;
+            //ARSession.enabled = false;
         }
 
     }
