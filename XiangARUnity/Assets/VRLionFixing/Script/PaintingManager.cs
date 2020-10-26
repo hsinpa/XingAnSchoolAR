@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Hsinpa.Shader;
+using Hsinpa.Input;
 
 namespace Hsinpa.App {
     public class PaintingManager : MonoBehaviour
@@ -40,24 +41,27 @@ private void Start()
 
         private void Update()
         {
-            if (Input.GetMouseButton(0) && toolIndex >= 0)
+
+            Debug.LogError(InputWrapper.instance.platformInput.GetMouse());
+
+            if (InputWrapper.instance.platformInput.GetMouse() && toolIndex >= 0)
             {
-                Vector3 diretion = (GetMouseWorldPos() - _camera.transform.position).normalized;
+                Vector3 diretion = InputWrapper.instance.platformInput.faceDir;
                 diretion.y = -diretion.y;
 
                 //Physics.Raycast
                 RaycastHit hit;
-                if (Physics.Raycast(_camera.ScreenPointToRay(Input.mousePosition), out hit, 100, layerMask))
+                if (Physics.Raycast(InputWrapper.instance.platformInput.GetRay(), out hit, 100, layerMask))
                 {
                     drawToTexture.DrawOnMesh(hit.textureCoord, _toolSRP.tools[toolIndex].mask_color);
                 }
             }
 
-            if (Input.GetMouseButtonUp(0) && toolIndex >= 0) {
+            if (InputWrapper.instance.platformInput.GetMouseUp() && toolIndex >= 0) {
                 CheckIfSocreIsMeet();
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
             {
                 drawToTexture.ResetBuffer();
             }
@@ -77,25 +81,23 @@ private void Start()
         }
 
         private void CheckIfToolIsPick() {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Alpha1))
                 EquipTool(ToolSRP.ToolEnum.Tool_1);
 
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Alpha2))
                 EquipTool(ToolSRP.ToolEnum.Tool_2);
 
-            if (Input.GetKeyDown(KeyCode.Alpha3))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Alpha3))
                 EquipTool(ToolSRP.ToolEnum.Tool_3);
         }
 
         private void RotateTargetModelManually() {
             int speed = 100;
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (InputWrapper.instance.platformInput.SwipeRight())
                 targetModel.transform.Rotate(Vector3.up * Time.deltaTime * speed);
 
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (InputWrapper.instance.platformInput.SwipeLeft())
                 targetModel.transform.Rotate(-Vector3.up * Time.deltaTime * speed);
-
-
         }
 
         public void EquipTool(ToolSRP.ToolEnum toolEnum) {
@@ -105,19 +107,5 @@ private void Start()
         public void UnEquip() {
             toolIndex = -1;
         }
-
-        private Vector3 GetMouseWorldPos()
-        {
-            Vector2 mousePos = new Vector2();
-
-            // Get the mouse position from Event.
-            // Note that the y position from Event is inverted.
-            mousePos.x = Input.mousePosition.x;
-            mousePos.y = _camera.pixelHeight - Input.mousePosition.y;
-
-            return _camera.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, _camera.nearClipPlane));
-        }
-
-
     }
 }

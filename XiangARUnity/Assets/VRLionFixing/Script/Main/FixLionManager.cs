@@ -30,7 +30,7 @@ namespace Expect.App {
         void Start()
         {
             _camera = Camera.main;
-            FixLionInput.SetUp(_camera);
+            FixLionInput.SetUp();
             FixLionInput.HoldItemEvent += OnTouchToolEvent;
             PaintingManager.OnTargetDirtIsClear += OnDirtIsCleared;
         }
