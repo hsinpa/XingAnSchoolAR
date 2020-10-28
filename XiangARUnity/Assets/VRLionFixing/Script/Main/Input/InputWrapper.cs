@@ -37,13 +37,13 @@ namespace Hsinpa.Input {
             waveAsset.SetActive(false);
 
 #if UNITY_EDITOR
-            //standaloneAsset.gameObject.SetActive(true);
-            //platformInput = new InputStandalone(standaloneAsset);
-            waveAsset.SetActive(true);
-            platformInput = new InputWave(waveInputManager);
+            standaloneAsset.gameObject.SetActive(true);
+            platformInput = new InputStandalone(standaloneAsset);
+            //waveAsset.SetActive(true);
+            //platformInput = new InputWave(waveInputManager);
 #elif UNITY_ANDROID
             waveAsset.SetActive(true);
-            platformInput = new InputWave(waveInputManager, waveCtrlLoader);
+            platformInput = new InputWave(waveInputManager);
 #endif
         }
     }

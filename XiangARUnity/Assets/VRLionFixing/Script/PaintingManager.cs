@@ -41,9 +41,6 @@ private void Start()
 
         private void Update()
         {
-
-            Debug.LogError(InputWrapper.instance.platformInput.GetMouse());
-
             if (InputWrapper.instance.platformInput.GetMouse() && toolIndex >= 0)
             {
                 Vector3 diretion = InputWrapper.instance.platformInput.faceDir;

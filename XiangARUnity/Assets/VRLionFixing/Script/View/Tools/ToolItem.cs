@@ -32,7 +32,7 @@ namespace Expect.View
         public void PairToParent(Transform parentObject) {
             this.transform.SetParent(parentObject);
             this.transform.localPosition = Vector3.zero;
-            this.transform.localRotation = parentObject.rotation;
+            this.transform.localRotation = Quaternion.Euler(parentObject.transform.forward);
         }
 
         public void ShowTipIntruction(string message) {

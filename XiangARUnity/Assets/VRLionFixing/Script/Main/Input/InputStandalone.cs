@@ -53,4 +53,9 @@ public class InputStandalone : InputInterface
     {
         return _camera.ScreenPointToRay(Input.mousePosition);
     }
+
+    public Transform GetParent()
+    {
+        return _camera.transform;
+    }
 }

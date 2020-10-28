@@ -19,5 +19,7 @@ namespace Hsinpa.Input
 
         bool SwipeLeft();
         bool SwipeRight();
+
+        Transform GetParent();
     }
 }

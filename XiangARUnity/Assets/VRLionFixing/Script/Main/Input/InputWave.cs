@@ -12,8 +12,10 @@ public class InputWave : InputInterface
     {
         get
         {
-            if (this._inputModule.Controller.DominantController == null) return Vector3.zero;
-            return _inputModule.Controller.DominantController.transform.forward;
+            var d = WaveVR_EventSystemControllerProvider.Instance.GetControllerModel(WaveVR_Controller.EDeviceType.Dominant);
+
+            if (d == null) return Vector3.zero;
+            return d.transform.forward;
         }
     }
 
@@ -28,19 +30,20 @@ public class InputWave : InputInterface
 
     public bool GetMouseDown()
     {
-        return WaveVR_Controller.Input(wvr.WVR_DeviceType.WVR_DeviceType_Controller_Right).GetPressDown(WVR_InputId.WVR_InputId_Alias1_Bumper);
+        return WaveVR_Controller.Input(wvr.WVR_DeviceType.WVR_DeviceType_Controller_Right).GetPressDown(WVR_InputId.WVR_InputId_Alias1_Trigger);
     }
 
     public bool GetMouseUp()
     {
-        return WaveVR_Controller.Input(wvr.WVR_DeviceType.WVR_DeviceType_Controller_Right).GetPressUp(WVR_InputId.WVR_InputId_Alias1_Bumper);
+        return WaveVR_Controller.Input(wvr.WVR_DeviceType.WVR_DeviceType_Controller_Right).GetPressUp(WVR_InputId.WVR_InputId_Alias1_Trigger);
     }
 
     public Ray GetRay()
     {
-        Debug.LogError("Has Ctrl " + this._inputModule.Controller == null);
-        if (this._inputModule.Controller.DominantController == null) return new Ray();
-        var d = _inputModule.Controller.DominantController;
+        var d = WaveVR_EventSystemControllerProvider.Instance.GetControllerModel(WaveVR_Controller.EDeviceType.Dominant);
+        if (d == null) return new Ray();
+        Debug.LogError($"Position {d.transform.position}, Forward {d.transform.forward}");
+
         return new Ray(d.transform.position, d.transform.forward);
     }
 
@@ -52,5 +55,10 @@ public class InputWave : InputInterface
     public bool SwipeRight()
     {
         return WaveVR_Controller.Input(wvr.WVR_DeviceType.WVR_DeviceType_Controller_Right).GetPress(WaveVR_ButtonList.EButtons.DPadRight);
+    }
+
+    public Transform GetParent()
+    {
+        return WaveVR_EventSystemControllerProvider.Instance.GetControllerModel(WaveVR_Controller.EDeviceType.Dominant).transform;
     }
 }

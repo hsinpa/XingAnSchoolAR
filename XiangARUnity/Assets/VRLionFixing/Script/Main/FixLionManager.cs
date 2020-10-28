@@ -6,6 +6,8 @@ using Expect.View;
 using Expect.StaticAsset;
 using Hsinpa.App;
 using Hsinpa.Utility;
+using Hsinpa.Input;
+using Hsinpa.View;
 
 namespace Expect.App {
     public class FixLionManager : MonoBehaviour
@@ -15,9 +17,6 @@ namespace Expect.App {
 
         [SerializeField]
         PaintingManager PaintingManager;
-
-        [SerializeField]
-        private Transform handTransform;
 
         private Camera _camera;
 
@@ -43,6 +42,11 @@ namespace Expect.App {
 
         private void DisplayAfterCleanTourGuide() {
             Debug.Log("Clean all done");
+
+            DialogueModal dialouge = Modals.instance.OpenModal<DialogueModal>();
+
+            dialouge.SetDialogue(StringAsset.LionRepairing.DoneFixedTitle, StringAsset.LionRepairing.DoneFixedContent,
+                                    new string[] { StringAsset.LionRepairing.DoneFixedButton}, null);
         }
 
         private void OnTouchToolEvent(ToolItem tool) {
@@ -60,7 +64,7 @@ namespace Expect.App {
 
             currentHoldItem = tool;
 
-            currentHoldItem.PairToParent(handTransform);
+            currentHoldItem.PairToParent(InputWrapper.instance.platformInput.GetParent());
 
             PaintingManager.EquipTool(StringAsset.GetToolEnumByID(currentHoldItem.name));
         }
