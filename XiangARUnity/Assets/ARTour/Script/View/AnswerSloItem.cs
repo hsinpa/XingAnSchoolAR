@@ -19,6 +19,16 @@ namespace Expect.View
         [SerializeField]
         private List<StatePair> state;
 
+        [Header("Radio")]
+        [SerializeField]
+        private Sprite checkMark;
+
+        [SerializeField]
+        private Sprite errorMark;
+
+        [SerializeField]
+        private Image radioMaker;
+
         private Image _background;
 
         public enum State { Normal, Correct, Wrong};
@@ -28,6 +38,13 @@ namespace Expect.View
             answerText.text = p_text;
             button.onClick.AddListener(() => clickEvent(this));
             SetState(State.Normal);
+        }
+
+        public void EnableBoolImg(bool isCorrect) {
+            radioMaker.enabled = true;
+            answerText.enabled = false;
+
+            radioMaker.sprite = (isCorrect) ? checkMark : errorMark;
         }
 
         public void SetTickStatus(bool p_enable) {

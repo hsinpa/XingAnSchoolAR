@@ -25,6 +25,9 @@ namespace Expect.StaticAsset {
 
             public const string TourProceedToQuiz = "進行測試";
             public const string TourQuizIsDone = "測試結束";
+
+            public const string ConfirmText = "正確";
+            public const string MistakeText = "錯誤";
         }
 
         public class LionRepairing {

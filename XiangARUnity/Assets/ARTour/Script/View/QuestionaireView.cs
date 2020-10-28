@@ -76,7 +76,14 @@ namespace Expect.View
                 var slotitem = UtilityMethod.CreateObjectToParent(AnswerContainer, AnswerSlotPrefab).GetComponent<AnswerSloItem>();
                 _answerSlotItems[i] = slotitem;
 
+
                 slotitem.SetContent(answers[i], HighlightCurrentSelectSlot);
+
+                if (answers[i] == StringAsset.ARTour.ConfirmText)
+                    slotitem.EnableBoolImg(true);
+
+                if (answers[i] == StringAsset.ARTour.MistakeText)
+                    slotitem.EnableBoolImg(false);
             }
         }
 

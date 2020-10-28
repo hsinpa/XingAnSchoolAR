@@ -29,7 +29,7 @@
   {
     "ChoiceID": "area01_database_02",
     "UniqueID": "overall_unique_04",
-    "MainValue": "否認",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 0",
     "NextStep": "area01_13",
@@ -47,7 +47,7 @@
   {
     "ChoiceID": "area01_database_03",
     "UniqueID": "overall_unique_06",
-    "MainValue": "否認",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 0",
     "NextStep": "area01_13",
@@ -317,7 +317,7 @@
   {
     "ChoiceID": "area02_database_02",
     "UniqueID": "overall_unique_36",
-    "MainValue": "否認",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 0",
     "NextStep": "area02_13",
@@ -335,7 +335,7 @@
   {
     "ChoiceID": "area02_database_03",
     "UniqueID": "overall_unique_38",
-    "MainValue": "否認",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 0",
     "NextStep": "area02_13",
@@ -605,7 +605,7 @@
   {
     "ChoiceID": "area03_database_02",
     "UniqueID": "overall_unique_68",
-    "MainValue": "否認",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 0",
     "NextStep": "area03_13",
@@ -623,7 +623,7 @@
   {
     "ChoiceID": "area03_database_03",
     "UniqueID": "overall_unique_70",
-    "MainValue": "否認",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 1",
     "NextStep": "area03_13",
@@ -893,7 +893,7 @@
   {
     "ChoiceID": "area04_database_02",
     "UniqueID": "overall_unique_100",
-    "MainValue": "否認",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 0",
     "NextStep": "area04_13",
@@ -911,7 +911,7 @@
   {
     "ChoiceID": "area04_database_03",
     "UniqueID": "overall_unique_102",
-    "MainValue": "否認",
+    "MainValue": "錯誤",
     "Constraint": "",
     "Effect": "score + 0",
     "NextStep": "area04_13",
