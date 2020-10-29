@@ -72,6 +72,7 @@ namespace Expect.ARTour
 
                 ScoreView scoreView = Modals.instance.OpenModal<ScoreView>();
                 scoreView.SetContent($"+{score}分", () => {
+                    _model.Reset();
                     SceneManager.LoadScene("ARTour");
                 });
 

@@ -40,7 +40,7 @@ public class ARTourModel : Model
 
 
     public void Reset() {
-
+        qBuilder.Reset();
     }
 
     [System.Serializable]

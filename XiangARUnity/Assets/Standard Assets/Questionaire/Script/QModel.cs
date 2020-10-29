@@ -68,7 +68,7 @@ namespace Questionaire
                     {
                         //Break loop if a constraint check fail
                         case "&":
-                            if (isValid == false) break;
+                            if (isValid == false) return false;
                             break;
 
                         //Return true if isvalid passed

@@ -25,7 +25,7 @@ namespace Expect.ARTour
         {
             foreach (var trackedImage in e.added)
             {
-                Debug.Log($"Tracked image detected: {trackedImage.referenceImage.name} with size: {trackedImage.size}");
+                //Debug.Log($"Tracked image detected: {trackedImage.referenceImage.name} with size: {trackedImage.size}");
             }
 
             UpdateTrackedImages(e.added);
@@ -46,7 +46,7 @@ namespace Expect.ARTour
 
             if (trackedImage.trackingState == TrackingState.Tracking || trackedImage.trackingState == TrackingState.Limited)
             {
-                Debug.Log($"Tracked image detected: {trackedImage.referenceImage.name} with position: {trackedImage.transform.position}, State {trackedImage.trackingState}");
+             //   Debug.Log($"Tracked image detected: {trackedImage.referenceImage.name} with position: {trackedImage.transform.position}, State {trackedImage.trackingState}");
 
 
                 var trackedImageTransform = trackedImage.transform;

@@ -123,5 +123,10 @@ namespace Expect.ARTour
             public bool isValid => !string.IsNullOrEmpty(_id);
         }
 
+        private void OnDestroy()
+        {
+            OnThemeChange -= OnThemeChangeCallback;
+        }
+
     }
 }
