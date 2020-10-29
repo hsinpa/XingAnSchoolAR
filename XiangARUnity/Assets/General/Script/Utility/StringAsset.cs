@@ -25,6 +25,9 @@ namespace Expect.StaticAsset {
 
             public const string TourProceedToQuiz = "進行測試";
             public const string TourQuizIsDone = "測試結束";
+
+            public const string ConfirmText = "正確";
+            public const string MistakeText = "錯誤";
         }
 
         public class LionRepairing {
@@ -36,6 +39,10 @@ namespace Expect.StaticAsset {
             public const string UnavilableTipTool_2 = "需要先用過Tool_1 清潔";
             public const string UnavilableTipTool_3 = "需要先用過Tool_2 清潔";
             public const string ToolUsedMessage = "已完成";
+
+            public const string DoneFixedTitle = "情理環節結束";
+            public const string DoneFixedContent = "清除工作完成";
+            public const string DoneFixedButton = "重新體驗";
         }
 
         public static string GetGradeString(int level) {

@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4627396706692520
 Transform:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344891592457118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.09, z: -1.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4360053938537090}
@@ -96,7 +96,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 118
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -126,9 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1964d584ab9a4b4a9d550a73bdb053f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textureBounds:
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
   ipd: 0.063
   projRawL:
   - -1
@@ -154,41 +151,6 @@ MonoBehaviour:
   _origin: 0
   pixelDensity: 1
   needTimeControl: 0
-  uView:
-  - e00: 0
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 0
-    e12: 0
-    e13: 0
-    e20: 0
-    e21: 0
-    e22: 0
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 0
-  - e00: 0
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 0
-    e12: 0
-    e13: 0
-    e20: 0
-    e21: 0
-    e22: 0
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 0
-  frameInx: 0
-  submitUnityNativeRenderTexture: 0
 --- !u!114 &114084172193078512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,7 +275,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746719709132206}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8867105aa6bca9f4b9117c3abcaf61b6, type: 3}
   m_Name: 
@@ -485,6 +447,26 @@ PrefabInstance:
     - target: {fileID: 114444801589434356, guid: cc75fc8b7e627bc4ebd4c9fdf6a59d9b,
         type: 3}
       propertyPath: m_DominantOptions.Bumper
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114444801589434356, guid: cc75fc8b7e627bc4ebd4c9fdf6a59d9b,
+        type: 3}
+      propertyPath: m_DominantOptions.DPadUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114444801589434356, guid: cc75fc8b7e627bc4ebd4c9fdf6a59d9b,
+        type: 3}
+      propertyPath: m_DominantOptions.DPadRight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114444801589434356, guid: cc75fc8b7e627bc4ebd4c9fdf6a59d9b,
+        type: 3}
+      propertyPath: m_DominantOptions.DPadDown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114444801589434356, guid: cc75fc8b7e627bc4ebd4c9fdf6a59d9b,
+        type: 3}
+      propertyPath: m_DominantOptions.DPadLeft
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
