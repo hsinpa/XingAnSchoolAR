@@ -30,5 +30,10 @@ namespace Questionaire
             public const string ExaminationStats = "Database/ExaminationDatabase";
         }
 
+        public class Style {
+            public static readonly Color Correct = new Color(0.2966358f, 0.6226415f, 0.3025632f);
+            public static readonly Color Wrong = new Color(0.6603774f, 0.264774f, 0.3467458f);
+        }
+
     }
 }

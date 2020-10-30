@@ -30,6 +30,19 @@ namespace Expect.View
         private Button ProceedBtn;
         private Text ProceedBtnText;
 
+        [Header("Hint Group")]
+        [SerializeField]
+        private Image hintImage;
+
+        [SerializeField]
+        private Sprite boolChoiceSprite;
+
+        [SerializeField]
+        private Sprite multipleChoiceSprite;
+
+        [SerializeField]
+        private Text resultHintText;
+
         private int currentIndex = -1;
         private int correctAnswerIndex = -1;
 
@@ -58,7 +71,11 @@ namespace Expect.View
 
             scoreText.text = "";
 
+            resultHintText.text = "";
+
             CreateAnswerSlots(answers);
+
+            hintImage.sprite = (answers.Length == 2) ? boolChoiceSprite : multipleChoiceSprite;
 
             ProceedBtn.interactable = false;
 
@@ -75,7 +92,6 @@ namespace Expect.View
             for (int i = 0; i < answers.Length; i++) {
                 var slotitem = UtilityMethod.CreateObjectToParent(AnswerContainer, AnswerSlotPrefab).GetComponent<AnswerSloItem>();
                 _answerSlotItems[i] = slotitem;
-
 
                 slotitem.SetContent(answers[i], HighlightCurrentSelectSlot);
 
@@ -113,8 +129,10 @@ namespace Expect.View
 
             ProceedBtnText.text = StringAsset.ARTour.QuestionaireContinueBtn;
 
-            if (currentIndex == correctIndex)
-                scoreText.text = string.Format(StringAsset.ARTour.AddScoreText, 25);
+            bool isCorrect = currentIndex == correctIndex;
+
+            resultHintText.color = (isCorrect) ? ParameterFlag.Style.Correct : ParameterFlag.Style.Wrong;
+            resultHintText.text = (isCorrect) ? StringAsset.ARTour.QuestionarieCorrectMsg : StringAsset.ARTour.QuestionarieWrongMsg;
         }
 
         private void OnProceedBtnClick() {
