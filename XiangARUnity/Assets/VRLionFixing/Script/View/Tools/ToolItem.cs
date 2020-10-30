@@ -36,16 +36,31 @@ namespace Expect.View
         }
 
         public void ShowTipIntruction(string message) {
+            if (string.IsNullOrEmpty(message)) {
+                tipText.enabled = false;
+                return;
+            }
+
             tipText.enabled = true;
             tipText.text = message;
 
             recordTime = Time.time + delayTime - 0.1f;
+
+            CloseSiblingMsg();
 
             _ = Hsinpa.Utility.UtilityMethod.DoDelayWork(delayTime, () =>
             {
                 if (Time.time > recordTime)
                     tipText.enabled = false;
             });
+        }
+
+        private void CloseSiblingMsg() {
+            foreach (Transform child in transform.parent) {
+                var toolItem = child.GetComponent<ToolItem>();
+                if (toolItem != null && toolItem.name != this.name)
+                    toolItem.ShowTipIntruction("");
+            }
         }
 
     }

@@ -19,6 +19,8 @@ public class InputWave : InputInterface
         }
     }
 
+    public int raycastLength => 2;
+
     public InputWave(WaveVR_InputModuleManager inputModule) {
         this._inputModule = inputModule; 
     }

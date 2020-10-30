@@ -29,6 +29,8 @@ namespace Hsinpa.App {
         private int toolCount;
         private int layerMask = 1 << 9;
 
+        
+
         public System.Action OnTargetDirtIsClear; 
 
 
@@ -41,14 +43,15 @@ private void Start()
 
         private void Update()
         {
-            if (InputWrapper.instance.platformInput.GetMouse() && toolIndex >= 0)
+            if (toolIndex >= 0)
             {
+                int raycastLength = InputWrapper.instance.platformInput.raycastLength;
                 Vector3 diretion = InputWrapper.instance.platformInput.faceDir;
                 diretion.y = -diretion.y;
 
                 //Physics.Raycast
                 RaycastHit hit;
-                if (Physics.Raycast(InputWrapper.instance.platformInput.GetRay(), out hit, 100, layerMask))
+                if (Physics.Raycast(InputWrapper.instance.platformInput.GetRay(), out hit, raycastLength, layerMask))
                 {
                     drawToTexture.DrawOnMesh(hit.textureCoord, _toolSRP.tools[toolIndex].mask_color);
                 }

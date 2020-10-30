@@ -11,6 +11,12 @@ namespace Hsinpa.Input
             get;
         }
 
+        int raycastLength
+        {
+            get;
+        }
+
+
         Ray GetRay();
 
         bool GetMouseDown();

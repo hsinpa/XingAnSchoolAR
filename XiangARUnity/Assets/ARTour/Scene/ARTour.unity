@@ -1980,6 +1980,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2207016714505305773, guid: f53d5056e7a633c4da64361a204a9830,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.3000183
+      objectReference: {fileID: 0}
     - target: {fileID: 2207016715002207352, guid: f53d5056e7a633c4da64361a204a9830,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2090,19 +2095,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestionareModal
       objectReference: {fileID: 0}
-    - target: {fileID: 2207016715002207355, guid: f53d5056e7a633c4da64361a204a9830,
+    - target: {fileID: 2277168263033951477, guid: f53d5056e7a633c4da64361a204a9830,
         type: 3}
-      propertyPath: m_Alpha
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2207016715002207355, guid: f53d5056e7a633c4da64361a204a9830,
+    - target: {fileID: 2277168263033951477, guid: f53d5056e7a633c4da64361a204a9830,
         type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2207016715002207355, guid: f53d5056e7a633c4da64361a204a9830,
-        type: 3}
-      propertyPath: m_BlocksRaycasts
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2277168263033951477, guid: f53d5056e7a633c4da64361a204a9830,
@@ -2113,16 +2113,6 @@ PrefabInstance:
     - target: {fileID: 2277168263033951477, guid: f53d5056e7a633c4da64361a204a9830,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2277168263033951477, guid: f53d5056e7a633c4da64361a204a9830,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2277168263033951477, guid: f53d5056e7a633c4da64361a204a9830,
-        type: 3}
-      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2277168263033951477, guid: f53d5056e7a633c4da64361a204a9830,
