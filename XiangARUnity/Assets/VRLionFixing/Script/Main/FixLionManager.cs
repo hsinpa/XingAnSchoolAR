@@ -64,6 +64,7 @@ namespace Expect.App {
 
             currentHoldItem = tool;
 
+            InputWrapper.instance.platformInput.SwitchControllerModel(false);
             currentHoldItem.PairToParent(InputWrapper.instance.platformInput.GetParent());
 
             PaintingManager.EquipTool(StringAsset.GetToolEnumByID(currentHoldItem.name));
@@ -73,7 +74,8 @@ namespace Expect.App {
             this.progress += 1;
 
             PaintingManager.UnEquip();
-            
+            InputWrapper.instance.platformInput.SwitchControllerModel(true);
+
             if (currentHoldItem != null)
                 currentHoldItem.Return();
 

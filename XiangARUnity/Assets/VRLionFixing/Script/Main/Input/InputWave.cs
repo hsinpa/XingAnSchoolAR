@@ -61,4 +61,12 @@ public class InputWave : InputInterface
     {
         return WaveVR_EventSystemControllerProvider.Instance.GetControllerModel(WaveVR_Controller.EDeviceType.Dominant).transform;
     }
+
+    public void SwitchControllerModel(bool isOn) {
+        Transform controlParent = GetParent();
+
+        foreach (Transform child in controlParent) {
+            child.gameObject.SetActive(isOn);
+        }
+    }
 }

@@ -58,4 +58,8 @@ public class InputStandalone : InputInterface
     {
         return _camera.transform;
     }
+
+    public void SwitchControllerModel(bool isOn)
+    {
+    }
 }
