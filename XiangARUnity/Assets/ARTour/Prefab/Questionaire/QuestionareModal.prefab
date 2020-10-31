@@ -53,7 +53,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361622535253170871}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -210,9 +210,9 @@ RectTransform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.127, y: 0.09}
-  m_AnchorMax: {x: 0.87224996, y: 0.65800005}
-  m_AnchoredPosition: {x: -0.5024414, y: 0.30000305}
-  m_SizeDelta: {x: -2.902771, y: -2.9356384}
+  m_AnchorMax: {x: 0.87100005, y: 0.69218355}
+  m_AnchoredPosition: {x: -0.0024414062, y: 0.2199707}
+  m_SizeDelta: {x: -1.902771, y: 0.43344116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2207016714505305775
 CanvasRenderer:
@@ -540,7 +540,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\u63D0\u4EA4"
 --- !u!114 &5202291585475882363
@@ -664,7 +664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.15699768}
+  m_AnchoredPosition: {x: 0, y: 0.15698242}
   m_SizeDelta: {x: 0, y: 0.31350708}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3738616298625134230
@@ -828,8 +828,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.79992676, y: 6.5}
-  m_SizeDelta: {x: -27.794373, y: -13.057373}
+  m_AnchoredPosition: {x: -0.7998047, y: 3.4000244}
+  m_SizeDelta: {x: -37.548157, y: -6.8988037}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2964181408360278131
 CanvasRenderer:
@@ -1084,8 +1084,8 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'You can select the shaders in the project to see ect to see all these
     properties and their names. '
@@ -1199,7 +1199,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21675, y: 0.7121515}
   m_AnchorMax: {x: 0.7865, y: 0.93371785}
-  m_AnchoredPosition: {x: -2.102356, y: 0.8049927}
+  m_AnchoredPosition: {x: -2.102295, y: 0.80493164}
   m_SizeDelta: {x: 0.3397827, y: 1.6108475}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7942863816469235586

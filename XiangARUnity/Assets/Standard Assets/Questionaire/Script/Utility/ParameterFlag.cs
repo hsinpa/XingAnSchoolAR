@@ -31,7 +31,7 @@ namespace Questionaire
         }
 
         public class Style {
-            public static readonly Color Correct = new Color(0.2966358f, 0.6226415f, 0.3025632f);
+            public static readonly Color Correct = new Color(0.08410467f, 0.3962264f, 0.08977961f);
             public static readonly Color Wrong = new Color(0.6603774f, 0.264774f, 0.3467458f);
         }
 
