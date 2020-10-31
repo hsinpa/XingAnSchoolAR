@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿#if UNITY_EDITOR || UNITY_ANDROID
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Hsinpa.Input;
@@ -72,3 +73,4 @@ public class InputWave : InputInterface
         }
     }
 }
+#endif

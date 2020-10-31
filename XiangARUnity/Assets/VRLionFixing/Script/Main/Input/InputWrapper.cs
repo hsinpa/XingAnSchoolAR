@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace Hsinpa.Input { 
+namespace Hsinpa.Input {
+
     public class InputWrapper : MonoBehaviour
     {
         [SerializeField]
@@ -10,11 +11,13 @@ namespace Hsinpa.Input {
         [SerializeField]
         private GameObject waveAsset;
 
+#if UNITY_EDITOR || UNITY_ANDROID
         [SerializeField]
         private WaveVR_InputModuleManager waveInputManager;
 
         [SerializeField]
         private WaveVR_ControllerLoader waveCtrlLoader;
+#endif
 
         public InputInterface platformInput;
 
