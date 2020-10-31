@@ -25,11 +25,11 @@ namespace Hsinpa.App {
         [SerializeField]
         private Transform targetModel;
 
+        RaycastHit[] m_Results = new RaycastHit[1];
+
         private int toolIndex;
         private int toolCount;
         private int layerMask = 1 << 9;
-
-        
 
         public System.Action OnTargetDirtIsClear; 
 
@@ -50,11 +50,13 @@ private void Start()
                 diretion.y = -diretion.y;
 
                 //Physics.Raycast
+                int hits = Physics.RaycastNonAlloc(InputWrapper.instance.platformInput.GetRay(), m_Results, raycastLength, layerMask);
+
                 RaycastHit hit;
-                if (Physics.Raycast(InputWrapper.instance.platformInput.GetRay(), out hit, raycastLength, layerMask))
+                if (hits > 0)
                 {
-                    drawToTexture.DrawOnMesh(hit.textureCoord, _toolSRP.tools[toolIndex].mask_color);
-                }
+                    drawToTexture.DrawOnMesh(m_Results[0].textureCoord, _toolSRP.tools[toolIndex].mask_color);
+                } 
             }
 
             if (InputWrapper.instance.platformInput.GetMouseUp() && toolIndex >= 0) {
