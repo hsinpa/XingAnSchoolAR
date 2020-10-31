@@ -4,6 +4,7 @@ using Expect.StaticAsset;
 using Hsinpa.View;
 using UnityEngine;
 using UnityEngine.UI;
+using Hsinpa.Utility;
 
 namespace Expect.View
 {
@@ -51,7 +52,9 @@ namespace Expect.View
         private ARTourModel _model;
 
         private System.Action OnQuestionStartCallback;
+        private System.Action OnCloseBtnCallback;
 
+        private GuideBoardSRP _guideBoardSRP;
         private float viewportHeight, contentHeight;
         private float currentHeight => ContentScrollRect.anchoredPosition.y;
         private float maxHeight => contentHeight - viewportHeight;
@@ -63,24 +66,34 @@ namespace Expect.View
             closeBtn.onClick.AddListener(() =>
             {
                 Modals.instance.Close();
+                
+                UniversalAudioSolution.instance.StopAudio(UniversalAudioSolution.AudioType.AudioClip2D);
+
+                if (OnCloseBtnCallback != null)
+                    OnCloseBtnCallback();
             });
 
             leftBtn.onClick.AddListener(OnLeftBtnClick);
             rightBtn.onClick.AddListener(OnRightBtnClick);
             ScrollRect.onValueChanged.AddListener(OnScrollViewChange);
+
+            chtVoiceBtn.onClick.AddListener(() => PlayTourAudio(_guideBoardSRP.chtAudioGuide));
+            engVoiceBtn.onClick.AddListener(() => PlayTourAudio(_guideBoardSRP.enAudioGuide));
         }
 
-        public void SetUp(string tour_id, ARTourModel model, GuideBoardSRP guideBoardSRP, System.Action Callback) {
+        public void SetUp(string tour_id, ARTourModel model, GuideBoardSRP guideBoardSRP, System.Action questionBtnCallback, System.Action closeBtnCallback) {
             this._model = model;
+            this._guideBoardSRP = guideBoardSRP;
 
             title.text = guideBoardSRP.title;
             contentText.text = guideBoardSRP.textAsset.text;
 
-            OnQuestionStartCallback = Callback;
+            OnQuestionStartCallback = questionBtnCallback;
+            OnCloseBtnCallback = closeBtnCallback;
 
             //Check question is being take or not
             int questionRecord = _model.GetVariable(tour_id);
-            startQuestionaireBtn.gameObject.SetActive(questionRecord == 0 && Callback != null);
+            startQuestionaireBtn.gameObject.SetActive(questionRecord == 0 && questionBtnCallback != null);
 
             StartCoroutine(ConfigTextContent());
         }
@@ -120,8 +133,15 @@ namespace Expect.View
             SetLeftRightContentBtn();
         }
 
+        private void PlayTourAudio(AudioClip clip) {
+            if (clip == null) return;
+
+            UniversalAudioSolution.instance.PlayAudio(UniversalAudioSolution.AudioType.AudioClip2D, clip);
+        }
+
         private void OnQuestionaireClick() {
             Modals.instance.Close();
+            UniversalAudioSolution.instance.StopAudio(UniversalAudioSolution.AudioType.AudioClip2D);
 
             if (OnQuestionStartCallback != null)
                 OnQuestionStartCallback();

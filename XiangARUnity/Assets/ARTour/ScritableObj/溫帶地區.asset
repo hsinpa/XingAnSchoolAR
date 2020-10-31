@@ -15,5 +15,5 @@ MonoBehaviour:
   title: "\u6EAB\u5E36\u5730\u5340"
   textAsset: {fileID: 4900000, guid: 47e82e206ea84440e8b88eced0e4253b, type: 3}
   sprite: {fileID: 0}
-  chtAudioGuide: {fileID: 0}
+  chtAudioGuide: {fileID: 8300000, guid: 2a0888247ad65d64bbb3ead9b52cf866, type: 3}
   enAudioGuide: {fileID: 0}

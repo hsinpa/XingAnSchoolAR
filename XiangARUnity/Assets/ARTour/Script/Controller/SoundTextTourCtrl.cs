@@ -1,5 +1,6 @@
 ﻿using Expect.View;
 using Hsinpa.View;
+using Questionaire;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,8 @@ namespace Expect.ARTour
             switch (p_event) {
                 case GeneralFlag.ObeserverEvent.TourStart:
                     arTourTheme = GeneralFlag.ARTourTheme.None;
+
+                    ShowLibraryIntro();
                     break;
 
                 case GeneralFlag.ObeserverEvent.AppEnd:
@@ -59,6 +62,22 @@ namespace Expect.ARTour
             OnThemeChange += OnThemeChangeCallback;
         }
 
+        private void ShowLibraryIntro()
+        {
+            var guideSRP = tourGuideDataList.Find(x => x._id.Equals(GeneralFlag.ARTour.TourGuide.LibraryIntro));
+
+            TourView tourModal = Modals.instance.OpenModal<TourView>();
+            tourModal.SetUp(GeneralFlag.ARTour.TourGuide.LibraryIntro, _model, guideSRP.GuideBoardSRP, null, ShowLibraryDetail);
+        }
+
+        private void ShowLibraryDetail()
+        {
+            var guideSRP = tourGuideDataList.Find(x => x._id.Equals(GeneralFlag.ARTour.TourGuide.LibraryPaint));
+
+            TourView tourModal = Modals.instance.OpenModal<TourView>();
+            tourModal.SetUp(GeneralFlag.ARTour.TourGuide.LibraryPaint, _model, guideSRP.GuideBoardSRP, null, null);
+        }
+
         private void OnClickTourBtn() {
             if (arTourTheme == GeneralFlag.ARTourTheme.None) return;
 
@@ -69,7 +88,7 @@ namespace Expect.ARTour
 
                 if (guideSRP.isValid) {
                     TourView tourModal = Modals.instance.OpenModal<TourView>();
-                    tourModal.SetUp(p_key, _model, guideSRP.GuideBoardSRP, OnQuestionStartClick);
+                    tourModal.SetUp(p_key, _model, guideSRP.GuideBoardSRP, OnQuestionStartClick, null);
                 }
             }
 
