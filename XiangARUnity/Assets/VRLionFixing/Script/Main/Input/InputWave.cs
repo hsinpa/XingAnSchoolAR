@@ -20,7 +20,7 @@ public class InputWave : InputInterface
         }
     }
 
-    public int raycastLength => 2;
+    public float raycastLength => 1.5f;
 
     public InputWave(WaveVR_InputModuleManager inputModule) {
         this._inputModule = inputModule; 
@@ -45,7 +45,6 @@ public class InputWave : InputInterface
     {
         var d = WaveVR_EventSystemControllerProvider.Instance.GetControllerModel(WaveVR_Controller.EDeviceType.Dominant);
         if (d == null) return new Ray();
-        Debug.LogError($"Position {d.transform.position}, Forward {d.transform.forward}");
 
         return new Ray(d.transform.position, d.transform.forward);
     }

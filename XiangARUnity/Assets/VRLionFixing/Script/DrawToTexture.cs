@@ -39,20 +39,16 @@ namespace Hsinpa.Shader {
 
         private Material drawMaterial;
         private Material scoreMaterial;
+        private Material targetMaterial;
         private int scoreTexSize = 24;
 
         public void SetUp(Material targetMaterial)
         {
+            this.targetMaterial = targetMaterial;
             drawMaterial = new Material(DrawShader);
             scoreMaterial = new Material(ScoreShader);
 
             ResetBuffer();
-
-
-            scoreMaterial.SetTexture(ShaderMainTex, maskTexture);
-            scoreMaterial.SetTexture(ScoreShaderPaintedTex, buffer);
-
-            targetMaterial.SetTexture("_EraseTex", buffer);
         }
 
         public void DrawOnMesh(Vector2 textureCoord, Color paintColor) {
@@ -109,7 +105,10 @@ namespace Hsinpa.Shader {
         public void ResetBuffer() {
             buffer = new RenderTexture(256, 256, 0, RenderTextureFormat.ARGBFloat);
             scoreBuffer = new RenderTexture(scoreTexSize, scoreTexSize, 0, RenderTextureFormat.ARGBFloat);
-        }
 
+            this.scoreMaterial.SetTexture(ShaderMainTex, maskTexture);
+            this.scoreMaterial.SetTexture(ScoreShaderPaintedTex, buffer);
+            this.targetMaterial.SetTexture("_EraseTex", buffer);
+        }
     }
 }

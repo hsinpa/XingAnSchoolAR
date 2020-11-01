@@ -33,8 +33,10 @@ namespace Hsinpa.App {
 
         public System.Action OnTargetDirtIsClear; 
 
+        private float checkCompleteTime = 2f;
+        private float recordCompleteTime = 0;
 
-private void Start()
+        private void Start()
         {
             drawToTexture.SetUp(targetMaterial);
             toolCount = _toolSRP.tools.Length;
@@ -45,22 +47,22 @@ private void Start()
         {
             if (toolIndex >= 0)
             {
-                int raycastLength = InputWrapper.instance.platformInput.raycastLength;
+                float raycastLength = InputWrapper.instance.platformInput.raycastLength;
                 Vector3 diretion = InputWrapper.instance.platformInput.faceDir;
                 diretion.y = -diretion.y;
 
                 //Physics.Raycast
                 int hits = Physics.RaycastNonAlloc(InputWrapper.instance.platformInput.GetRay(), m_Results, raycastLength, layerMask);
 
-                RaycastHit hit;
                 if (hits > 0)
                 {
                     drawToTexture.DrawOnMesh(m_Results[0].textureCoord, _toolSRP.tools[toolIndex].mask_color);
-                } 
-            }
+                }
 
-            if (InputWrapper.instance.platformInput.GetMouseUp() && toolIndex >= 0) {
-                CheckIfSocreIsMeet();
+                if (recordCompleteTime < Time.time) {
+                    recordCompleteTime = Time.time + checkCompleteTime;
+                    CheckIfSocreIsMeet();
+                }
             }
 
             if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
@@ -108,6 +110,10 @@ private void Start()
 
         public void UnEquip() {
             toolIndex = -1;
+        }
+
+        public void ResetPaint() {
+            drawToTexture.ResetBuffer();
         }
     }
 }

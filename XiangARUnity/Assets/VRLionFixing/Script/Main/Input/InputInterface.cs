@@ -11,7 +11,7 @@ namespace Hsinpa.Input
             get;
         }
 
-        int raycastLength
+        float raycastLength
         {
             get;
         }

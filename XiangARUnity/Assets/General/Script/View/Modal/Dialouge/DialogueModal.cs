@@ -59,7 +59,9 @@ namespace Expect.View
                 button.onClick.AddListener(() =>
                 {
                     Modals.instance.Close();
-                    btnEvent(index);
+
+                    if (btnEvent != null)
+                        btnEvent(index);
                 });
             }
         }

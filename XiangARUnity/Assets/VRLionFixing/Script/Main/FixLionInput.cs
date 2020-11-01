@@ -30,8 +30,6 @@ namespace Expect.Input
         }
 
         private ToolItem DetectAvailableTool() {
-
-            
             Ray ray = InputWrapper.instance.platformInput.GetRay();
             int hits = Physics.RaycastNonAlloc(ray, m_Results, raycastlength, layerMask);
 
@@ -42,9 +40,6 @@ namespace Expect.Input
             }
 
             return null;
-            
         }
-
-
     }
 }
