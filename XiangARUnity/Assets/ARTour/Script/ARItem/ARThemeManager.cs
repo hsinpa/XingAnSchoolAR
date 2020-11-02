@@ -44,7 +44,7 @@ namespace Expect.ARTour
             }
 
 
-            if (trackedImage.trackingState == TrackingState.Tracking || trackedImage.trackingState == TrackingState.Limited)
+            if (trackedImage.trackingState == TrackingState.Tracking)
             {
              //   Debug.Log($"Tracked image detected: {trackedImage.referenceImage.name} with position: {trackedImage.transform.position}, State {trackedImage.trackingState}");
 

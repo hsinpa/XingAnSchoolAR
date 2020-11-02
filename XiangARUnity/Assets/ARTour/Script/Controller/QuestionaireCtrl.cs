@@ -40,7 +40,6 @@ namespace Expect.ARTour
             _questionaireView = Modals.instance.OpenModal<QuestionaireView>();
 
             string debugMsg = string.Format("ID : {0}, Value : {1}", currentTicket.eventStats._ID, currentTicket.eventStats.MainValue);
-            Debug.Log(debugMsg);
 
             ProcessTicket(currentTicket);
         }
@@ -57,7 +56,7 @@ namespace Expect.ARTour
             }
 
             string[] potentialAnswers = ticket.choiceStats.Select(x => x.MainValue).ToArray<string>();
-            string title = StringAsset.GetGradeString(PlayerPrefs.GetInt(ParameterFlag.QuestionaireParameter.ClassLevel, 0));
+            string title = StringAsset.GetGradeString(PlayerPrefs.GetInt(GeneralFlag.Playerpref.Level, 0));
 
             _questionaireView.SetContent(title, ticket.eventStats.MainValue, potentialAnswers, correctIndex, OnAnswerSubmit);
         }

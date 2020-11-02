@@ -33,13 +33,17 @@ namespace Expect.ARTour
 
             switch (p_event) {
                 case GeneralFlag.ObeserverEvent.TourStart:
-                    arTourTheme = GeneralFlag.ARTourTheme.None;
+
+                    //OnThemeChangeCallback(GeneralFlag.ARTourTheme.None);
 
                     ShowLibraryIntro();
+
                     break;
 
                 case GeneralFlag.ObeserverEvent.AppEnd:
+
                     tourButton.gameObject.SetActive(false);
+
                     break;
 
                 case GeneralFlag.ObeserverEvent.ThemeChange:
@@ -60,6 +64,8 @@ namespace Expect.ARTour
             //Hide by default
             tourButton.gameObject.SetActive(false);
             OnThemeChange += OnThemeChangeCallback;
+
+            OnThemeChangeCallback(GeneralFlag.ARTourTheme.None);
         }
 
         private void ShowLibraryIntro()
@@ -91,7 +97,6 @@ namespace Expect.ARTour
                     tourModal.SetUp(p_key, _model, guideSRP.GuideBoardSRP, OnQuestionStartClick, null);
                 }
             }
-
         }
 
         private void OnQuestionStartClick() {
@@ -111,8 +116,13 @@ namespace Expect.ARTour
         }
 
         private void OnThemeChangeCallback(GeneralFlag.ARTourTheme theme) {
-            tourButton.gameObject.SetActive(true);
             arTourTheme = theme;
+
+            tourButton.gameObject.SetActive(false);
+
+            if (theme == GeneralFlag.ARTourTheme.None) return;
+
+            tourButton.gameObject.SetActive(true);
             
             Debug.Log("Theme is pick " + theme.ToString("g"));
         }
