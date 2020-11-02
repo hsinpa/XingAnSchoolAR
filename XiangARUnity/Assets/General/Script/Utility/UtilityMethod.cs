@@ -44,6 +44,7 @@ namespace Hsinpa.Utility {
 			item.transform.localScale = Vector3.one;
 			item.transform.position = new Vector3(item.transform.position.x, item.transform.position.y, 1);
 			item.transform.localPosition = new Vector3(0, 0, 1);
+			item.transform.localRotation = Quaternion.identity;
 			return item;
 		}
 
