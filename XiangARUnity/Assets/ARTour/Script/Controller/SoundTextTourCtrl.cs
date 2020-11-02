@@ -18,6 +18,9 @@ namespace Expect.ARTour
         private Button updateButton;
 
         [SerializeField]
+        private Image scanImage;
+
+        [SerializeField]
         private List<TourGuideData> tourGuideDataList;
 
         public static System.Action<GeneralFlag.ARTourTheme> OnThemeChange;
@@ -119,11 +122,13 @@ namespace Expect.ARTour
             arTourTheme = theme;
 
             tourButton.gameObject.SetActive(false);
+            scanImage.enabled = true;
 
             if (theme == GeneralFlag.ARTourTheme.None) return;
 
             tourButton.gameObject.SetActive(true);
-            
+            scanImage.enabled = false;
+
             Debug.Log("Theme is pick " + theme.ToString("g"));
         }
 
