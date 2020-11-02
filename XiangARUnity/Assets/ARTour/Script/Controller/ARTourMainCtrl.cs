@@ -34,11 +34,9 @@ namespace Expect.ARTour {
         }
 
         private void StartWithSelectLang() {
-            DialogueModal dialogueModal = Modals.instance.OpenModal<DialogueModal>();
-            string[] levels = new string[] { StringAsset.ARTour.LowGrade, StringAsset.ARTour.MiddleGrade, StringAsset.ARTour.HighGrade };
+            ClassSelectionModal dialogueModal = Modals.instance.OpenModal<ClassSelectionModal>();
 
-            dialogueModal.SetDialogue(StringAsset.ARTour.ChooseGradeTitle, StringAsset.ARTour.ChooseGradeContent,
-                levels,
+            dialogueModal.SetCallback(StringAsset.ARTour.ChooseGradeTitle,
                 (int p_index) =>
                 {
                     PlayerPrefs.SetInt(GeneralFlag.Playerpref.Level, p_index);
