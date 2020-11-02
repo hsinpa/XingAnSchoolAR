@@ -46,7 +46,7 @@ namespace Expect.App {
             DialogueModal dialouge = Modals.instance.OpenModal<DialogueModal>();
 
             dialouge.SetDialogue(StringAsset.LionRepairing.DoneFixedTitle, StringAsset.LionRepairing.DoneFixedContent,
-                                    new string[] { StringAsset.LionRepairing.DoneFixedButton}, null);
+                                    new string[] { StringAsset.LionRepairing.DoneFixedButton}, (int i) => ResetLevel());
         }
 
         private void OnTouchToolEvent(ToolItem tool) {
@@ -88,6 +88,7 @@ namespace Expect.App {
 
         public void ResetLevel() {
             progress = 0;
+            PaintingManager.ResetPaint();
         }
 
     }
