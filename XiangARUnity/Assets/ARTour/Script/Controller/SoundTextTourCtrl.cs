@@ -66,6 +66,8 @@ namespace Expect.ARTour
 
             //Hide by default
             tourButton.gameObject.SetActive(false);
+            scanImage.enabled = false;
+
             OnThemeChange += OnThemeChangeCallback;
 
             OnThemeChangeCallback(GeneralFlag.ARTourTheme.None);
@@ -84,7 +86,10 @@ namespace Expect.ARTour
             var guideSRP = tourGuideDataList.Find(x => x._id.Equals(GeneralFlag.ARTour.TourGuide.LibraryPaint));
 
             TourView tourModal = Modals.instance.OpenModal<TourView>();
-            tourModal.SetUp(GeneralFlag.ARTour.TourGuide.LibraryPaint, _model, guideSRP.GuideBoardSRP, null, null);
+            tourModal.SetUp(GeneralFlag.ARTour.TourGuide.LibraryPaint, _model, guideSRP.GuideBoardSRP, null, () => {
+                if (arTourTheme == GeneralFlag.ARTourTheme.None)
+                    scanImage.enabled = true;
+            });
         }
 
         private void OnClickTourBtn() {
@@ -122,7 +127,6 @@ namespace Expect.ARTour
             arTourTheme = theme;
 
             tourButton.gameObject.SetActive(false);
-            scanImage.enabled = true;
 
             if (theme == GeneralFlag.ARTourTheme.None) return;
 

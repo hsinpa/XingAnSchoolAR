@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee4a7be94b634e1b962f906c4f5274a, type: 3}
   m_Name: "\u5E78\u798F\u68EE\u6797\u5716\u66F8\u9928"
   m_EditorClassIdentifier: 
-  title: "\u5E78\u798F\u68EE\u6797\u5716\u66F8\u9928"
+  title: "\u68EE\u6797\u5716\u66F8\u9928"
   btnName: "\u9032\u5165\u63A2\u7D22"
   textAsset: {fileID: 4900000, guid: 3c4c53f6f4b274bb49c544ad86a9c7a4, type: 3}
   sprite: {fileID: 0}
