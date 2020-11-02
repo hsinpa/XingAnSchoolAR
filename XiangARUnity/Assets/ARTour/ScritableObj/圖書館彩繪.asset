@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: "\u5716\u66F8\u9928\u5F69\u7E6A"
   m_EditorClassIdentifier: 
   title: "\u5716\u66F8\u9928\u5F69\u7E6A"
+  btnName: "\u9032\u5165\u5C0E\u89BD"
   textAsset: {fileID: 4900000, guid: 1ee4c77d6c3ce4301af5ec187a091f26, type: 3}
   sprite: {fileID: 0}
   chtAudioGuide: {fileID: 8300000, guid: c534d034a80a04d439086b4ef1927caf, type: 3}

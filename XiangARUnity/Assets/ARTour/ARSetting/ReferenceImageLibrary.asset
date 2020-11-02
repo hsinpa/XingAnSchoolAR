@@ -19,9 +19,9 @@ MonoBehaviour:
       m_GuidLow: 5646509768483795556
       m_GuidHigh: 12611423552857833913
     m_SerializedTextureGuid:
-      m_GuidLow: 3698721057582429552
-      m_GuidHigh: 6885762494309486617
-    m_Size: {x: 0.04, y: 0.04}
+      m_GuidLow: 4734576289189986971
+      m_GuidHigh: 2994585482399880955
+    m_Size: {x: 0.065, y: 0.065}
     m_SpecifySize: 1
     m_Name: ar_theme_autumn
     m_Texture: {fileID: 0}
@@ -29,9 +29,9 @@ MonoBehaviour:
       m_GuidLow: 5134287319922585993
       m_GuidHigh: 10059748450212482750
     m_SerializedTextureGuid:
-      m_GuidLow: 12602457046512430778
-      m_GuidHigh: 15792272414034893977
-    m_Size: {x: 0.04, y: 0.04}
+      m_GuidLow: 5792951633998374495
+      m_GuidHigh: 2882929251133298986
+    m_Size: {x: 0.065, y: 0.065}
     m_SpecifySize: 1
     m_Name: ar_theme_spring
     m_Texture: {fileID: 0}
@@ -39,9 +39,9 @@ MonoBehaviour:
       m_GuidLow: 5334617375937036816
       m_GuidHigh: 8631360661233573518
     m_SerializedTextureGuid:
-      m_GuidLow: 11264663360464535014
-      m_GuidHigh: 14042341358741542361
-    m_Size: {x: 0.04, y: 0.04}
+      m_GuidLow: 13908308310366457266
+      m_GuidHigh: 8429590520784769976
+    m_Size: {x: 0.065, y: 0.065}
     m_SpecifySize: 1
     m_Name: ar_theme_summer
     m_Texture: {fileID: 0}
@@ -49,9 +49,9 @@ MonoBehaviour:
       m_GuidLow: 5179329740034749529
       m_GuidHigh: 8562156132022809993
     m_SerializedTextureGuid:
-      m_GuidLow: 17772406596236526400
-      m_GuidHigh: 15400193400405249579
-    m_Size: {x: 0.04, y: 0.04}
+      m_GuidLow: 11449284293265606573
+      m_GuidHigh: 4043184517415497050
+    m_Size: {x: 0.065, y: 0.065}
     m_SpecifySize: 1
     m_Name: ar_theme_winter
     m_Texture: {fileID: 0}

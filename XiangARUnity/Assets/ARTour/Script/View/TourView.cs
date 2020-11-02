@@ -47,6 +47,9 @@ namespace Expect.View
         private Button startQuestionaireBtn;
 
         [SerializeField]
+        private Text startQuestionaireBtnText;
+
+        [SerializeField]
         private Button closeBtn;
 
         private ARTourModel _model;
@@ -63,16 +66,7 @@ namespace Expect.View
         {
             startQuestionaireBtn.onClick.AddListener(OnQuestionaireClick);
 
-            closeBtn.onClick.AddListener(() =>
-            {
-                Modals.instance.Close();
-                
-                UniversalAudioSolution.instance.StopAudio(UniversalAudioSolution.AudioType.AudioClip2D);
-
-                if (OnCloseBtnCallback != null)
-                    OnCloseBtnCallback();
-            });
-
+            closeBtn.onClick.AddListener(OnCloseBtnClick);
             leftBtn.onClick.AddListener(OnLeftBtnClick);
             rightBtn.onClick.AddListener(OnRightBtnClick);
             ScrollRect.onValueChanged.AddListener(OnScrollViewChange);
@@ -87,13 +81,14 @@ namespace Expect.View
 
             title.text = guideBoardSRP.title;
             contentText.text = guideBoardSRP.textAsset.text;
+            startQuestionaireBtnText.text = guideBoardSRP.btnName;
 
             OnQuestionStartCallback = questionBtnCallback;
             OnCloseBtnCallback = closeBtnCallback;
 
             //Check question is being take or not
             int questionRecord = _model.GetVariable(tour_id);
-            startQuestionaireBtn.gameObject.SetActive(questionRecord == 0 && questionBtnCallback != null);
+            startQuestionaireBtn.gameObject.SetActive(questionRecord == 0);
 
             StartCoroutine(ConfigTextContent());
         }
@@ -139,7 +134,22 @@ namespace Expect.View
             UniversalAudioSolution.instance.PlayAudio(UniversalAudioSolution.AudioType.AudioClip2D, clip);
         }
 
+        private void OnCloseBtnClick() {
+            Modals.instance.Close();
+
+            UniversalAudioSolution.instance.StopAudio(UniversalAudioSolution.AudioType.AudioClip2D);
+
+            if (OnCloseBtnCallback != null)
+                OnCloseBtnCallback();
+        }
+
         private void OnQuestionaireClick() {
+
+            if (OnQuestionStartCallback == null) {
+                OnCloseBtnClick();
+                return;
+            }
+
             Modals.instance.Close();
             UniversalAudioSolution.instance.StopAudio(UniversalAudioSolution.AudioType.AudioClip2D);
 

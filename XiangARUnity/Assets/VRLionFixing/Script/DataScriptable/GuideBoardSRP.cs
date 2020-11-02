@@ -6,6 +6,8 @@ using UnityEngine;
 public class GuideBoardSRP : ScriptableObject
 {
     public string title;
+    public string btnName;
+
     public TextAsset textAsset;
     public Sprite sprite;
 
