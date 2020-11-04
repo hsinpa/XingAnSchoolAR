@@ -2334,7 +2334,7 @@ MonoBehaviour:
   drawToTexture: {fileID: 1207677032}
   _camera: {fileID: 1470813061}
   _toolSRP: {fileID: 11400000, guid: 050e89b5d14cd0c41924ea6f0007a39f, type: 2}
-  _ResidualThreshold: 0.01
+  _ResidualThreshold: 0.009
   targetModel: {fileID: 2764453617206817225}
 --- !u!114 &1207677032
 MonoBehaviour:
@@ -2348,8 +2348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd1f6c867f7fee4da8eb20b966a423d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Power: 0.12
-  _Range: 0.03
+  _Power: 0.4
+  _Range: 0.015
   DrawShader: {fileID: 4800000, guid: 9b55552181b9fe144bf55fdf52af3727, type: 3}
   ScoreShader: {fileID: 4800000, guid: df5db4e76c9e1574b865c44077811875, type: 3}
   maskTexture: {fileID: 2800000, guid: 2cf0f32ac8cee4b70aeb12389bfac968, type: 3}

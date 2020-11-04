@@ -52,6 +52,7 @@
             sampler2D _EraseTex;
 
             float _DirtTransition;
+            float4 _Color;
             float4 _ColorHint;
 
             float _OverrideColor;
@@ -115,27 +116,28 @@
                 //fixed4 dirtEffect = col - (col * (dirtTex + dirtTex) * FindTheLargestColor(maskResult));
 
                 float multipier = FindTheLargestColor(maskResult);
+                float colorResidual = 1 - abs(length(_Color.rgb - maskResult));
                 fixed4 dirtEffect = dirtTex * multipier;
 
-                dirtEffect = dirtEffect * (_ColorHint * ScaleNumberToRange(sin(_Time.z), 1, -1, 1, 0.85));
-                
+                //dirtEffect = dirtEffect * (_Color * ScaleNumberToRange(sin(_Time.z), 1, -1, 1, 0.85));
+
+                if (colorResidual > 0.95) {
+                    dirtEffect = dirtEffect * (_ColorHint * ScaleNumberToRange(sin(_Time.z), 1, -1, 1, 0.75));
+                }
+
                 if ((length(dirtTex.rgb) * _OverrideColor) > 0) {
-                    return dirtEffect;
+                    return colorResidual - dirtEffect;
                 }
 
                 float3 dirtTexWorldNormal = GetWorldNormal(dirtTexNormal, i.tbn);
                 dirtEffect *= dot(dirtTexWorldNormal, _WorldSpaceLightPos0 );
                 
-
-
 				float3 mainTexWorldNormal = GetWorldNormal(mainTexNormal, i.tbn);
                 col *= dot(mainTexWorldNormal, _WorldSpaceLightPos0 );
 
                 if ((multipier) < 0.95) {
                     dirtEffect = col;
                 }
-
-
 
                 //fixed4 dirtEffect = col - (dirtTex) * FindTheLargestColor(maskResult);
 

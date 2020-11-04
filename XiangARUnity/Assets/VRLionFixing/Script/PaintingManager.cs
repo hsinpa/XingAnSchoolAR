@@ -106,6 +106,7 @@ namespace Hsinpa.App {
 
         public void EquipTool(ToolSRP.ToolEnum toolEnum) {
             toolIndex = (int)toolEnum;
+            drawToTexture.SetPaintColor(_toolSRP.tools[toolIndex].mask_color);
         }
 
         public void UnEquip() {

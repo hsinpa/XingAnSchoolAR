@@ -51,6 +51,11 @@ namespace Hsinpa.Shader {
             ResetBuffer();
         }
 
+        public void SetPaintColor(Color p_color) {
+            if (this.targetMaterial != null)
+                this.targetMaterial.SetColor(ShaderColorKey, p_color);
+        }
+
         public void DrawOnMesh(Vector2 textureCoord, Color paintColor) {
             drawMaterial.SetFloat(ShaderPowerKey, _Power);
             drawMaterial.SetFloat(ShaderRangeKey, _Range);

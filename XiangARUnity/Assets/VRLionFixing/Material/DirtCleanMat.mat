@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: DirtCleanMat
   m_Shader: {fileID: 4800000, guid: 232cb5ffa5271b34880c1ffb9a94e8a9, type: 3}
-  m_ShaderKeywords: _OVERRIDECOLOR_ON
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -92,7 +92,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OverrideColor: 1
+    - _OverrideColor: 0
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -100,6 +100,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorHint: {r: 0.9175839, g: 1, b: 0.8820755, a: 1}
+    - _Color: {r: 1, g: 0, b: 0, a: 1}
+    - _ColorHint: {r: 0.6084906, g: 1, b: 0.67612076, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
