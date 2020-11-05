@@ -71,5 +71,10 @@ public class InputWave : InputInterface
             child.gameObject.SetActive(isOn);
         }
     }
+
+    public bool ClickOnMenuKey()
+    {
+        return WaveVR_Controller.Input(wvr.WVR_DeviceType.WVR_DeviceType_Controller_Right).GetPressDown(WaveVR_ButtonList.EButtons.Menu);
+    }
 }
 #endif

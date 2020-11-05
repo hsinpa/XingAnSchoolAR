@@ -35,12 +35,14 @@ namespace Hsinpa.Shader {
         private string ShaderRangeKey = "_Range";
 
         private string ScoreShaderPaintedTex = "_PaintedTex";
-
+        private string ShaderShowHintKey = "_OverrideColor";
 
         private Material drawMaterial;
         private Material scoreMaterial;
         private Material targetMaterial;
         private int scoreTexSize = 24;
+
+        public bool IsColorHintEnable => this.targetMaterial.GetInt(ShaderShowHintKey) == 1;
 
         public void SetUp(Material targetMaterial)
         {
@@ -49,6 +51,10 @@ namespace Hsinpa.Shader {
             scoreMaterial = new Material(ScoreShader);
 
             ResetBuffer();
+        }
+
+        public void EnableColorHint(bool isEnable) {
+            this.targetMaterial.SetInt(ShaderShowHintKey, (isEnable) ? 1 : 0);
         }
 
         public void SetPaintColor(Color p_color) {
@@ -114,6 +120,7 @@ namespace Hsinpa.Shader {
             this.scoreMaterial.SetTexture(ShaderMainTex, maskTexture);
             this.scoreMaterial.SetTexture(ScoreShaderPaintedTex, buffer);
             this.targetMaterial.SetTexture("_EraseTex", buffer);
+            EnableColorHint(false);
         }
     }
 }

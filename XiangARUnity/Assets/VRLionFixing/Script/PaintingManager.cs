@@ -63,6 +63,8 @@ namespace Hsinpa.App {
                     recordCompleteTime = Time.time + checkCompleteTime;
                     CheckIfSocreIsMeet();
                 }
+
+                CheckShowColorHintEvent();
             }
 
             if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
@@ -104,6 +106,12 @@ namespace Hsinpa.App {
                 targetModel.transform.Rotate(-Vector3.up * Time.deltaTime * speed);
         }
 
+        private void CheckShowColorHintEvent() {
+            if (InputWrapper.instance.platformInput.ClickOnMenuKey()) {
+                drawToTexture.EnableColorHint(!drawToTexture.IsColorHintEnable);
+            }
+        }
+
         public void EquipTool(ToolSRP.ToolEnum toolEnum) {
             toolIndex = (int)toolEnum;
             drawToTexture.SetPaintColor(_toolSRP.tools[toolIndex].mask_color);
@@ -111,10 +119,12 @@ namespace Hsinpa.App {
 
         public void UnEquip() {
             toolIndex = -1;
+            drawToTexture.EnableColorHint(false);
         }
 
         public void ResetPaint() {
             drawToTexture.ResetBuffer();
+            drawToTexture.EnableColorHint(false);
         }
     }
 }

@@ -55,7 +55,7 @@
             float4 _Color;
             float4 _ColorHint;
 
-            float _OverrideColor;
+            uniform float _OverrideColor;
 
             v2f vert (appdata v)
             {
@@ -105,7 +105,6 @@
                 fixed4 dirtTex = tex2D(_DirtTex, i.uv);
                 fixed3 dirtMaskTex = tex2D(_DirtMaskTex, i.uv).rgb;
                 fixed3 eraseTex = tex2D(_EraseTex, i.uv).rgb;
-
 
                 fixed4 white = fixed4(1,1,1,1);
                 fixed4 black = fixed4(0,0,0,1);

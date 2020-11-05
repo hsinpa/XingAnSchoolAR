@@ -26,6 +26,8 @@ namespace Hsinpa.Input
         bool SwipeLeft();
         bool SwipeRight();
 
+        bool ClickOnMenuKey();
+
         Transform GetParent();
 
         void SwitchControllerModel(bool isOn);

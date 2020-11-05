@@ -64,4 +64,9 @@ public class InputStandalone : InputInterface
     public void SwitchControllerModel(bool isOn)
     {
     }
+
+    public bool ClickOnMenuKey()
+    {
+        return Input.GetKeyDown(KeyCode.H);
+    }
 }
