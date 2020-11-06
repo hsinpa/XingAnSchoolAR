@@ -13,7 +13,7 @@ namespace Expect.ARTour
         private ARThemeAnchor[] ThemeItems;
 
         private Vector3 recordPosition;
-        private float limitLengthDiff = 0.4f;
+        private float limitLengthDiff = 0.3f;
 
         void Start()
         {
@@ -50,7 +50,7 @@ namespace Expect.ARTour
             var anchor = ThemeItems.FirstOrDefault<ARThemeAnchor>(x => x.name == imageName);
             if (anchor == null) return;
 
-            anchor.transform.rotation = Quaternion.Lerp(anchor.transform.rotation, rotation, 0.1f);
+            anchor.transform.rotation = Quaternion.Lerp(anchor.transform.rotation, rotation, 0.05f);
             anchor.transform.position = Vector3.Lerp(anchor.transform.position, worldPos, 0.1f);
             //anchor.transform.SetPositionAndRotation(worldPos, rotation);
         }

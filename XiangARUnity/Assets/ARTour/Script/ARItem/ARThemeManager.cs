@@ -54,6 +54,7 @@ namespace Expect.ARTour
                 themeItem.UpdateThemeWorldPosData(trackedImage.referenceImage.name, trackedImageTransform.position, trackedImageTransform.rotation);
                 themeItem.ShowARTheme(trackedImage.referenceImage.name);
 
+
                 if (GeneralFlag.SThemeLookUpTable.TryGetValue(trackedImage.referenceImage.name, out GeneralFlag.ARTourTheme theme)) {
                     if (_trackImage == null || _trackImage.referenceImage.name != trackedImage.referenceImage.name)
                         MainApp.Instance.Notify(GeneralFlag.ObeserverEvent.ThemeChange, theme);
