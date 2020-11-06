@@ -28,6 +28,8 @@ namespace Expect.ARTour
         public static GeneralFlag.ARTourTheme arTourTheme = GeneralFlag.ARTourTheme.None;
 
         ARDataSync _arDataSync;
+        FireStoreUtility _fireStoreUtility;
+
         ARTourModel _model;
 
         public override void OnNotify(string p_event, params object[] p_objects)
@@ -51,7 +53,6 @@ namespace Expect.ARTour
 
                 case GeneralFlag.ObeserverEvent.ThemeChange:
                     OnThemeChange((GeneralFlag.ARTourTheme)p_objects[0]);
-                    OnARObjectUpdateBtn();
                     break;
             }
         }
@@ -59,10 +60,11 @@ namespace Expect.ARTour
         private void Start()
         {
             _arDataSync = new ARDataSync();
+            _fireStoreUtility = new FireStoreUtility();
+            _fireStoreUtility.OnInit += OnFireBaseReady;
             _model = MainApp.Instance.model.GetModel<ARTourModel>();
 
             tourButton.onClick.AddListener(OnClickTourBtn);
-            updateButton.onClick.AddListener(OnARObjectUpdateBtn);
 
             //Hide by default
             tourButton.gameObject.SetActive(false);
@@ -113,16 +115,6 @@ namespace Expect.ARTour
             }
         }
 
-        private void OnARObjectUpdateBtn()
-        {
-            StartCoroutine(
-            _arDataSync.WebSyncARData(() =>
-            {
-                if (OnDataSync != null)
-                    OnDataSync(_arDataSync);
-            }));
-        }
-
         private void OnThemeChangeCallback(GeneralFlag.ARTourTheme theme) {
             arTourTheme = theme;
 
@@ -135,6 +127,28 @@ namespace Expect.ARTour
 
             Debug.Log("Theme is pick " + theme.ToString("g"));
         }
+
+        #region FireBase Region
+        private void OnFireBaseReady() {
+            Debug.Log("OnFireBaseReady");
+
+            //_ = _fireStoreUtility.GetOnceCollection(GeneralFlag.FireBase.AnimalARCol);
+            _fireStoreUtility.ListenToCollection(GeneralFlag.FireBase.AnimalARCol);
+            _fireStoreUtility.OnFireBaseDocEvent += OnFireStoreEvent;
+        }
+
+        private void OnFireStoreEvent(List<Firebase.Firestore.DocumentSnapshot> documentSnapshot) {
+
+            for (int i = 0; i < documentSnapshot.Count; i++) {
+                if (documentSnapshot[i].Exists)
+                    _arDataSync.SaveFireStoreData(documentSnapshot[i].ToDictionary());
+            }
+
+            if (OnDataSync != null)
+                OnDataSync(_arDataSync);
+        }
+             
+        #endregion
 
 #if UNITY_EDITOR
         public void Update()
@@ -164,6 +178,10 @@ namespace Expect.ARTour
         private void OnDestroy()
         {
             OnThemeChange -= OnThemeChangeCallback;
+            _fireStoreUtility.OnFireBaseDocEvent -= OnFireStoreEvent;
+
+            if (_fireStoreUtility != null)
+                _fireStoreUtility.UnRegisterAll();
         }
 
     }

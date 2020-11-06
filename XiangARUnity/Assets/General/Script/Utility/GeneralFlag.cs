@@ -8,6 +8,10 @@ public class GeneralFlag
         public const string UniversalSyntaxRex = @"^.{2,20}$";
     }
 
+    public class FireBase { 
+        public const string AnimalARCol = "ARAnimalTheme";
+    }
+
     public class ObeserverEvent {
         public const string AppStart = "event@start_app";
 

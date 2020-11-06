@@ -87,6 +87,25 @@ namespace Expect.ARTour
             return arList;
         }
 
+        public void SaveFireStoreData(Dictionary<string, object> documents) {
+            ARData aRData = new ARData();
+
+            string name = (string) documents["name"];
+            string position_str = (string)documents["position"];
+            string rotation_str = (string)documents["rotation"];
+            float scale = (float)((double)documents["scale"]);
+
+            aRData.name = name;
+            aRData.position = StrToVector(position_str);
+            aRData.rotation = Quaternion.Euler(StrToVector(rotation_str));
+            aRData.scale = new Vector3(scale, scale, scale);
+
+            if (_arDataList.ContainsKey(name))
+                _arDataList[name] = aRData;
+            else
+                _arDataList.Add(name, aRData);
+        }
+
         private Vector3 StrToVector(string vector_str)
         {
             Vector3 vector = Vector3.one;
