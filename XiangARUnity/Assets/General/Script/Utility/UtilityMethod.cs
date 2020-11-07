@@ -133,7 +133,6 @@ namespace Hsinpa.Utility {
 			return tex.GetPixels();
 		}
 
-
 		public static T GetFromDict<T>(Dictionary<string, T> dict, string key, T default_value) {
 			if (dict.TryGetValue(key, out T p_value)) {
 				return p_value;

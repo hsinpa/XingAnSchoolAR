@@ -53,9 +53,10 @@ namespace Expect.ARTour {
 
         private void ShowTotalScore() {
             ScoreView scoreView = Modals.instance.OpenModal<ScoreView>();
+
+
+
         }
-
-
 
         private void ResetData() {
             //ARSession.enabled = false;
