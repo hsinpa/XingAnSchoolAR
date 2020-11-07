@@ -24,7 +24,7 @@ namespace Expect.StaticAsset {
             public const string AddScoreText = "+{0}分";
 
             public const string QuestionarieCorrectMsg = "恭喜, 你答對了(+25分)";
-            public const string QuestionarieWrongMsg = "真可惜, 你答錯了";
+            public const string QuestionarieWrongMsg = "真可惜, 你答錯了(+0分)";
 
             public const string TourProceedToQuiz = "進行測試";
             public const string TourQuizIsDone = "測試結束";
