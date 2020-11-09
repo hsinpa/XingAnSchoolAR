@@ -71,8 +71,8 @@ namespace Expect.View
             rightBtn.onClick.AddListener(OnRightBtnClick);
             ScrollRect.onValueChanged.AddListener(OnScrollViewChange);
 
-            chtVoiceBtn.onClick.AddListener(() => PlayTourAudio(_guideBoardSRP.chtAudioGuide, _guideBoardSRP.textAsset));
-            engVoiceBtn.onClick.AddListener(() => PlayTourAudio(_guideBoardSRP.enAudioGuide, _guideBoardSRP.textAsset_en));
+            chtVoiceBtn.onClick.AddListener(() => PlayTourAudio(_guideBoardSRP.chtAudioGuide, _guideBoardSRP.textAsset, _guideBoardSRP.title));
+            engVoiceBtn.onClick.AddListener(() => PlayTourAudio(_guideBoardSRP.enAudioGuide, _guideBoardSRP.textAsset_en, _guideBoardSRP.title_en));
         }
 
         public void SetUp(string tour_id, ARTourModel model, GuideBoardSRP guideBoardSRP, System.Action questionBtnCallback, System.Action closeBtnCallback) {
@@ -129,9 +129,11 @@ namespace Expect.View
             SetLeftRightContentBtn();
         }
 
-        private void PlayTourAudio(AudioClip clip, TextAsset textAsset) {
+        private void PlayTourAudio(AudioClip clip, TextAsset textAsset, string p_title) {
             if (clip != null)
                 UniversalAudioSolution.instance.PlayAudio(UniversalAudioSolution.AudioType.AudioClip2D, clip);
+
+            title.text = p_title;
 
             AssignContentText(textAsset);
         }

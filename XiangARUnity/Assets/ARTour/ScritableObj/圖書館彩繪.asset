@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: "\u5716\u66F8\u9928\u5F69\u7E6A"
   m_EditorClassIdentifier: 
   title: "\u5716\u66F8\u9928\u5F69\u7E6A"
+  title_en: Library's Surroundings
   btnName: "\u9032\u5165\u63A2\u7D22"
   textAsset: {fileID: 4900000, guid: 1ee4c77d6c3ce4301af5ec187a091f26, type: 3}
   textAsset_en: {fileID: 4900000, guid: 036dcd0d6374a4e8a9e1e30e547e7680, type: 3}
   sprite: {fileID: 0}
   chtAudioGuide: {fileID: 8300000, guid: c534d034a80a04d439086b4ef1927caf, type: 3}
-  enAudioGuide: {fileID: 0}
+  enAudioGuide: {fileID: 8300000, guid: 26935c40ac10b4d098779e43e0f2d033, type: 3}
