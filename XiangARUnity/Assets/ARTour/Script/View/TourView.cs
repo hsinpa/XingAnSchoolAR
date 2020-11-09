@@ -71,8 +71,8 @@ namespace Expect.View
             rightBtn.onClick.AddListener(OnRightBtnClick);
             ScrollRect.onValueChanged.AddListener(OnScrollViewChange);
 
-            chtVoiceBtn.onClick.AddListener(() => PlayTourAudio(_guideBoardSRP.chtAudioGuide));
-            engVoiceBtn.onClick.AddListener(() => PlayTourAudio(_guideBoardSRP.enAudioGuide));
+            chtVoiceBtn.onClick.AddListener(() => PlayTourAudio(_guideBoardSRP.chtAudioGuide, _guideBoardSRP.textAsset));
+            engVoiceBtn.onClick.AddListener(() => PlayTourAudio(_guideBoardSRP.enAudioGuide, _guideBoardSRP.textAsset_en));
         }
 
         public void SetUp(string tour_id, ARTourModel model, GuideBoardSRP guideBoardSRP, System.Action questionBtnCallback, System.Action closeBtnCallback) {
@@ -80,8 +80,9 @@ namespace Expect.View
             this._guideBoardSRP = guideBoardSRP;
 
             title.text = guideBoardSRP.title;
-            contentText.text = guideBoardSRP.textAsset.text;
             startQuestionaireBtnText.text = guideBoardSRP.btnName;
+
+            AssignContentText(guideBoardSRP.textAsset);
 
             OnQuestionStartCallback = questionBtnCallback;
             OnCloseBtnCallback = closeBtnCallback;
@@ -128,10 +129,19 @@ namespace Expect.View
             SetLeftRightContentBtn();
         }
 
-        private void PlayTourAudio(AudioClip clip) {
-            if (clip == null) return;
+        private void PlayTourAudio(AudioClip clip, TextAsset textAsset) {
+            if (clip != null)
+                UniversalAudioSolution.instance.PlayAudio(UniversalAudioSolution.AudioType.AudioClip2D, clip);
 
-            UniversalAudioSolution.instance.PlayAudio(UniversalAudioSolution.AudioType.AudioClip2D, clip);
+            AssignContentText(textAsset);
+        }
+
+        private void AssignContentText(TextAsset textAsset) {
+            if (textAsset != null)
+            {
+                contentText.text = textAsset.text;
+                contentText.text = contentText.text.Replace("\\n", "\n");
+            }
         }
 
         private void OnCloseBtnClick() {

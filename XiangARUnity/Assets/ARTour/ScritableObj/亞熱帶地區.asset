@@ -15,6 +15,7 @@ MonoBehaviour:
   title: "\u4E9E\u71B1\u5E36\u5730\u5340"
   btnName: "\u9032\u5165\u904A\u6232"
   textAsset: {fileID: 4900000, guid: ea581486ad67b4a8e919201d0036674b, type: 3}
+  textAsset_en: {fileID: 4900000, guid: 962a61ea648174a1c847e4aa12fbc735, type: 3}
   sprite: {fileID: 0}
   chtAudioGuide: {fileID: 8300000, guid: 97ff6eca24feceb44979fab34dff4c3e, type: 3}
   enAudioGuide: {fileID: 0}

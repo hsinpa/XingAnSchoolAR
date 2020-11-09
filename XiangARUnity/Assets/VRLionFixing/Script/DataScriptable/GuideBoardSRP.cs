@@ -9,6 +9,8 @@ public class GuideBoardSRP : ScriptableObject
     public string btnName;
 
     public TextAsset textAsset;
+    public TextAsset textAsset_en;
+
     public Sprite sprite;
 
     public AudioClip chtAudioGuide;
