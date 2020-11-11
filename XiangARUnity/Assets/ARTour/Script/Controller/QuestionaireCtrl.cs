@@ -18,6 +18,7 @@ namespace Expect.ARTour
         private QuestionaireView _questionaireView;
 
         private Ticket currentTicket;
+        private GuideBoardSRP _guideBoardSRP;
 
         public override void OnNotify(string p_event, params object[] p_objects)
         {
@@ -26,7 +27,7 @@ namespace Expect.ARTour
             switch (p_event)
             {
                 case GeneralFlag.ObeserverEvent.QuizStart:
-
+                    _guideBoardSRP = (GuideBoardSRP)p_objects[1];
                     StartQuiz((string)p_objects[0]);
                     break;
             }
@@ -41,7 +42,7 @@ namespace Expect.ARTour
 
             string debugMsg = string.Format("ID : {0}, Value : {1}", currentTicket.eventStats._ID, currentTicket.eventStats.MainValue);
 
-            ProcessTicket(currentTicket);
+            ProcessTicket(currentTicket, false);
         }
 
         private void SetQuestionToView(Ticket ticket) {
@@ -61,35 +62,58 @@ namespace Expect.ARTour
             _questionaireView.SetContent(title, ticket.eventStats.MainValue, potentialAnswers, correctIndex, OnAnswerSubmit);
         }
 
-        private void ProcessTicket(Ticket ticket) {
+        private void ProcessTicket(Ticket ticket, bool isCorrect) {
 
-            if (ticket.eventStats.Tag == GeneralFlag.ARTour.QuestionType.End)
+            if (ticket.eventStats.Tag == GeneralFlag.ARTour.QuestionType.Continue)
             {
-                //TODO: Show Score Board;
-                Modals.instance.Close();
-                int score = _model.GetVariable(ParameterFlag.QuestionaireParameter.Score) * 25;
-
-                ScoreView scoreView = Modals.instance.OpenModal<ScoreView>();
-                scoreView.SetContent($"+{score}分", () => {
-                    _model.Reset();
-                    SceneManager.LoadScene("ARTour");
-                });
+                ShowMidScorePage(isCorrect, null);
 
                 return;
             }
 
-            if (ticket.eventStats.Tag == GeneralFlag.ARTour.QuestionType.Continue) {
-                Modals.instance.Close();
+            if (ticket.eventStats.Tag == GeneralFlag.ARTour.QuestionType.End)
+            {
+                ShowMidScorePage(isCorrect, () => {
+                    ShowFinalScorePage();
+                });
+
                 return;
             }
 
             SetQuestionToView(ticket);
         }
 
+        private void ShowMidScorePage(bool isCorrect, System.Action p_callback) {
+            Modals.instance.Close();
+            int score = (!isCorrect) ? 0 : 25;
+            ScoreView scoreView = Modals.instance.OpenModal<ScoreView>();
 
-        private void OnAnswerSubmit(int selectedIndex)
+            scoreView.SetContent(_guideBoardSRP.title, StringAsset.ARTour.ShowAreaScoreStatement, "",
+            $"+{ score }分", StringAsset.ARTour.ShowAreaScoreButton, () => {
+                Modals.instance.Close();
+
+                if (p_callback != null) {
+                    p_callback();
+                }
+            });
+        }
+
+        private void ShowFinalScorePage() {
+            Modals.instance.Close();
+            int score = _model.GetVariable(ParameterFlag.QuestionaireParameter.Score) * 25;
+
+            ScoreView scoreView = Modals.instance.OpenModal<ScoreView>();
+            scoreView.SetContent(StringAsset.ARTour.EndGameTitle, StringAsset.ARTour.EndGameStatement, StringAsset.ARTour.EndGameSubStatement,
+                $"+{score}分", StringAsset.ARTour.EndGameButton, () => {
+                    _model.Reset();
+                    SceneManager.LoadScene("ARTour");
+                });
+        }
+
+
+        private void OnAnswerSubmit(int selectedIndex, bool isCorrect)
         {
-            ProcessTicket(_model.SubmitChoiceWithIndex(currentTicket, selectedIndex));
+            ProcessTicket(_model.SubmitChoiceWithIndex(currentTicket, selectedIndex), isCorrect);
         }
 
     }
