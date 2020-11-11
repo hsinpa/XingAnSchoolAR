@@ -11,6 +11,19 @@ namespace Hsinpa.Input {
         [SerializeField]
         private GameObject waveAsset;
 
+        [SerializeField]
+        private GameObject waveHeadSet;
+
+        public GameObject cameraObject {
+            get {
+#if UNITY_EDITOR
+                return standaloneAsset.gameObject;
+#else
+                return waveHeadSet;
+#endif
+            }
+        }
+
 #if UNITY_EDITOR || UNITY_ANDROID
         [SerializeField]
         private WaveVR_InputModuleManager waveInputManager;
@@ -18,7 +31,6 @@ namespace Hsinpa.Input {
         [SerializeField]
         private WaveVR_ControllerLoader waveCtrlLoader;
 #endif
-
         public InputInterface platformInput;
 
         private static InputWrapper _instance;
@@ -35,6 +47,8 @@ namespace Hsinpa.Input {
             }
         }
 
+        
+
         public void SetUp() {
             standaloneAsset.gameObject.SetActive(false);
             waveAsset.SetActive(false);
@@ -42,8 +56,6 @@ namespace Hsinpa.Input {
 #if UNITY_EDITOR
             standaloneAsset.gameObject.SetActive(true);
             platformInput = new InputStandalone(standaloneAsset);
-            //waveAsset.SetActive(true);
-            //platformInput = new InputWave(waveInputManager);
 #elif UNITY_ANDROID
             waveAsset.SetActive(true);
             platformInput = new InputWave(waveInputManager);

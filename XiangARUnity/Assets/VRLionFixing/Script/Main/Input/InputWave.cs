@@ -8,6 +8,7 @@ using wvr;
 public class InputWave : InputInterface
 {
     WaveVR_InputModuleManager _inputModule;
+    Ray ray = new Ray();
 
     public Vector3 faceDir
     {
@@ -20,7 +21,9 @@ public class InputWave : InputInterface
         }
     }
 
-    public float raycastLength => 1.5f;
+
+    //0.3 => official length
+    public float raycastLength => 1f;
 
     public InputWave(WaveVR_InputModuleManager inputModule) {
         this._inputModule = inputModule; 
@@ -44,9 +47,12 @@ public class InputWave : InputInterface
     public Ray GetRay()
     {
         var d = WaveVR_EventSystemControllerProvider.Instance.GetControllerModel(WaveVR_Controller.EDeviceType.Dominant);
-        if (d == null) return new Ray();
+        if (d == null) return ray;
 
-        return new Ray(d.transform.position, d.transform.forward);
+        ray.direction = d.transform.forward;
+        ray.origin = d.transform.position;
+
+        return ray;
     }
 
     public bool SwipeLeft()

@@ -8,6 +8,9 @@ using Hsinpa.App;
 using Hsinpa.Utility;
 using Hsinpa.Input;
 using Hsinpa.View;
+using UnityEngine.UI;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 namespace Expect.App {
     public class FixLionManager : MonoBehaviour
@@ -18,12 +21,38 @@ namespace Expect.App {
         [SerializeField]
         PaintingManager PaintingManager;
 
+        [Header("Lighting")]
+        [SerializeField]
+        InputWrapper inputWrapper;
+
+        [SerializeField]
+        GameObject targetGameObject;
+
+        [SerializeField]
+        GameObject lightingObject;
+
+        [Header("UI Components")]
+        [SerializeField]
+        private Button GameStartBtn;
+
+        [Header("Timeline Components")]
+        [SerializeField]
+        private PlayableDirector timeline;
+
+        [SerializeField]
+        private TimelineAsset EndingTimeAsset;
+
+        [SerializeField]
+        private TimelineAsset StartTimeAsset;
+
+        [SerializeField]
+        private bool skipAnim;
+
         private Camera _camera;
 
         private int progress = 0;
         private int maxProgress = 3;
         private ToolItem currentHoldItem = null;
-
 
         // Start is called before the first frame update
         void Start()
@@ -32,21 +61,22 @@ namespace Expect.App {
             FixLionInput.SetUp();
             FixLionInput.HoldItemEvent += OnTouchToolEvent;
             PaintingManager.OnTargetDirtIsClear += OnDirtIsCleared;
+
+            GameStartBtn.onClick.AddListener(OnStartBtnClick);
         }
 
         // Update is called once per frame
         void Update()
         {
             FixLionInput.OnUpdate();
+            UpdateLightDirAccordingToTarget();
         }
 
         private void DisplayAfterCleanTourGuide() {
-            Debug.Log("Clean all done");
+            Debug.LogError("Clean all done");
 
-            DialogueModal dialouge = Modals.instance.OpenModal<DialogueModal>();
-
-            dialouge.SetDialogue(StringAsset.LionRepairing.DoneFixedTitle, StringAsset.LionRepairing.DoneFixedContent,
-                                    new string[] { StringAsset.LionRepairing.DoneFixedButton}, (int i) => ResetLevel());
+            timeline.playableAsset = EndingTimeAsset;
+            timeline.Play();
         }
 
         private void OnTouchToolEvent(ToolItem tool) {
@@ -84,6 +114,21 @@ namespace Expect.App {
             if (this.progress == maxProgress) {
                 DisplayAfterCleanTourGuide();
             }
+        }
+
+        private void OnStartBtnClick() {
+            GameStartBtn.gameObject.SetActive(false);
+
+            timeline.playableAsset = StartTimeAsset;
+            timeline.Play();
+
+            if (skipAnim)
+                timeline.time = StartTimeAsset.duration;
+        }
+
+        private void UpdateLightDirAccordingToTarget() {
+            Vector3 direction = (targetGameObject.transform.position - inputWrapper.cameraObject.transform.position);
+            lightingObject.transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
         }
 
         public void ResetLevel() {

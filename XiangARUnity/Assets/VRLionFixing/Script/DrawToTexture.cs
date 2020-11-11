@@ -40,6 +40,7 @@ namespace Hsinpa.Shader {
         private Material drawMaterial;
         private Material scoreMaterial;
         private Material targetMaterial;
+        Texture2D _cacheTex;
         private int scoreTexSize = 24;
 
         public bool IsColorHintEnable => this.targetMaterial.GetInt(ShaderShowHintKey) == 1;
@@ -49,7 +50,7 @@ namespace Hsinpa.Shader {
             this.targetMaterial = targetMaterial;
             drawMaterial = new Material(DrawShader);
             scoreMaterial = new Material(ScoreShader);
-
+            _cacheTex = new Texture2D(scoreTexSize, scoreTexSize, TextureFormat.RGB24, false);
             ResetBuffer();
         }
 
@@ -63,6 +64,7 @@ namespace Hsinpa.Shader {
         }
 
         public void DrawOnMesh(Vector2 textureCoord, Color paintColor) {
+
             drawMaterial.SetFloat(ShaderPowerKey, _Power);
             drawMaterial.SetFloat(ShaderRangeKey, _Range);
             drawMaterial.SetVector(ShaderPositionKey, textureCoord);
@@ -85,7 +87,7 @@ namespace Hsinpa.Shader {
 
         private async Task<float> CalculateOnCPU(Color paintColor) {
 
-            Color[] colors = Utility.UtilityMethod.ToColor(Utility.UtilityMethod.toTexture2D(scoreTexSize, scoreBuffer));
+            Color[] colors = Utility.UtilityMethod.ToColor(Utility.UtilityMethod.toTexture2D(scoreBuffer, _cacheTex));
             Color whiteColor = Color.white;
             float allocateColor = 0;
 
@@ -105,16 +107,20 @@ namespace Hsinpa.Shader {
 
                 return allocateColor / (scoreTexSize * scoreTexSize);
             });
+
+
         }
 
+#if UNITY_EDITOR
         private void OnGUI()
         {
             GUI.DrawTexture(new Rect(0, 0, 128, 128), buffer, ScaleMode.ScaleToFit, false, 1);
             GUI.DrawTexture(new Rect(128, 0, 128, 128), scoreBuffer, ScaleMode.ScaleToFit, false, 1);
         }
+#endif
 
         public void ResetBuffer() {
-            buffer = new RenderTexture(256, 256, 0, RenderTextureFormat.ARGBFloat);
+            buffer = new RenderTexture(128, 128, 0, RenderTextureFormat.ARGBFloat);
             scoreBuffer = new RenderTexture(scoreTexSize, scoreTexSize, 0, RenderTextureFormat.ARGBFloat);
 
             this.scoreMaterial.SetTexture(ShaderMainTex, maskTexture);

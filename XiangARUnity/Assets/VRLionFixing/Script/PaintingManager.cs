@@ -14,9 +14,6 @@ namespace Hsinpa.App {
         private DrawToTexture drawToTexture;
 
         [SerializeField]
-        private Camera _camera;
-
-        [SerializeField]
         private ToolSRP _toolSRP;
 
         [SerializeField, Range(0, 0.1f)]
@@ -33,7 +30,7 @@ namespace Hsinpa.App {
 
         public System.Action OnTargetDirtIsClear; 
 
-        private float checkCompleteTime = 2f;
+        private float checkCompleteTime = 3f;
         private float recordCompleteTime = 0;
 
         private void Start()
@@ -83,7 +80,7 @@ namespace Hsinpa.App {
             if (dirtIsClear && OnTargetDirtIsClear != null) {
                 OnTargetDirtIsClear();
             }
-            Debug.Log("Color Score " + colorScore +", pass " + (dirtIsClear));
+            Debug.LogError("Color Score " + colorScore +", pass " + (dirtIsClear));
         }
 
         private void CheckIfToolIsPick() {

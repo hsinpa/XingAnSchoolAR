@@ -12,6 +12,9 @@ namespace Expect.View
         [SerializeField]
         private Vector3 _rotationOffset;
 
+        [SerializeField]
+        private Vector3 _positionOffset;
+
         private Vector3 _originalPos;
         private Quaternion _originalRot;
         private Transform _originalParent;
@@ -34,7 +37,7 @@ namespace Expect.View
 
         public void PairToParent(Transform parentObject) {
             this.transform.SetParent(parentObject);
-            this.transform.localPosition = Vector3.zero;
+            this.transform.localPosition = _positionOffset;
             this.transform.localRotation = Quaternion.Euler(parentObject.transform.forward + _rotationOffset);
         }
 
