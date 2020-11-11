@@ -166,7 +166,8 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorVariation: {r: 0.9862069, g: 1, b: 0, a: 1}
     - _CustomLightColor: {r: 0.35427305, g: 0.5283019, b: 0, a: 1}
-    - _DiffusionProfile_asset: {r: -6.315383e-37, g: -7.0622125e-27, b: 4.6171996e-22, a: -8.3853756e-30}
+    - _DiffusionProfile_asset: {r: -6.315383e-37, g: -7.0622125e-27, b: 4.6171996e-22,
+        a: -8.3853756e-30}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _LightColor: {r: 1, g: 1, b: 1, a: 1}
@@ -177,4 +178,3 @@ Material:
     - _TranslucencyTint: {r: 1, g: 1, b: 1, a: 1}
     - _TranslucentColor: {r: 1, g: 1, b: 1, a: 1}
     - _TransmissionTint: {r: 0.40302935, g: 0.49700004, b: 0.16810293, a: 1}
-  m_BuildTextureStacks: []

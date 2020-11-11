@@ -23,11 +23,20 @@ namespace Expect.StaticAsset {
             public const string QuestionaireContinueBtn = "繼續";
             public const string AddScoreText = "+{0}分";
 
-            public const string QuestionarieCorrectMsg = "恭喜, 你答對了(+25分)";
-            public const string QuestionarieWrongMsg = "真可惜, 你答錯了(+0分)";
+            public const string QuestionarieCorrectMsg = "恭喜, 你答對了";
+            public const string QuestionarieWrongMsg = "真可惜, 你答錯了";
 
             public const string TourProceedToQuiz = "進行測試";
             public const string TourQuizIsDone = "測試結束";
+
+            public const string EndGameTitle = "分數結算";
+            public const string EndGameStatement = "你完成了四個關卡的問題, 總分為";
+            public const string EndGameSubStatement = "請停留在此頁面, \n將行動裝置拿給課堂老師登記成績";
+            public const string EndGameButton = "完成成績登記";
+
+            public const string ShowAreaScoreStatement = "你在本關獲得了";
+            public const string ShowAreaScoreSubStatement = "";
+            public const string ShowAreaScoreButton = "確定";
 
             public const string ConfirmText = "正確";
             public const string MistakeText = "錯誤";

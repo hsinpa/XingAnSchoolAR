@@ -34,6 +34,7 @@ namespace Expect.View
         public enum State { Normal, Correct, Wrong};
 
         public void SetContent(string p_text, System.Action<AnswerSloItem> clickEvent) {
+            radioMaker.enabled = false;
             _background = GetComponent<Image>();
             answerText.text = p_text;
             button.onClick.AddListener(() => clickEvent(this));
@@ -42,7 +43,7 @@ namespace Expect.View
 
         public void EnableBoolImg(bool isCorrect) {
             radioMaker.enabled = true;
-            answerText.enabled = false;
+            //answerText.enabled = false;
 
             radioMaker.sprite = (isCorrect) ? checkMark : errorMark;
         }

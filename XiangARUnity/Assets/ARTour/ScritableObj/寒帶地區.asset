@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: "\u5BD2\u5E36\u5730\u5340"
   m_EditorClassIdentifier: 
   title: "\u5BD2\u5E36\u5730\u5340"
+  title_en: Frigid Zone
   btnName: "\u9032\u5165\u904A\u6232"
   textAsset: {fileID: 4900000, guid: ed8732c08561049559bf032c6d4a7636, type: 3}
+  textAsset_en: {fileID: 4900000, guid: 591d4a1de206e4b1ebf2837ea323f992, type: 3}
   sprite: {fileID: 0}
   chtAudioGuide: {fileID: 8300000, guid: 321d2324d884f4dee8393274c92220d8, type: 3}
-  enAudioGuide: {fileID: 0}
+  enAudioGuide: {fileID: 8300000, guid: 9ada6ad01dc0a49ad9604e152151de7f, type: 3}

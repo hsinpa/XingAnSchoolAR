@@ -29,6 +29,7 @@ namespace Expect.ARTour
 
         ARDataSync _arDataSync;
         ARTourModel _model;
+        TourGuideData _tourGuideData;
 
         public override void OnNotify(string p_event, params object[] p_objects)
         {
@@ -97,19 +98,18 @@ namespace Expect.ARTour
 
             if (GeneralFlag.ThemeKeyLookUpTable.TryGetValue(arTourTheme, out string p_key))
             {
-
-                var guideSRP = tourGuideDataList.Find(x => x._id.Equals(p_key));
-
-                if (guideSRP.isValid) {
+                _tourGuideData = tourGuideDataList.Find(x => x._id.Equals(p_key));
+                 
+                if (_tourGuideData.isValid) {
                     TourView tourModal = Modals.instance.OpenModal<TourView>();
-                    tourModal.SetUp(p_key, _model, guideSRP.GuideBoardSRP, OnQuestionStartClick, null);
+                    tourModal.SetUp(p_key, _model, _tourGuideData.GuideBoardSRP, OnQuestionStartClick, null);
                 }
             }
         }
 
         private void OnQuestionStartClick() {
             if (GeneralFlag.QThemeLookUpTable.TryGetValue(arTourTheme, out string firstQEventKey)) {
-                MainApp.Instance.Notify(GeneralFlag.ObeserverEvent.QuizStart, firstQEventKey);
+                MainApp.Instance.Notify(GeneralFlag.ObeserverEvent.QuizStart, firstQEventKey, _tourGuideData.GuideBoardSRP);
             }
         }
 
