@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Expect.StaticAsset;
 using UnityEngine.SceneManagement;
+using Hsinpa.Utility;
 
 namespace Expect.ARTour
 {
@@ -108,6 +109,8 @@ namespace Expect.ARTour
                     _model.Reset();
                     SceneManager.LoadScene("ARTour");
                 });
+
+            UniversalAudioSolution.instance.PlayAudio(UniversalAudioSolution.AudioType.UI, TypeFlag.Audio.UITag, TypeFlag.Audio.EffectFinalScore);
         }
 
 

@@ -8,6 +8,11 @@ namespace Hsinpa.Utility {
         [SerializeField]
         private List<AudioStructure> _audioStructure = new List<AudioStructure>();
 
+        [SerializeField]
+        private AudioSRPSet _audioSRPSet;
+        public AudioSRPSet AudioSRPSet => _audioSRPSet;
+        public bool isAudioSRPSupport => (_audioSRPSet != null);
+
         public enum AudioType
         {
             UI, BGM, AudioClip2D, Other 
@@ -25,6 +30,13 @@ namespace Hsinpa.Utility {
                 }
                 return _instance;
             }
+        }
+
+        public void PlayAudio(AudioType audioType, string tag, string id) {
+            if (!isAudioSRPSupport) return;
+
+            var clip = AudioSRPSet.GetAudioClip(tag, id);
+            PlayAudio(audioType, clip);
         }
 
         public void PlayAudio(AudioType audioType, AudioClip audioClip) {

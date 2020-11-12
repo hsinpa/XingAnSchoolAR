@@ -16,5 +16,13 @@ public class TypeFlag
         public const string KickFromGame = "event@kick_from_game";
     }
 
+    public class Audio {
+        public const string UITag = "UI";
+
+        public const string EffectFinalScore = "FinalScore";
+        public const string EffectCorrect = "Correct";
+        public const string EffectWrong= "Wrong";
+        public const string EffectChoiceSelect = "ChoiceSelect";
+    }
 
 }

@@ -120,6 +120,7 @@ namespace Expect.View
             mainBtnImage.color = Color.gray;
 
             ProceedBtn.interactable = true;
+            UniversalAudioSolution.instance.PlayAudio(UniversalAudioSolution.AudioType.UI, TypeFlag.Audio.UITag, TypeFlag.Audio.EffectChoiceSelect);
         }
 
         private void CreateTrueFalseGroup() {
@@ -177,6 +178,8 @@ namespace Expect.View
                 if (isCurrentSelected)
                     currentIndex = i;
             }
+
+            UniversalAudioSolution.instance.PlayAudio(UniversalAudioSolution.AudioType.UI, TypeFlag.Audio.UITag, TypeFlag.Audio.EffectChoiceSelect);
         }
 
         private void DisplayCorrectAnswerLayout(int correctIndex) {
@@ -202,6 +205,9 @@ namespace Expect.View
 
             trueGroupBtnImage.color = (0 == correctIndex) ? Color.white : Color.gray;
             falseGroupBtnImage.color = (1 == correctIndex) ? Color.white : Color.gray;
+
+            string AudioID = (isCorrect) ? TypeFlag.Audio.EffectCorrect : TypeFlag.Audio.EffectWrong;
+            UniversalAudioSolution.instance.PlayAudio(UniversalAudioSolution.AudioType.UI, TypeFlag.Audio.UITag, AudioID);
         }
 
         private void OnProceedBtnClick() {

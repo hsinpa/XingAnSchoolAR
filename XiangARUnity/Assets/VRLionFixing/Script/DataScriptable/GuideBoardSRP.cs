@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/GuideBoard", order = 1)]
 public class GuideBoardSRP : ScriptableObject
 {
