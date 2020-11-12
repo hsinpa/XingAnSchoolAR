@@ -27,6 +27,8 @@ namespace Expect.ARTour
 
         private void OnARDataUpdate(ARDataSync aRDataSync)
         {
+            return;
+
             if (aRDataSync == null)
             {
                 Debug.LogError("_ARTrackedImage is null");
